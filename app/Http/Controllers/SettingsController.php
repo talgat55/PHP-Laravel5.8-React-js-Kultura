@@ -12,7 +12,7 @@ class SettingsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index($id =null, Request $request)
+    public function index($id =1, Request $request)
     {
 
         if (!empty($id)) {
