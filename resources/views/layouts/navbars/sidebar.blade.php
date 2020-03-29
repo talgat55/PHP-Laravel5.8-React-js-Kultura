@@ -29,20 +29,20 @@
                 <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
 
                     {{--<a href="{{ route('profile.edit') }}" class="dropdown-item">--}}
-                        {{--<i class="ni ni-single-02"></i>--}}
-                        {{--<span>{{ __('My profile') }}</span>--}}
+                    {{--<i class="ni ni-single-02"></i>--}}
+                    {{--<span>{{ __('My profile') }}</span>--}}
                     {{--</a>--}}
                     {{--<a href="#" class="dropdown-item">--}}
-                        {{--<i class="ni ni-settings-gear-65"></i>--}}
-                        {{--<span>{{ __('Settings') }}</span>--}}
+                    {{--<i class="ni ni-settings-gear-65"></i>--}}
+                    {{--<span>{{ __('Settings') }}</span>--}}
                     {{--</a>--}}
                     {{--<a href="#" class="dropdown-item">--}}
-                        {{--<i class="ni ni-calendar-grid-58"></i>--}}
-                        {{--<span>{{ __('Activity') }}</span>--}}
+                    {{--<i class="ni ni-calendar-grid-58"></i>--}}
+                    {{--<span>{{ __('Activity') }}</span>--}}
                     {{--</a>--}}
                     {{--<a href="#" class="dropdown-item">--}}
-                        {{--<i class="ni ni-support-16"></i>--}}
-                        {{--<span>{{ __('Support') }}</span>--}}
+                    {{--<i class="ni ni-support-16"></i>--}}
+                    {{--<span>{{ __('Support') }}</span>--}}
                     {{--</a>--}}
                     <div class="dropdown-divider"></div>
                     {{--<a href="{{/* route('logout') */}}" class="dropdown-item" onclick="event.preventDefault();--}}
@@ -98,52 +98,58 @@
                         <i class="ni ni-tv-2 text-primary text-green"></i> {{ __('Слайдер на главной') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('settingsIndex') }}">
+                        <i class="ni ni-app text-primary text-orange"></i> {{ __('Настройки сайта') }}
+                    </a>
+                </li>
+
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button"--}}
-                       {{--aria-expanded="true" aria-controls="navbar-examples">--}}
-                        {{--<i class="fab fa-laravel" style="color: #f4645f;"></i>--}}
-                        {{--<span class="nav-link-text" style="color: #f4645f;">{{ __('Операции') }}</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button"--}}
+                {{--aria-expanded="true" aria-controls="navbar-examples">--}}
+                {{--<i class="fab fa-laravel" style="color: #f4645f;"></i>--}}
+                {{--<span class="nav-link-text" style="color: #f4645f;">{{ __('Операции') }}</span>--}}
+                {{--</a>--}}
 
-                    {{--<div class="collapse show" id="navbar-examples">--}}
-                        {{--<ul class="nav nav-sm flex-column">--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('operations.index') }}">--}}
+                {{--<div class="collapse show" id="navbar-examples">--}}
+                {{--<ul class="nav nav-sm flex-column">--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('operations.index') }}">--}}
 
-                                    {{--{{ __('Поступление товара') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('operations.realization') }}">--}}
-                                    {{--{{ __('Реализация товара') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('operations.updateCredit') }}">--}}
-                                    {{--{{ __('Получение средств от клиента') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('operations.orgSetCredit') }}">--}}
-                                    {{--{{ __('Оплата организации') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                             {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('operations.withdraw') }}">--}}
-                                    {{--{{ __('Расход по кассе') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
+                {{--{{ __('Поступление товара') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('operations.realization') }}">--}}
+                {{--{{ __('Реализация товара') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('operations.updateCredit') }}">--}}
+                {{--{{ __('Получение средств от клиента') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('operations.orgSetCredit') }}">--}}
+                {{--{{ __('Оплата организации') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('operations.withdraw') }}">--}}
+                {{--{{ __('Расход по кассе') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
 
-                        {{--</ul>--}}
-                    {{--</div>--}}
+                {{--</ul>--}}
+                {{--</div>--}}
                 {{--</li>--}}
                 {{--@endif--}}
 
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('clients.index') }}">--}}
-                        {{--<i class="ni ni-circle-08 text-primary text-red"></i>  {{ __('Клиенты') }}--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link" href="{{ route('clients.index') }}">--}}
+                {{--<i class="ni ni-circle-08 text-primary text-red"></i>  {{ __('Клиенты') }}--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item">--}}
                 {{--<a class="nav-link" href="{{ route('cars.index') }}">--}}
@@ -158,68 +164,68 @@
                 {{--</li>--}}
 
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('storage.index') }}">--}}
-                        {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Склад') }}--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link" href="{{ route('storage.index') }}">--}}
+                {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Склад') }}--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('waybillsRealization.index') }}">--}}
-                        {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Накладные (реализация)') }}--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link" href="{{ route('waybillsRealization.index') }}">--}}
+                {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Накладные (реализация)') }}--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('waybillsEntrance.index') }}">--}}
-                        {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Накладные (поступление)') }}--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link" href="{{ route('waybillsEntrance.index') }}">--}}
+                {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Накладные (поступление)') }}--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('statistics.index') }}">--}}
-                        {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Статистика') }}--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link" href="{{ route('statistics.index') }}">--}}
+                {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Статистика') }}--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('operations.reconciliation') }}">--}}
-                        {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Акт сверки') }}--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link" href="{{ route('operations.reconciliation') }}">--}}
+                {{--<i class="ni ni-box-2 text-primary text-red"></i> {{ __('Акт сверки') }}--}}
+                {{--</a>--}}
                 {{--</li>--}}
 
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link active" href="#navbar-products" data-toggle="collapse" role="button"--}}
-                       {{--aria-expanded="false" aria-controls="navbar-products">--}}
-                        {{--<i class="ni ni-basket text-primary  text-info"></i>--}}
-                        {{--<span class="nav-link-text" style="color: #f4645f;">{{ __('Заполнение данных') }}</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-link active" href="#navbar-products" data-toggle="collapse" role="button"--}}
+                {{--aria-expanded="false" aria-controls="navbar-products">--}}
+                {{--<i class="ni ni-basket text-primary  text-info"></i>--}}
+                {{--<span class="nav-link-text" style="color: #f4645f;">{{ __('Заполнение данных') }}</span>--}}
+                {{--</a>--}}
 
-                    {{--<div class="collapse" id="navbar-products">--}}
-                        {{--<ul class="nav nav-sm flex-column">--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('items.index') }}">--}}
+                {{--<div class="collapse" id="navbar-products">--}}
+                {{--<ul class="nav nav-sm flex-column">--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('items.index') }}">--}}
 
-                                    {{--{{ __('Категории овощей') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
+                {{--{{ __('Категории овощей') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
 
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('sort.index') }}">--}}
-                                    {{--{{ __('Сорты овощей') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('sort.index') }}">--}}
+                {{--{{ __('Сорты овощей') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
 
 
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('cars.index') }}">--}}
-                                    {{--{{ __('Организации') }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--@if (Auth::user()->hasRole("admin"))--}}
-                                {{--<li class="nav-item">--}}
-                                    {{--<a class="nav-link" href="{{ route('user.index') }}">--}}
-                                        {{--{{ __('Администраторы') }}--}}
-                                    {{--</a>--}}
-                                {{--</li>--}}
-                            {{--@endif--}}
-                        {{--</ul>--}}
-                    {{--</div>--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('cars.index') }}">--}}
+                {{--{{ __('Организации') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--@if (Auth::user()->hasRole("admin"))--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('user.index') }}">--}}
+                {{--{{ __('Администраторы') }}--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--@endif--}}
+                {{--</ul>--}}
+                {{--</div>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item">--}}
                 {{--<a class="nav-link" href="{{ route('user.index') }}">--}}

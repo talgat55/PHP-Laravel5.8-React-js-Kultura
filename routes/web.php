@@ -24,4 +24,7 @@ Route::prefix('admin')->group(function () {
     Route::delete('/home-slider/{id}/delete', 'HomeSliderController@delete')->name('homeSliderDelete');
     Route::match(['get', 'post'], '/home-slider/{id}/edit', ['as' => 'homeSliderEdit', 'uses' => 'HomeSliderController@edit']);
 
+
+    Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
+
 });
