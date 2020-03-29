@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {compose, createStore, applyMiddleware} from "redux";
+import createSagaMiddleware from 'redux-saga'
+import { introSaga } from './sagas/sagas'
+import {rootReducer} from "./redux/rootReducer";
 
 export default class Client extends Component {
     render() {
@@ -19,5 +24,23 @@ export default class Client extends Component {
     }
 }
 
-    render(<Client/>, document.getElementById('root'));
+const saga = createSagaMiddleware();
+
+
+const store = createStore(
+    rootReducer,
+    compose(
+        applyMiddleware(
+            saga,
+        ),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+    )
+);
+saga.run(introSaga);
+render(
+    <Provider store={store}>
+        <Client/>
+    </Provider>
+    , document.getElementById('root'));
 
