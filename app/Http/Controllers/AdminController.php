@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use Spatie\ImageOptimizer\OptimizerChainFactory;
 class AdminController extends Controller
 {
 
@@ -33,6 +33,9 @@ class AdminController extends Controller
 
         }
         $path = $request->file('file')->store('public/'.$folderSave);
+
+        $optimizerChain = OptimizerChainFactory::create();
+        $optimizerChain->optimize(Storage::path($path));
 
         $url = Storage::url($path);
         return response()->json(['data' => $url]);
