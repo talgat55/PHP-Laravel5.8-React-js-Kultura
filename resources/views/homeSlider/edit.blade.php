@@ -1,7 +1,7 @@
-@extends('layouts.app', ['title' => __('Добавление слайда')])
+@extends('layouts.app', ['title' => __('Редактирование слайда')])
 
 @section('content')
-    @include('users.partials.header', ['title' => __('Добавление слайда')])
+    @include('users.partials.header', ['title' => __('Редактирование слайда')])
     <div class="container-fluid mt--7">
         <div class="row">
             <div class="col-xl-12 order-xl-1">
@@ -9,7 +9,7 @@
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Добавление слайда') }}</h3>
+                                <h3 class="mb-0">{{ __('Редактирование слайда') }}</h3>
                             </div>
                             <div class="col-4 text-right">
                                 <a href="{{ route('homeSliderIndex') }}"
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="{{ route('homeSliderCreate') }}" enctype="multipart/form-data"
+                        <form method="post" action="{{ route('homeSliderEdit', $item->id) }}" enctype="multipart/form-data"
                               autocomplete="off">
                             @csrf
                             <h6 class="heading-small text-muted mb-4">{{ __('Информация') }}</h6>
@@ -29,8 +29,8 @@
                                            for="input-status">{{ __('Опубликовать ?') }}</label>
 
                                     <select class="form-control" id="select-status" name="status">
-                                        <option selected value="1">Да</option>
-                                        <option value="0">Нет</option>
+                                        <option  @if ($item->status =='1')   selected    @endif  value="1">Да</option>
+                                        <option @if ($item->status =='0')   selected    @endif  value="0">Нет</option>
                                     </select>
 
                                     @if ($errors->has('status'))
@@ -43,7 +43,7 @@
                                     <label class="form-control-label" for="input-sort">{{ __('Сортировка') }}</label>
                                     <input type="text" name="sort" id="input-sort"
                                            class="form-control form-control-alternative{{ $errors->has('sort') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Сортировка') }}" value="500"
+                                           placeholder="{{ __('Сортировка') }}" value="{{ $item->sort }}"
                                     >
 
                                     @if ($errors->has('sort'))
@@ -57,7 +57,7 @@
                                     <label class="form-control-label" for="input-driver">{{ __('Заголовок') }}</label>
                                     <input type="text" name="name" id="input-name"
                                            class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Заголовок') }}" value="{{ old('name') }}" required
+                                           placeholder="{{ __('Заголовок') }}" value="{{ $item->name }}" required
                                            autofocus>
 
                                     @if ($errors->has('name'))
@@ -70,8 +70,8 @@
                                     <label class="form-control-label" for="input-text">{{ __('Текст') }}</label>
                                     <input type="text" name="text" id="input-text"
                                            class="form-control form-control-alternative{{ $errors->has('text') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Текст') }}" value="{{ old('text') }}"
-                                            >
+                                           placeholder="{{ __('Текст') }}" value="{{ $item->text }}"
+                                    >
 
                                     @if ($errors->has('text'))
                                         <span class="invalid-feedback" role="alert">
@@ -83,8 +83,8 @@
                                     <label class="form-control-label" for="input-link">{{ __('Ссылка кнопки') }}</label>
                                     <input type="text" name="link" id="input-link"
                                            class="form-control form-control-alternative{{ $errors->has('link') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Ссылка кнопки') }}" value="{{ old('link') }}"
-                                            >
+                                           placeholder="{{ __('Ссылка кнопки') }}" value="{{ $item->link }}"
+                                    >
 
                                     @if ($errors->has('link'))
                                         <span class="invalid-feedback" role="alert">
@@ -99,7 +99,7 @@
                                            for="input-name_place">{{ __('Место проведения') }}</label>
                                     <input type="text" name="name_place" id="input-name_place"
                                            class="form-control form-control-alternative{{ $errors->has('name_place') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Место проведения') }}" value="{{ old('name_place') }}"
+                                           placeholder="{{ __('Место проведения') }}" value="{{ $item->name_place }}"
                                     >
 
                                     @if ($errors->has('name_place'))
@@ -113,7 +113,7 @@
                                            for="input-date">{{ __('Дата проведения') }}</label>
                                     <input type="text" name="date" id="input-date"
                                            class="form-control form-control-alternative{{ $errors->has('date') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Дата проведения') }}" value="{{ old('date') }}"
+                                           placeholder="{{ __('Дата проведения') }}" value="{{  $item->date  }}"
                                     >
 
                                     @if ($errors->has('date'))
@@ -130,7 +130,7 @@
                                     <input type="file"
                                            name="file" id="input-url"
                                            class="form-control  image form-control-alternative{{ $errors->has('url') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Файл') }}" value="{{ old('url') }}"
+                                           placeholder="{{ __('Файл') }}" value="{{  $item->url  }}"
                                     >
 
                                     @if ($errors->has('url'))
@@ -145,6 +145,7 @@
                                         <input type="hidden"
                                                name="url"
                                                id="input-url-val"
+                                               value="{{  $item->url  }}"
                                                class="form-control form-control-alternative "
                                         >
                                     </div>

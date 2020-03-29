@@ -20,7 +20,7 @@
         <link type="text/css" href="{{ asset('/css/app.css') }}" rel="stylesheet">
         {{--<link type="text/css" href="{{ asset('/css/select2.min.css') }}" rel="stylesheet">--}}
         {{--<link type="text/css" href="{{ asset('/css/selectize.bootstrap3.css') }}" rel="stylesheet">--}}
-        {{--<link type="text/css" href="{{ asset('/css/datepicker.min.css') }}" rel="stylesheet">--}}
+        <link type="text/css" href="{{ asset('/css/datepicker.min.css') }}" rel="stylesheet">
         <link type="text/css" href="{{ asset('/css/admin.css') }}" rel="stylesheet">
         <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
         {{--<script src="{{ asset('/js/jquery.js') }}"></script>--}}
@@ -52,7 +52,7 @@
         
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
-        {{--<script src="{{ asset('js/datepicker.min.js')}}"></script>--}}
+        <script src="{{ asset('js/datepicker.min.js')}}"></script>
         {{--<script src="{{ asset('js/select2.min.js') }}"></script>--}}
         <!--   script app -->
         <script src="{{ asset('js/default.js')}}"></script>

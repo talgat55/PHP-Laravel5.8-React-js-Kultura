@@ -9,6 +9,11 @@ $(document).ready(function () {
         }
     });
 
+    //  datepicker
+    $('#input-date').datepicker({
+        clearButton: true
+    });
+
 
 });
 

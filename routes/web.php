@@ -21,7 +21,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/upload-images/upload','AdminController@upload');
     Route::get('/home-slider', 'HomeSliderController@index')->name('homeSliderIndex');
     Route::match(['get', 'post'], '/home-slider/create', ['as' => 'homeSliderCreate', 'uses' => 'HomeSliderController@create']);
-    Route::get('/home-slider/{id}/delete', 'HomeSliderController@delete')->name('homeSliderDelete');
+    Route::delete('/home-slider/{id}/delete', 'HomeSliderController@delete')->name('homeSliderDelete');
     Route::match(['get', 'post'], '/home-slider/{id}/edit', ['as' => 'homeSliderEdit', 'uses' => 'HomeSliderController@edit']);
 
 });

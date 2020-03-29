@@ -17,10 +17,10 @@ class CreateTableHomeSliders extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('url');
-            $table->string('name_place');
-            $table->string('text');
-            $table->string('link');
-            $table->date('date');
+            $table->string('name_place')->nullable();
+            $table->string('text')->nullable();
+            $table->string('link')->nullable();
+            $table->date('date')->nullable();
             $table->integer('sort');
             $table->boolean('status')->default(1);
             $table->timestamps();

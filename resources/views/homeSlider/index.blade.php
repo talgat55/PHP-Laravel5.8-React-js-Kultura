@@ -9,7 +9,7 @@
                 <div class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
-                            <div class="col-lg-8 col-sm-12 text-lg-right text-sm-left">
+                            <div class="col-lg-8 col-sm-12 text-left text-sm-left">
                                 <h3 class="mb-0">{{ __('Слайдер на главной странице') }}</h3>
                             </div>
                             <div class="col-lg-4 col-sm-12 text-lg-right text-sm-left">
@@ -37,6 +37,7 @@
                             <thead class="thead-light">
                             <tr>
                                 <th scope="col">{{ __('Заголовок') }}</th>
+                                <th scope="col">{{ __('Изображение') }}</th>
                                 <th scope="col">{{ __('Дата') }}</th>
                                 <th scope="col">{{ __('Сатус') }}</th>
                                 <th scope="col">{{ __('Сортировка') }}</th>
@@ -47,6 +48,9 @@
                             @foreach ($items as $item)
                                 <tr>
                                     <td>{{ $item->name }}</td>
+                                    <td>
+                                        <img style="max-width: 200px;" src="{{ asset($item->url) }}"  />
+                                    </td>
                                     <td> {{\Carbon\Carbon::parse($item->updated_at)->format('d.m.Y')   }} </td>
                                     <td> {{  $item->status  }} </td>
                                     <td> {{  $item->sort  }} </td>
