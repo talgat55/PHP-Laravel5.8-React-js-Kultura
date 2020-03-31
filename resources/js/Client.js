@@ -1,46 +1,26 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
-import {Provider} from 'react-redux';
-import {compose, createStore, applyMiddleware} from "redux";
-import createSagaMiddleware from 'redux-saga'
-import { introSaga } from './sagas/sagas'
-import {rootReducer} from "./redux/rootReducer";
+import Header from "./components/Client/elements/Header/Header";
+import {connect} from 'react-redux';
+import {fetchSettingsData} from "./redux/actions";
 
-export default class Client extends Component {
+ class Client extends Component {
+     constructor(props) {
+         super(props);
+
+     }
+    componentDidMount() {
+        this.props.fetchSettingsData();
+    }
     render() {
         return (
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <div className="card">
-                            <div className="card-header">Example Component</div>
-                            adwdawd
-                            <div className="card-body">I'm an example component!</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <>
+                <Header/>
+            </>
         );
     }
 }
-
-const saga = createSagaMiddleware();
-
-
-const store = createStore(
-    rootReducer,
-    compose(
-        applyMiddleware(
-            saga,
-        ),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-
-    )
-);
-saga.run(introSaga);
-render(
-    <Provider store={store}>
-        <Client/>
-    </Provider>
-    , document.getElementById('root'));
+const mapDispatchToProps = {
+    fetchSettingsData
+};
+export default connect(null,mapDispatchToProps)(Client);
 
