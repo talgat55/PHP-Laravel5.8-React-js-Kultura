@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 import SearchBox from "../SearchBox/SearchBox";
+import VisualImpaired from "../VisualImpaired/VisualImpaired";
+import SocLinks from "../SocLinks/SocLinks";
 
 const Header = (props) => {
 
@@ -21,8 +23,12 @@ const Header = (props) => {
                                 )
                             }
                         </div>
-                        <div  className="col-12 col-md-6 col-lg-4">
+                        <div  className="header__search-top col-12 col-md-6 col-lg-4">
                             <SearchBox/>
+                        </div>
+                        <div  className="header__add-block-top col-12 col-md-6 col-lg-4">
+                            <VisualImpaired/>
+                            <SocLinks/>
                         </div>
 
                     </div>
@@ -37,9 +43,20 @@ const HeaderComponent = styled.header`
     background-image: -webkit-linear-gradient(0deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);
     background-image: linear-gradient(90deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);
     padding: 19px 0;
-    .header__top .row{
-      align-items: center;
+    .header{
+      &__top {
+          .row{
+            align-items: center;
+          } 
+      }
+      &__add-block-top{
+        display: flex;
+        justify-content: flex-end;
+      }
     }
+     
+    
+    
 `;
 
 const mapStateToProps = state => {

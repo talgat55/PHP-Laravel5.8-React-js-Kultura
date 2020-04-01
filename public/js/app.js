@@ -75843,8 +75843,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SearchBox/SearchBox */ "./resources/js/components/Client/elements/SearchBox/SearchBox.jsx");
+/* harmony import */ var _VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../VisualImpaired/VisualImpaired */ "./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx");
+/* harmony import */ var _SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SocLinks/SocLinks */ "./resources/js/components/Client/elements/SocLinks/SocLinks.jsx");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    background-image: -webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#1f1b2f),color-stop(.395,#252d45),color-stop(.667,#285a6c),color-stop(.998,#24838a));\n    background-image: -webkit-linear-gradient(0deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    background-image: linear-gradient(90deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    padding: 19px 0;\n    .header__top .row{\n      align-items: center;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-image: -webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#1f1b2f),color-stop(.395,#252d45),color-stop(.667,#285a6c),color-stop(.998,#24838a));\n    background-image: -webkit-linear-gradient(0deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    background-image: linear-gradient(90deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    padding: 19px 0;\n    .header{\n      &__top {\n          .row{\n            align-items: center;\n          } \n      }\n      &__add-block-top{\n        display: flex;\n        justify-content: flex-end;\n      }\n    }\n     \n    \n    \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -75854,6 +75856,8 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
 
 
 
@@ -75874,8 +75878,10 @@ var Header = function Header(props) {
     src: logo_url,
     alt: "\u041B\u043E\u0433\u043E\u0442\u0438\u043F"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-md-6 col-lg-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_3__["default"], null))))));
+    className: "header__search-top col-12 col-md-6 col-lg-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header__add-block-top col-12 col-md-6 col-lg-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_5__["default"], null))))));
 };
 
 var HeaderComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header(_templateObject());
@@ -75935,6 +75941,143 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   }))));
 });
 var SearchBoxComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/elements/SocLinks/SocLinks.jsx":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/Client/elements/SocLinks/SocLinks.jsx ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _static_facebook_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../static/facebook.png */ "./resources/js/static/facebook.png");
+/* harmony import */ var _static_facebook_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_facebook_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _static_vk_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../static/vk.png */ "./resources/js/static/vk.png");
+/* harmony import */ var _static_vk_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_static_vk_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _static_instagram_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../static/instagram.png */ "./resources/js/static/instagram.png");
+/* harmony import */ var _static_instagram_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_static_instagram_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _static_telegram_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../static/telegram.png */ "./resources/js/static/telegram.png");
+/* harmony import */ var _static_telegram_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_static_telegram_png__WEBPACK_IMPORTED_MODULE_6__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  display: flex;\n  li{\n    list-style: none; \n  }\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+
+
+var SocLinks = function SocLinks(props) {
+  var _props$data = props.data,
+      linkVK = _props$data.soc_link_vk,
+      linkFb = _props$data.soc_link_fb,
+      linkInst = _props$data.soc_link_inst,
+      linkTG = _props$data.soc_link_telegram;
+  var linksSoc = [{
+    id: '1',
+    link: linkFb,
+    url: _static_facebook_png__WEBPACK_IMPORTED_MODULE_3___default.a
+  }, {
+    id: '2',
+    link: linkVK,
+    url: _static_vk_png__WEBPACK_IMPORTED_MODULE_4___default.a
+  }, {
+    id: '3',
+    link: linkTG,
+    url: _static_telegram_png__WEBPACK_IMPORTED_MODULE_6___default.a
+  }, {
+    id: '4',
+    link: linkInst,
+    url: _static_instagram_png__WEBPACK_IMPORTED_MODULE_5___default.a
+  }];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SocLinksComponent, {
+    className: "link-to-social"
+  }, linksSoc.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: item.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      target: "_blank",
+      href: item.link
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: item.url,
+      alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
+    })));
+  }));
+};
+
+var SocLinksComponent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul(_templateObject());
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    data: state.settings.data
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(SocLinks));
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _static_eye_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../static/eye.png */ "./resources/js/static/eye.png");
+/* harmony import */ var _static_eye_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_static_eye_png__WEBPACK_IMPORTED_MODULE_2__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  transition: all .3s;\n  &:hover{\n    opacity: .6;\n    text-decoration: none;\n  }\n  .bvi-class-wrapper{\n    display: flex;\n    align-items: center;\n    img{\n      height: 13px;\n    }\n  }\n  img{\n    margin-right: 5px;\n  } \n  .bvi-class__text{\n    font-family: 'Open Sans', sans-serif;\n    font-weight: 700;\n    font-size: 14px;\n    line-height: 20px;\n    margin-left: 8px;\n    color: #fff;\n    text-transform: uppercase;\n    border-bottom: 1.2px solid #fff;\n    cursor: pointer;\n  }\n  \n \n\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BVIComponent, {
+    href: "#",
+    className: "bvi-class"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bvi-class-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _static_eye_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+    alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bvi-class__text"
+  }, "\u0412\u0415\u0420\u0421\u0418\u042F \u0414\u041B\u042F \u0421\u041B\u0410\u0411\u041E\u0412\u0418\u0414\u042F\u0429\u0418\u0425")));
+});
+var BVIComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject());
 
 /***/ }),
 
@@ -76109,6 +76252,39 @@ function sagaGetSettings() {
 
 /***/ }),
 
+/***/ "./resources/js/static/eye.png":
+/*!*************************************!*\
+  !*** ./resources/js/static/eye.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/eye.png?a648ba2126a213b4b34949cb4d8b3261";
+
+/***/ }),
+
+/***/ "./resources/js/static/facebook.png":
+/*!******************************************!*\
+  !*** ./resources/js/static/facebook.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/facebook.png?ee5ae604e9f64be7f317ea398dc2e8a4";
+
+/***/ }),
+
+/***/ "./resources/js/static/instagram.png":
+/*!*******************************************!*\
+  !*** ./resources/js/static/instagram.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/instagram.png?80051c5386c0ad3f71887f943ad65634";
+
+/***/ }),
+
 /***/ "./resources/js/static/search.png":
 /*!****************************************!*\
   !*** ./resources/js/static/search.png ***!
@@ -76117,6 +76293,28 @@ function sagaGetSettings() {
 /***/ (function(module, exports) {
 
 module.exports = "/images/search.png?73b3217913c64a4de21d044062b914e4";
+
+/***/ }),
+
+/***/ "./resources/js/static/telegram.png":
+/*!******************************************!*\
+  !*** ./resources/js/static/telegram.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/telegram.png?33e84cad5833d87c943c36a339004193";
+
+/***/ }),
+
+/***/ "./resources/js/static/vk.png":
+/*!************************************!*\
+  !*** ./resources/js/static/vk.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/vk.png?36846d23d3f7e119367fdae02c8914e0";
 
 /***/ }),
 
