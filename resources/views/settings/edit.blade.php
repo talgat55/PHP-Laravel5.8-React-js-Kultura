@@ -77,7 +77,7 @@
 
                                 <div class="form-group{{ $errors->has('name_place') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-soc_link_telegram">{{ __('Текст блока  О нас') }}</label>
-                                    <textarea name="about_info" class="editor">{{ $item->about_info }}</textarea>
+                                    <textarea name="about_info"    placeholder="Введите текст"  class="editor">{{ $item->about_info }}</textarea>
 
                                 </div>
 
@@ -182,7 +182,7 @@
                                 ]
                             },
                             licenseKey: '',
-
+                            placeholder: 'Введите текст'
                         } )
                         .then( editor => {
                             window.editor = editor;

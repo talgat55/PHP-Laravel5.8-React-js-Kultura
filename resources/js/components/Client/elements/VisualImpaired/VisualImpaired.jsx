@@ -17,6 +17,7 @@ export default () => {
 const BVIComponent = styled.a`
   display: inline-block;
   transition: all .3s;
+  margin: 0 0 15px auto;
   &:hover{
     opacity: .6;
     text-decoration: none;

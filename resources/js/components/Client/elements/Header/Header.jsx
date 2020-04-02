@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import SearchBox from "../SearchBox/SearchBox";
 import VisualImpaired from "../VisualImpaired/VisualImpaired";
 import SocLinks from "../SocLinks/SocLinks";
+import TopNav from "../TopNav/TopNav";
 
 const Header = (props) => {
 
@@ -23,12 +24,13 @@ const Header = (props) => {
                                 )
                             }
                         </div>
-                        <div  className="header__search-top col-12 col-md-6 col-lg-4">
+                        <div className="header__search-top col-12 col-md-6 col-lg-4">
                             <SearchBox/>
                         </div>
-                        <div  className="header__add-block-top col-12 col-md-6 col-lg-4">
-                            <VisualImpaired/>
-                            <SocLinks/>
+                        <div className="header__add-block-top col-12 col-md-6 col-lg-4">
+                                <VisualImpaired/>
+                                <SocLinks/>
+                                <TopNav/>
                         </div>
 
                     </div>
@@ -52,6 +54,8 @@ const HeaderComponent = styled.header`
       &__add-block-top{
         display: flex;
         justify-content: flex-end;
+        flex-direction: column;
+        text-align: right;
       }
     }
      

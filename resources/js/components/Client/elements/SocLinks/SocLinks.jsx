@@ -57,6 +57,7 @@ const SocLinksComponent = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: flex-end;
   li{
     list-style: none; 
   }

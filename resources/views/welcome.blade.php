@@ -15,7 +15,7 @@
     <body>
         <div id="root"></div>
         <script src="{{ mix('/js/app.js') }}"></script>
-
+        <link type="text/css" href="{{ asset('/css/fonts.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     </body>
 </html>
