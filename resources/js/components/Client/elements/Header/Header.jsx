@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
+import FadeIn from "react-fade-in";
 import SearchBox from "../SearchBox/SearchBox";
 import VisualImpaired from "../VisualImpaired/VisualImpaired";
 import SocLinks from "../SocLinks/SocLinks";
@@ -20,7 +21,11 @@ const Header = (props) => {
                             {
                                 logo_url &&
                                 (
-                                    <img src={logo_url} alt="Логотип"/>
+                                    <FadeIn>
+                                        <a href="/">
+                                            <img src={logo_url} alt="Логотип"/>
+                                        </a>
+                                    </FadeIn>
                                 )
                             }
                         </div>
@@ -28,9 +33,9 @@ const Header = (props) => {
                             <SearchBox/>
                         </div>
                         <div className="header__add-block-top col-12 col-md-6 col-lg-4">
-                                <VisualImpaired/>
-                                <SocLinks/>
-                                <TopNav/>
+                            <VisualImpaired/>
+                            <SocLinks/>
+                            <TopNav/>
                         </div>
 
                     </div>
