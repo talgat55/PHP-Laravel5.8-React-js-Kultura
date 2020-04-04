@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/get-settings', 'ApiSettingsThemeController@get')->name('apiGetSettings');
+Route::get('/get-menus', 'ApiSettingsThemeController@get')->name('apiGetMenus');
