@@ -103,6 +103,11 @@
                         <i class="ni ni-app text-primary text-orange"></i> {{ __('Настройки сайта') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('menuIndex') }}">
+                        <i class="ni ni-align-center text-primary text-yellow"></i> {{ __('Меню') }}
+                    </a>
+                </li>
 
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}

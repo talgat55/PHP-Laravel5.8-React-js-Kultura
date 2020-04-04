@@ -24,6 +24,10 @@ Route::prefix('admin')->group(function () {
     Route::delete('/home-slider/{id}/delete', 'HomeSliderController@delete')->name('homeSliderDelete');
     Route::match(['get', 'post'], '/home-slider/{id}/edit', ['as' => 'homeSliderEdit', 'uses' => 'HomeSliderController@edit']);
 
+    Route::get('/menus', 'MenuController@index')->name('menuIndex');
+    Route::match(['get', 'post'], '/menus/create', ['as' => 'menuCreate', 'uses' => 'MenuController@create']);
+    Route::match(['get', 'post'], '/menus/{id}/edit', ['as' => 'menuEdit', 'uses' => 'MenuController@edit']);
+    Route::delete('/menus/{id}/delete', 'MenuController@delete')->name('menuDelete');
 
     Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
 
