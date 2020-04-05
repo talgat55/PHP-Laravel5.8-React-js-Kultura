@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchSettingsData, fetchMenus} from "./redux/actions";
+import {fetchInitialData} from "./redux/actions";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./components/Client/pages/Home";
 
@@ -10,8 +10,9 @@ class Client extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchSettingsData();
-        this.props.fetchMenus()
+        this.props.fetchInitialData();
+        // this.props.fetchSettingsData();
+        // this.props.fetchMenus()
     }
 
     render() {
@@ -27,8 +28,7 @@ class Client extends Component {
 }
 
 const mapDispatchToProps = {
-    fetchSettingsData,
-    fetchMenus
+    fetchInitialData
 
 };
 export default connect(null, mapDispatchToProps)(Client);

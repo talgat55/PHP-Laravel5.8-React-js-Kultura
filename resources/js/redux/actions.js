@@ -1,4 +1,4 @@
-import {GET_MENUS, GET_SETTINGS_DATA} from "./types";
+import {GET_INITIAL_DATA, GET_MENUS, GET_SETTINGS_DATA} from "./types";
 
 
 export function fetchSettingsData() {
@@ -10,6 +10,13 @@ export function fetchSettingsData() {
 export function fetchMenus() {
     return {
         type: GET_MENUS
+    }
+}
+
+
+export function fetchInitialData() {
+    return {
+        type: GET_INITIAL_DATA
     }
 }
 

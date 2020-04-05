@@ -85891,8 +85891,8 @@ var Client = /*#__PURE__*/function (_Component) {
   _createClass(Client, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchSettingsData();
-      this.props.fetchMenus();
+      this.props.fetchInitialData(); // this.props.fetchSettingsData();
+      // this.props.fetchMenus()
     }
   }, {
     key: "render",
@@ -85912,8 +85912,7 @@ var Client = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 var mapDispatchToProps = {
-  fetchSettingsData: _redux_actions__WEBPACK_IMPORTED_MODULE_2__["fetchSettingsData"],
-  fetchMenus: _redux_actions__WEBPACK_IMPORTED_MODULE_2__["fetchMenus"]
+  fetchInitialData: _redux_actions__WEBPACK_IMPORTED_MODULE_2__["fetchInitialData"]
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(Client));
 
@@ -86777,13 +86776,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./resources/js/redux/actions.js ***!
   \***************************************/
-/*! exports provided: fetchSettingsData, fetchMenus */
+/*! exports provided: fetchSettingsData, fetchMenus, fetchInitialData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSettingsData", function() { return fetchSettingsData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMenus", function() { return fetchMenus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchInitialData", function() { return fetchInitialData; });
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./resources/js/redux/types.js");
 
 function fetchSettingsData() {
@@ -86794,6 +86794,11 @@ function fetchSettingsData() {
 function fetchMenus() {
   return {
     type: _types__WEBPACK_IMPORTED_MODULE_0__["GET_MENUS"]
+  };
+}
+function fetchInitialData() {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_0__["GET_INITIAL_DATA"]
   };
 }
 
@@ -86902,7 +86907,7 @@ var settingsReducer = function settingsReducer() {
 /*!*************************************!*\
   !*** ./resources/js/redux/types.js ***!
   \*************************************/
-/*! exports provided: GET_SETTINGS_DATA, SET_SETTINGS_DATA, SET_MENU, GET_MENUS */
+/*! exports provided: GET_SETTINGS_DATA, SET_SETTINGS_DATA, SET_MENU, GET_MENUS, GET_INITIAL_DATA */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -86911,10 +86916,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_SETTINGS_DATA", function() { return SET_SETTINGS_DATA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_MENU", function() { return SET_MENU; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_MENUS", function() { return GET_MENUS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_INITIAL_DATA", function() { return GET_INITIAL_DATA; });
 var GET_SETTINGS_DATA = 'APP/GET_SETTINGS_DATA';
 var SET_SETTINGS_DATA = 'APP/SET_SETTINGS_DATA';
 var SET_MENU = 'APP/SET_MENU';
 var GET_MENUS = 'APP/GET_MENUS';
+var GET_INITIAL_DATA = 'APP/GET_INITIAL_DATA';
 
 /***/ }),
 
@@ -86934,11 +86941,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/types */ "./resources/js/redux/types.js");
 /* harmony import */ var _api_getSettings__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../api/getSettings */ "./resources/js/api/getSettings.js");
 /* harmony import */ var _api_getMenus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../api/getMenus */ "./resources/js/api/getMenus.js");
+/* harmony import */ var _redux_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../redux/actions */ "./resources/js/redux/actions.js");
 
 
 var _marked = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(introSaga),
-    _marked2 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(sagaGetSettings),
-    _marked3 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(sagaGetMenu);
+    _marked2 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(sagaGetInitialData),
+    _marked3 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(sagaGetSettings),
+    _marked4 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(sagaGetMenu);
+
 
 
 
@@ -86951,13 +86961,17 @@ function introSaga() {
         case 0:
           console.log('Hello Sagas!');
           _context.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_redux_types__WEBPACK_IMPORTED_MODULE_2__["GET_SETTINGS_DATA"], sagaGetSettings);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_redux_types__WEBPACK_IMPORTED_MODULE_2__["GET_INITIAL_DATA"], sagaGetInitialData);
 
         case 3:
           _context.next = 5;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_redux_types__WEBPACK_IMPORTED_MODULE_2__["GET_MENUS"], sagaGetMenu);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_redux_types__WEBPACK_IMPORTED_MODULE_2__["GET_SETTINGS_DATA"], sagaGetSettings);
 
         case 5:
+          _context.next = 7;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_redux_types__WEBPACK_IMPORTED_MODULE_2__["GET_MENUS"], sagaGetMenu);
+
+        case 7:
         case "end":
           return _context.stop();
       }
@@ -86965,63 +86979,58 @@ function introSaga() {
   }, _marked);
 }
 /*
-* Get settings theme
- */
+* Get initial data from API
+*/
 
-function sagaGetSettings() {
-  var payload;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function sagaGetSettings$(_context2) {
+function sagaGetInitialData() {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function sagaGetInitialData$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_api_getSettings__WEBPACK_IMPORTED_MODULE_3__["fetchSettings"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])(Object(_redux_actions__WEBPACK_IMPORTED_MODULE_5__["fetchSettingsData"])());
 
         case 3:
-          payload = _context2.sent;
-          _context2.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _redux_types__WEBPACK_IMPORTED_MODULE_2__["SET_SETTINGS_DATA"],
-            payload: payload
-          });
+          _context2.next = 5;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])(Object(_redux_actions__WEBPACK_IMPORTED_MODULE_5__["fetchMenus"])());
 
-        case 6:
-          _context2.next = 11;
+        case 5:
+          _context2.next = 10;
           break;
 
-        case 8:
-          _context2.prev = 8;
+        case 7:
+          _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
           console.log(_context2.t0);
 
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
     }
-  }, _marked2, null, [[0, 8]]);
+  }, _marked2, null, [[0, 7]]);
 }
 /*
-* Get menu
+* Get settings theme
  */
 
 
-function sagaGetMenu() {
+function sagaGetSettings() {
   var payload;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function sagaGetMenu$(_context3) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function sagaGetSettings$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.prev = 0;
           _context3.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_api_getMenus__WEBPACK_IMPORTED_MODULE_4__["getMenus"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_api_getSettings__WEBPACK_IMPORTED_MODULE_3__["fetchSettings"]);
 
         case 3:
           payload = _context3.sent;
           _context3.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _redux_types__WEBPACK_IMPORTED_MODULE_2__["SET_MENU"],
+            type: _redux_types__WEBPACK_IMPORTED_MODULE_2__["SET_SETTINGS_DATA"],
             payload: payload
           });
 
@@ -87040,6 +87049,45 @@ function sagaGetMenu() {
       }
     }
   }, _marked3, null, [[0, 8]]);
+}
+/*
+* Get menu
+ */
+
+
+function sagaGetMenu() {
+  var payload;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function sagaGetMenu$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          _context4.prev = 0;
+          _context4.next = 3;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_api_getMenus__WEBPACK_IMPORTED_MODULE_4__["getMenus"]);
+
+        case 3:
+          payload = _context4.sent;
+          _context4.next = 6;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _redux_types__WEBPACK_IMPORTED_MODULE_2__["SET_MENU"],
+            payload: payload
+          });
+
+        case 6:
+          _context4.next = 11;
+          break;
+
+        case 8:
+          _context4.prev = 8;
+          _context4.t0 = _context4["catch"](0);
+          console.log(_context4.t0);
+
+        case 11:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, _marked4, null, [[0, 8]]);
 }
 
 /***/ }),
