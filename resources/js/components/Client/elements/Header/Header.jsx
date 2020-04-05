@@ -6,6 +6,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import VisualImpaired from "../VisualImpaired/VisualImpaired";
 import SocLinks from "../SocLinks/SocLinks";
 import TopNav from "../TopNav/TopNav";
+import TopNavigation from "../Navigation/Top";
 
 const Header = (props) => {
 
@@ -14,8 +15,9 @@ const Header = (props) => {
     } = props.settingsData;
     return (
         <HeaderComponent>
-            <div className="container">
-                <div className="header__top">
+            <div className="header__top">
+                <div className="container">
+
                     <div className="row">
                         <div className="header__logo-top col-12 col-md-6 col-lg-4">
                             {
@@ -40,6 +42,12 @@ const Header = (props) => {
 
                     </div>
                 </div>
+
+            </div>
+            <div className="header__bottom">
+                <div className="container">
+                    <TopNavigation/>
+                </div>
             </div>
         </HeaderComponent>
     );
@@ -49,12 +57,16 @@ const HeaderComponent = styled.header`
     background-image: -webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#1f1b2f),color-stop(.395,#252d45),color-stop(.667,#285a6c),color-stop(.998,#24838a));
     background-image: -webkit-linear-gradient(0deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);
     background-image: linear-gradient(90deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);
-    padding: 19px 0;
+    
     .header{
       &__top {
+        padding: 19px 0;
           .row{
             align-items: center;
           } 
+      }
+      &__bottom{
+        background: #fff;
       }
       &__add-block-top{
         display: flex;

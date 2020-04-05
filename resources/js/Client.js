@@ -1,28 +1,35 @@
 import React, {Component} from 'react';
-import Header from "./components/Client/elements/Header/Header";
 import {connect} from 'react-redux';
-import {fetchSettingsData} from "./redux/actions";
-import Footer from "./components/Client/elements/Footer/Footer";
+import {fetchSettingsData, fetchMenus} from "./redux/actions";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./components/Client/pages/Home";
 
- class Client extends Component {
-     constructor(props) {
-         super(props);
+class Client extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-     }
     componentDidMount() {
         this.props.fetchSettingsData();
+        this.props.fetchMenus()
     }
+
     render() {
         return (
-            <>
-                <Header/>
-                <Footer/>
-            </>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact component={Error}/>
+                </Switch>
+            </Router>
         );
     }
 }
+
 const mapDispatchToProps = {
-    fetchSettingsData
+    fetchSettingsData,
+    fetchMenus
+
 };
-export default connect(null,mapDispatchToProps)(Client);
+export default connect(null, mapDispatchToProps)(Client);
 

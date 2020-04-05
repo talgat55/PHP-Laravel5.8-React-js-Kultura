@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import FadeIn from "react-fade-in";
 import SocLinks from "../SocLinks/SocLinks";
 import VisualImpaired from "../VisualImpaired/VisualImpaired";
+import BottomNavigation from "../Navigation/Bottom";
 
 const Footer = (props) => {
     const {
@@ -14,7 +15,7 @@ const Footer = (props) => {
         <FooterComponent>
             <div className="container">
                 <div className="row">
-                    <div className="footer__first col-12 col-sm-4">
+                    <div className="footer__first col-12 col-sm-5">
                         {
                             logo_url &&
                             (
@@ -28,8 +29,9 @@ const Footer = (props) => {
                         <SocLinks/>
                         <VisualImpaired/>
                     </div>
-                    <div className="footer__second col-12 col-sm-8">
-
+                    <div className="footer__second col-12 col-sm-7">
+                        <BottomNavigation/>
+                        <a className="bottom-copyright" target="_blank" title="Перейти на сайт разработчика" href="http://asmart-group.ru/">Сайт создан в IT-Company <span>ASMART</span></a>
                     </div>
                 </div>
             </div>
@@ -44,6 +46,19 @@ const FooterComponent = styled.footer`
     .link-to-social{
         justify-content: flex-start;
         margin: 10px 0 10px;
+    }
+    .bottom-copyright{
+          color: rgba(255, 255, 255, 0.8);
+          width: 100%;
+          text-align: right;
+          display: block;
+          margin-top: 20px;
+          span{
+            color: #9aca42;
+          }
+          &:hover{
+            text-decoraiton: underline;
+          }
     }
 `;
 
