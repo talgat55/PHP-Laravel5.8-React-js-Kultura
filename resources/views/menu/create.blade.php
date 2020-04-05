@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="{{ route('menuCreate') }}" enctype="multipart/form-data"
+                        <form  id="create-menu-form" method="post" action="{{ route('menuCreate') }}" enctype="multipart/form-data"
                               autocomplete="off">
                             @csrf
                             <h6 class="heading-small text-muted mb-4">{{ __('Информация') }}</h6>
