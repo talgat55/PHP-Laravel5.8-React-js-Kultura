@@ -19,4 +19,12 @@ class HomeSlider extends Model
     ];
 
 
+
+    /*
+     *  Return active sliders
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
 }

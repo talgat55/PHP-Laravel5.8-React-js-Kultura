@@ -11,8 +11,6 @@ class Client extends Component {
 
     componentDidMount() {
         this.props.fetchInitialData();
-        // this.props.fetchSettingsData();
-        // this.props.fetchMenus()
     }
 
     render() {
