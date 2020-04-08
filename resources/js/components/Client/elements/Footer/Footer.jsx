@@ -43,6 +43,7 @@ const FooterComponent = styled.footer`
     color: rgba(255, 255, 255, 0.65);
     font-size: 14px;
     padding: 35px 5px 30px;
+    position: relative;
     .link-to-social{
         justify-content: flex-start;
         margin: 10px 0 10px;
