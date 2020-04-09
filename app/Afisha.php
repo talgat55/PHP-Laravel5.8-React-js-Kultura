@@ -16,5 +16,7 @@ class Afisha extends Model
         'duration',
         'date_time_launch',
         'place_id',
+        'sort',
+        'status',
     ];
 }

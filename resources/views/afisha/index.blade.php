@@ -37,9 +37,10 @@
                             <thead class="thead-light">
                             <tr>
                                 <th scope="col">{{ __('Название') }}</th>
-                                <th scope="col">{{ __('Урл') }}</th>
+                                <th scope="col">{{ __('Дата начала') }}</th>
                                 <th scope="col">{{ __('Статус') }}</th>
                                 <th scope="col">{{ __('Сортировка') }}</th>
+                                <th scope="col">{{ __('Место проведения') }}</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>
@@ -47,9 +48,10 @@
                             @foreach ($items as $item)
                                 <tr>
                                     <td>{{ $item->name }}</td>
-                                    <td>  {{ $item->link }} </td>
+                                    <td>  {{ $item->date_time_launch }} </td>
                                     <td> {{  $item->status  }} </td>
                                     <td> {{  $item->sort  }} </td>
+                                    <td> {{  $item->place_id  }} </td>
                                     <td class="text-right">
                                         {{--@if (!Auth::user()->hasRole("viewer"))--}}
                                         <div class="dropdown">
@@ -58,13 +60,13 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <form action="{{ route('menuDelete', $item->id) }}"
+                                                <form action="{{ route('afishaDelete', $item->id) }}"
                                                       method="post">
                                                     @csrf
                                                     @method('delete')
 
                                                     <a class="dropdown-item"
-                                                       href="{{ route('menuEdit', $item->id) }}">{{ __('Редактировать') }}</a>
+                                                       href="{{ route('afishaEdit', $item->id) }}">{{ __('Редактировать') }}</a>
 
                                                     <button type="button" class="dropdown-item"
                                                             onclick="confirm('{{ __("Вы уверены что хотите удалить запись?") }}') ? this.parentElement.submit() : ''">

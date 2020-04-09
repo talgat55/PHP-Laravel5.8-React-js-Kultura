@@ -20,6 +20,8 @@ class CreateTableAfisha extends Migration
             $table->longText('text');
             $table->string('image');
             $table->string('age_limit');
+            $table->boolean('status');
+            $table->integer('sort');
             $table->string('duration');
             $table->dateTime('date_time_launch', 0);
             $table->integer('place_id')->unsigned()->nullable();

@@ -19,6 +19,8 @@ class CreateTablePlaces extends Migration
             $table->string('image');
             $table->string('address');
             $table->string('phone');
+            $table->boolean('status');
+            $table->integer('sort');
             $table->string('web_site_link');
             $table->longText('text');
             $table->integer('category_place_id');
