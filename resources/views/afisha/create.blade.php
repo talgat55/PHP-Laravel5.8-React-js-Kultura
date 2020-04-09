@@ -138,8 +138,9 @@
                                            for="input-place_id">{{ __('Место проведения') }}</label>
 
                                     <select class="form-control" id="select-status" name="place_id">
-                                        <option selected value="none">Нет</option>
-                                        <option value="1">1</option>
+                                        @foreach ($places as $place)
+                                            <option value="{{$place->id}}">{{$place->name}}</option>
+                                        @endforeach
                                     </select>
 
                                     @if ($errors->has('place_id'))
@@ -152,7 +153,8 @@
                                 <div class="form-group{{ $errors->has('date_time_launch') ? ' has-danger' : '' }}">
                                     <label class="form-control-label"
                                            for="input-date">{{ __('Начало') }}</label>
-                                    <input type="text" name="date_time_launch" id="input-date"
+                                    <input type="text" name="date_time_launch" id="input-date-time"
+
                                            class="form-control form-control-alternative{{ $errors->has('date_time_launch') ? ' is-invalid' : '' }}"
                                            placeholder="{{ __('Начало') }}" value="{{ old('date_time_launch') }}"
                                     >

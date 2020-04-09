@@ -13,6 +13,11 @@ $(document).ready(function () {
     $('#input-date').datepicker({
         clearButton: true
     });
+    $('#input-date-time').datepicker({
+        clearButton: true,
+        dateFormat: 'yyyy-mm-dd',
+        timepicker: true
+    });
 
 
 });

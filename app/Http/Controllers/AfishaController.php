@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Afisha;
+use App\Place;
 use Illuminate\Http\Request;
 
 class AfishaController extends Controller
@@ -14,7 +15,8 @@ class AfishaController extends Controller
      */
     public function index()
     {
-        $items = Afisha::paginate('50');
+        $items = Afisha::activeWithPlaces();
+
         return view('afisha.index', compact('items'));
     }
 
@@ -30,7 +32,8 @@ class AfishaController extends Controller
             $model->save();
             return redirect()->route('afishaIndex')->withStatus(__('Запись создана.'));
         }
-        return view('afisha.create');
+        $places = Place::all();
+        return view('afisha.create', compact('places'));
     }
 
     /**
@@ -47,7 +50,8 @@ class AfishaController extends Controller
             $item->save();
             return redirect()->route('afishaIndex')->withStatus(__('Запись успешно отредкатирована.'));
         }
-        return view('afisha.edit', compact('item'));
+        $places = Place::all();
+        return view('afisha.edit', compact('item', 'places'));
     }
   /*
   * Delete row

@@ -51,7 +51,7 @@
                                     <td>  {{ $item->date_time_launch }} </td>
                                     <td> {{  $item->status  }} </td>
                                     <td> {{  $item->sort  }} </td>
-                                    <td> {{  $item->place_id  }} </td>
+                                    <td> {{  $item->places->name  }}  </td>
                                     <td class="text-right">
                                         {{--@if (!Auth::user()->hasRole("viewer"))--}}
                                         <div class="dropdown">

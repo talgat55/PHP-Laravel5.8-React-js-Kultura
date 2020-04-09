@@ -19,4 +19,15 @@ class Afisha extends Model
         'sort',
         'status',
     ];
+
+
+    function scopeActiveWithPlaces($query){
+        return $query->where('status', 1)->with('places') ->paginate('50');
+    }
+
+
+    public function places()
+    {
+        return $this->belongsTo('App\Place', 'place_id', 'id');
+    }
 }
