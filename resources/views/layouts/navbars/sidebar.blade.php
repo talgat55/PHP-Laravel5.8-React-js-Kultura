@@ -108,7 +108,11 @@
                         <i class="ni ni-align-center text-primary text-yellow"></i> {{ __('Меню') }}
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('afishaIndex') }}">
+                        <i class="ni ni-tv-2 text-primary  "></i> {{ __('Афиша') }}
+                    </a>
+                </li>
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}
                 {{--<a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button"--}}

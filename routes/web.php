@@ -31,7 +31,13 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/settings/{id?}', 'SettingsController@index')->name('settingsIndex');
     Route::post('/settings/update/{id?}', 'SettingsController@store')->name('settingsUpdate');
-//    Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
-//    Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
+
+
+    Route::get('/afisha', 'AfishaController@index')->name('afishaIndex');
+    Route::match(['get', 'post'], '/afisha/create', ['as' => 'afishaCreate', 'uses' => 'AfishaController@create']);
+    Route::match(['get', 'post'], '/afisha/{id}/edit', ['as' => 'afishaEdit', 'uses' => 'AfishaController@edit']);
+    Route::delete('/afisha/{id}/delete', 'AfishaController@delete')->name('afishaDelete');
+
+
 
 });
