@@ -39,5 +39,13 @@ Route::prefix('admin')->group(function () {
     Route::delete('/afisha/{id}/delete', 'AfishaController@delete')->name('afishaDelete');
 
 
+    Route::get('/place', 'PlaceController@index')->name('placeIndex');
+    Route::match(['get', 'post'], '/place/create', ['as' => 'placeCreate', 'uses' => 'PlaceController@create']);
+    Route::match(['get', 'post'], '/place/{id}/edit', ['as' => 'placeEdit', 'uses' => 'PlaceController@edit']);
+    Route::delete('/place/{id}/delete', 'PlaceController@delete')->name('placeDelete');
+
+
+
+
 
 });

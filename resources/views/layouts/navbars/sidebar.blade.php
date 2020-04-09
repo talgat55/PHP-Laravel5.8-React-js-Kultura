@@ -113,6 +113,13 @@
                         <i class="ni ni-tv-2 text-primary  "></i> {{ __('Афиша') }}
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('placeIndex') }}">
+                        <i class="ni ni-pin-3 text-info "></i> {{ __('Места') }}
+                    </a>
+                </li>
+
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}
                 {{--<a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button"--}}

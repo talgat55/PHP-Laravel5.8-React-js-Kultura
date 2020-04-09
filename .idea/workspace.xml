@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="567f64c4-aab4-407e-af53-e64572852b38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/place/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/place/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/place/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Afisha.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Afisha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/afisha/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/afisha/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/afisha/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/afisha/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/afisha/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/afisha/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,56 +23,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="37" column="75" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="75" />
+            <state relative-caret-position="418">
+              <caret line="42" column="72" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AfishaController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="349">
+              <caret line="125" column="77" lean-forward="true" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PlaceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-437">
+              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
-                <element signature="e#40#55#0#PHP" expanded="true" />
+                <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Afisha.php">
+        <entry file="file://$PROJECT_DIR$/app/Place.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/afisha/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
+            <state relative-caret-position="437">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/afisha/edit.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/place/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="28" column="96" lean-forward="true" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
+            <state relative-caret-position="414">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/menu/edit.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/place/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="32" selection-end-column="118" />
+            <state relative-caret-position="349">
+              <caret line="143" column="59" selection-start-line="143" selection-start-column="59" selection-end-line="143" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -112,8 +111,8 @@
       <find>dataHomeSliders</find>
       <find>static/</find>
       <find>$item</find>
-      <find>status</find>
       <find>ClassicEditor</find>
+      <find>status</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,11 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Menus.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_04_02_035859_create_table_menus.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" />
-        <option value="$PROJECT_DIR$/resources/views/menu/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiMenuController.php" />
         <option value="$PROJECT_DIR$/tests/unit.suite.yml" />
         <option value="$PROJECT_DIR$/tests/unit/Menu/CreateMenuTest.php" />
@@ -164,8 +158,6 @@
         <option value="$PROJECT_DIR$/resources/views/settings/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SettingsController.php" />
         <option value="$PROJECT_DIR$/resources/views/settings/edit.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AfishaController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php" />
@@ -173,6 +165,13 @@
         <option value="$PROJECT_DIR$/resources/views/afisha/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Afisha.php" />
         <option value="$PROJECT_DIR$/resources/views/afisha/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Place.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PlaceController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/place/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/place/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/place/create.blade.php" />
       </list>
     </option>
   </component>
@@ -322,7 +321,7 @@
               <item name="KulturaReact" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="place" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -340,15 +339,15 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/js/redux" />
       <recent name="$PROJECT_DIR$/resources/js/api" />
       <recent name="$PROJECT_DIR$/resources/js/components/Client/elements/Navigation" />
       <recent name="$PROJECT_DIR$/resources/views/settings" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,12 +402,12 @@
       <workItem from="1586273958152" duration="12050000" />
       <workItem from="1586318680005" duration="606000" />
       <workItem from="1586365333987" duration="12086000" />
-      <workItem from="1586444652297" duration="3291000" />
+      <workItem from="1586444652297" duration="6895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143023000" />
+    <option name="totallyTimeSpent" value="146627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -441,29 +440,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cypress/integration/AdminPageMenuController.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/redux/settingsReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Client/elements/Navigation/TopNavigation" />
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Client/elements/Navigation/TopNavigation.jsx" />
-    <entry file="file://$PROJECT_DIR$/resources/js/redux/menusReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Client/elements/Navigation/Top.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
@@ -677,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiMenuController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -711,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/afisha/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1909">
@@ -725,34 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AfishaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="23" column="33" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="37" column="75" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/afisha/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
         </state>
       </provider>
     </entry>
@@ -767,13 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="123" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Afisha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -793,8 +724,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/afisha/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="28" column="96" lean-forward="true" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
+        <state relative-caret-position="247">
+          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/afisha/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Afisha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AfishaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="61" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="125" column="77" lean-forward="true" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/place/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="42" column="72" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PlaceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/place/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="143" column="59" selection-start-line="143" selection-start-column="59" selection-end-line="143" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/place/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
         </state>
       </provider>
     </entry>
