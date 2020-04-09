@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="{{ route('settingsUpdate', $item->id ) }}" enctype="multipart/form-data"
+                        <form method="post" action="{{ route('settingsUpdate', null ) }}" enctype="multipart/form-data"
                               autocomplete="off">
                             @csrf
                             <h6 class="heading-small text-muted mb-4">{{ __('Информация') }}</h6>
@@ -28,7 +28,7 @@
                                     <label class="form-control-label" for="input-soc_link_vk">{{ __('Ссылка на вк') }}</label>
                                     <input type="text" name="soc_link_vk" id="input-soc_link_vk"
                                            class="form-control form-control-alternative{{ $errors->has('soc_link_vk') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Ссылка на вк') }}" value="{{ $item->soc_link_vk }}"
+                                           placeholder="{{ __('Ссылка на вк') }}" value="{{ old('soc_link_vk') }}"
                                     >
 
                                     @if ($errors->has('soc_link_vk'))
@@ -41,7 +41,7 @@
                                     <label class="form-control-label" for="input-soc_link_fb">{{ __('Ссылка на fb') }}</label>
                                     <input type="text" name="soc_link_fb" id="input-soc_link_fb"
                                            class="form-control form-control-alternative{{ $errors->has('soc_link_fb') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Ссылка на fb') }}" value="{{ $item->soc_link_fb }}"
+                                           placeholder="{{ __('Ссылка на fb') }}" value="{{old('soc_link_fb') }}"
                                     >
                                     @if ($errors->has('soc_link_fb'))
                                         <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
                                     <label class="form-control-label" for="input-soc_link_inst">{{ __('Ссылка на inst') }}</label>
                                     <input type="text" name="soc_link_inst" id="input-soc_link_inst"
                                            class="form-control form-control-alternative{{ $errors->has('soc_link_inst') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Ссылка на inst') }}" value="{{ $item->soc_link_inst }}"
+                                           placeholder="{{ __('Ссылка на inst') }}" value="{{ old('soc_link_inst') }}"
                                     >
                                     @if ($errors->has('soc_link_inst'))
                                         <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                                     <label class="form-control-label" for="input-soc_link_telegram">{{ __('Ссылка на telegram') }}</label>
                                     <input type="text" name="soc_link_telegram" id="input-soc_link_telegram"
                                            class="form-control form-control-alternative{{ $errors->has('soc_link_telegram') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Ссылка на telegram') }}" value="{{ $item->soc_link_telegram }}"
+                                           placeholder="{{ __('Ссылка на telegram') }}" value="{{ old('soc_link_telegram') }}"
                                     >
                                     @if ($errors->has('soc_link_telegram'))
                                         <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
 
                                 <div class="form-group{{ $errors->has('name_place') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-soc_link_telegram">{{ __('Текст блока  О нас') }}</label>
-                                    <textarea name="about_info"    placeholder="Введите текст"  class="editor">{{ $item->about_info }}</textarea>
+                                    <textarea name="about_info"    placeholder="Введите текст"  class="editor">{{ old('about_info') }}</textarea>
 
                                 </div>
 
@@ -87,7 +87,7 @@
                                     <input type="file"
                                            name="file" id="input-url"
                                            class="form-control  image form-control-alternative{{ $errors->has('url') ? ' is-invalid' : '' }}"
-                                           placeholder="{{ __('Новый логотип') }}" value="{{  $item->url  }}"
+                                           placeholder="{{ __('Новый логотип') }}" value="{{  old('url')  }}"
                                     >
 
                                     @if ($errors->has('url'))
@@ -102,12 +102,12 @@
                                         <input type="hidden"
                                                name="logo_url"
                                                id="input-url-val"
-                                               value="{{  $item->logo_url  }}"
+                                               value="{{   old('logo_url')  }}"
                                                class="form-control form-control-alternative "
                                         >
                                     </div>
                                     <div class="image-preview">
-                                        <img src="{{ $item->logo_url }}" />
+                                        <img src="{{  old('logo_url') }}" />
                                     </div>
 
                                 </div>

@@ -29,6 +29,9 @@ Route::prefix('admin')->group(function () {
     Route::match(['get', 'post'], '/menus/{id}/edit', ['as' => 'menuEdit', 'uses' => 'MenuController@edit']);
     Route::delete('/menus/{id}/delete', 'MenuController@delete')->name('menuDelete');
 
-    Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
+    Route::get('/settings/{id?}', 'SettingsController@index')->name('settingsIndex');
+    Route::post('/settings/update/{id?}', 'SettingsController@store')->name('settingsUpdate');
+//    Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
+//    Route::match(['get', 'post'], '/settings/{id?}', ['as' => 'settingsIndex', 'uses' => 'SettingsController@index']);
 
 });
