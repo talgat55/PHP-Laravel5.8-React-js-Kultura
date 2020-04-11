@@ -1,26 +1,43 @@
-import React, {useState,useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from "../elements/Header/Header";
 import Footer from "../elements/Footer/Footer";
 import {fetchHomeSliders} from "../../../api/getHomeSliders";
+import {fetchRelatedAfisha} from "../../../api/getAfisha";
 import HomeSlider from "../elements/HomeSlider/HomeSlider";
+import AfishaBlock from "../elements/AfishaBlock/AfishaBlock";
+
 const Home = () => {
-    const [homeSliders , setHomeSliders] = useState([]);
-    useEffect(   () => {
+    const [homeSliders, setHomeSliders] = useState([]);
+    const [afishaSlides, setAfishaSlides] = useState([]);
+    useEffect(() => {
         const fetchData = async () => {
-            const data = await fetchHomeSliders();
-            setHomeSliders(data);
+            // get from api   home slider slides
+            const dataHomeSlides = await fetchHomeSliders();
+            setHomeSliders(dataHomeSlides);
+            // get from api related afisha slides
+            const dataAfisahSlides = await fetchRelatedAfisha();
+            setAfishaSlides(dataAfisahSlides);
+
+
+
         };
         fetchData();
 
         return () => {
             setHomeSliders([]);
+            setAfishaSlides([]);
         }
-    },[setHomeSliders]);
+
+    }, [setHomeSliders]);
+
     return (
         <>
             <Header/>
             <HomeSlider
                 sliders={homeSliders}
+            />
+            <AfishaBlock
+                sliders={afishaSlides}
             />
 
             <Footer/>
@@ -28,4 +45,4 @@ const Home = () => {
     )
 };
 
-export default  Home;
+export default Home;

@@ -108996,6 +108996,59 @@ Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WE
 
 /***/ }),
 
+/***/ "./resources/js/api/getAfisha.js":
+/*!***************************************!*\
+  !*** ./resources/js/api/getAfisha.js ***!
+  \***************************************/
+/*! exports provided: fetchRelatedAfisha */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchRelatedAfisha", function() { return fetchRelatedAfisha; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function fetchRelatedAfisha() {
+  return _fetchRelatedAfisha.apply(this, arguments);
+}
+
+function _fetchRelatedAfisha() {
+  _fetchRelatedAfisha = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    var response, json;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch('/api/get-afisha-related');
+
+          case 2:
+            response = _context.sent;
+            _context.next = 5;
+            return response.json();
+
+          case 5:
+            json = _context.sent;
+            return _context.abrupt("return", json);
+
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _fetchRelatedAfisha.apply(this, arguments);
+}
+
+/***/ }),
+
 /***/ "./resources/js/api/getHomeSliders.js":
 /*!********************************************!*\
   !*** ./resources/js/api/getHomeSliders.js ***!
@@ -109223,6 +109276,202 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! slick-carousel/slick/slick-theme.css */ "./node_modules/slick-carousel/slick/slick-theme.css");
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! slick-carousel/slick/slick.css */ "./node_modules/slick-carousel/slick/slick.css");
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Slide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Slide */ "./resources/js/components/Client/elements/AfishaBlock/Slide.jsx");
+/* harmony import */ var _Title_Subtitle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Title/Subtitle */ "./resources/js/components/Client/elements/Title/Subtitle.jsx");
+/* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../static/afisha-arr.png */ "./resources/js/static/afisha-arr.png");
+/* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../static/afisha-arr-mirror.png */ "./resources/js/static/afisha-arr-mirror.png");
+/* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Link/Link */ "./resources/js/components/Client/elements/Link/Link.jsx");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    padding: 55px 0;\n    .slider-wrapper{\n      width: 100%;\n      position: relative;\n    }\n    .afisha-sliders__arrows{\n        .button{\n          position: absolute;\n          top: 150px;\n          transition: all .3s;\n          &:hover{\n            opacity: .5;\n          }\n        }\n        \n        .right-arrow{\n            right: -40px;\n        }\n        .left-arrow{\n            left: -40px;\n        }\n    }\n    .afisha__link-bottom-wrapper{\n        display: table;\n        margin: 40px auto;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+
+
+
+
+
+
+
+
+var settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  slidesToShow: 4,
+  slidesToScroll: 1
+};
+
+var AfishaBlock = function AfishaBlock(_ref) {
+  var sliders = _ref.sliders;
+  var SliderInstance;
+
+  var next = function next(e) {
+    e.preventDefault();
+    SliderInstance.slickNext();
+  };
+
+  var prev = function prev(e) {
+    e.preventDefault();
+    SliderInstance.slickPrev();
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AfishaBlockComponent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title_Subtitle__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    title: "\u0412 \u0426\u0415\u041D\u0422\u0420\u0415 \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u042F"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
+    ref: function ref(e) {
+      return SliderInstance = e;
+    }
+  }, settings), sliders.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slide__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      key: item.id,
+      id: item.id,
+      name: item.name,
+      image: item.image,
+      date_time_launch: item.date_time_launch
+    });
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-sliders__arrows"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: "button  left-arrow",
+    onClick: prev
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9___default.a,
+    alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: "button  right-arrow",
+    onClick: next
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+    alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha__link-bottom-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    name: "\u0412\u0441\u044F \u0430\u0444\u0438\u0448\u0430",
+    link: "/afisha"
+  }))))));
+};
+
+var AfishaBlockComponent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject());
+AfishaBlock.propTypes = {
+  sliders: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array
+};
+/* harmony default export */ __webpack_exports__["default"] = (AfishaBlock);
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/elements/AfishaBlock/Slide.jsx":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/Client/elements/AfishaBlock/Slide.jsx ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  .afisha-slide{\n    position: relative;\n    margin: 42px 10px 10px 10px;\n      &__link{\n        display: inline-block;\n        width: 100%;\n        height: 100%;\n        position: relative;\n        &:hover .afisha-slide__overlay,\n        &:hover .afisha-slide__title{\n          opacity: 1;\n        }\n      }\n      &__date{\n        background: #fff;\n        box-sizing: border-box;\n        z-index: 9;\n        white-space: nowrap;\n        padding: 3px 26px;\n        position: absolute;\n        top: -21px;\n        box-shadow: 0px -8px 18px 0px #e0e0e0;\n        left: 50%;\n        border-radius: 42px;\n        font-family: \"Neo Sans Pro\";\n        font-size: 23px;\n        color: #12a69d;\n        transform: translateX(-50%);\n      }\n      &__title{\n        position: absolute;\n        z-index: 3;\n        top: 50%;\n        left: 0;\n        width: 100%; \n        padding: 0 10px;\n        text-align: center;\n        font-family: \"Neo Sans Pro\";\n        font-size: 25px;\n        font-weight: 400;\n        color: #fff;\n         transition: all .3s;\n         transform: translateY(-50%);\n         opacity: 0;\n      }\n      &__overlay{\n        position: absolute;\n        z-index: 2;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background: rgba(0,0,0,.4); \n        transition: all .3s; \n        opacity: 0;\n      }\n      &__image-block{\n        width: 260px;\n        height: 250px; \n        margin: 0 auto;\n      }\n      &__image{\n        background-repeat: no-repeat!important;\n        background-position: center center!important;\n        background-size: cover!important;\n        height: 100%;\n      }\n  \n  }\n  \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+moment__WEBPACK_IMPORTED_MODULE_2___default.a.locale('ru');
+
+var Slide = function Slide(_ref) {
+  var name = _ref.name,
+      image = _ref.image,
+      props = _objectWithoutProperties(_ref, ["name", "image"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SlideComponent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-slide"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-slide__date"
+  }, moment__WEBPACK_IMPORTED_MODULE_2___default()(props.date_time_launch).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-slide__image-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: "afisha-slide__link"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-slide__image",
+    style: {
+      backgroundImage: "url(".concat(image, ")")
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-slide__overlay"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-slide__title"
+  }, name)))));
+};
+
+var SlideComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (Slide);
+
+/***/ }),
+
 /***/ "./resources/js/components/Client/elements/Footer/Footer.jsx":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/Client/elements/Footer/Footer.jsx ***!
@@ -109402,7 +109651,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _static_slider_arr_mirror_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../static/slider-arr-mirror.png */ "./resources/js/static/slider-arr-mirror.png");
 /* harmony import */ var _static_slider_arr_mirror_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_slider_arr_mirror_png__WEBPACK_IMPORTED_MODULE_8__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 500px;\n  position: relative;\n\n   .home-sliders__arrows{\n      position: absolute;\n      top: 0;\n      width: 100%;\n      .container{\n        position: relative;\n      }\n      .button{\n        position: absolute;\n        right: 0;\n        top: 250px;\n        transform: translateY(-50%);\n        transition: all .3s;\n        &:hover{\n            opacity: .5;    \n        }\n      }\n      .right-arrow{\n        right: -50px;\n      }\n      .left-arrow{\n        left: -50px;\n      }\n        \n   }\n   \n\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 500px;\n  position: relative;\n  overflow: hidden;\n\n   .home-sliders__arrows{\n      position: absolute;\n      top: 0;\n      width: 100%;\n      .container{\n        position: relative;\n      }\n      .button{\n        position: absolute;\n        right: 0;\n        top: 250px;\n        transform: translateY(-50%);\n        transition: all .3s;\n        &:hover{\n            opacity: .5;    \n        }\n      }\n      .right-arrow{\n        right: -50px;\n      }\n      .left-arrow{\n        left: -50px;\n      }\n        \n   }\n   \n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -109567,6 +109816,46 @@ var Slide = function Slide(_ref) {
 
 var SlideComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
 /* harmony default export */ __webpack_exports__["default"] = (Slide);
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/elements/Link/Link.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/Client/elements/Link/Link.jsx ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    a{\n        display: inline-block;\n        color: #12a69d;\n        border: 1.4px solid #12a69d;\n\n        text-decoration: none;\n        padding: 10px 32px;\n        font-family: \"Neo Sans Pro\";\n        font-size: 20px;\n        -webkit-transition: all 0.3s ease;\n        -moz-transition: all 0.3s ease;\n        transition: all 0.3s ease;\n        &:hover{\n            color: #fff;\n            background-color: #12a69d;\n            text-decoration: none;\n        }\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+var Link = function Link(_ref) {
+  var name = _ref.name,
+      link = _ref.link;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinkComponent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: link
+  }, name));
+};
+
+var LinkComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (Link);
 
 /***/ }),
 
@@ -109827,6 +110116,49 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Client/elements/Title/Subtitle.jsx":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Client/elements/Title/Subtitle.jsx ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  text-align: center;\n  display: block;\n  width: 100%;\n  font-size: 26px;\n  line-height: 26px;\n  font-family: \"Neo Sans Pro\";\n  text-transform: uppercase;\n  color: #000;\n  font-weight: 500;\n   &:after{\n        content: \"\";\n        width: 208px;\n        display: table;\n        margin: 20px auto 40px auto;\n        height: 1px;\n        background-color: #12a69d;\n   }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+var Subtitle = function Subtitle(_ref) {
+  var title = _ref.title;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubtitleComponent, null, title);
+};
+
+var SubtitleComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(_templateObject());
+Subtitle.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Subtitle);
+
+/***/ }),
+
 /***/ "./resources/js/components/Client/elements/TopNav/TopNav.jsx":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/Client/elements/TopNav/TopNav.jsx ***!
@@ -110055,7 +110387,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../elements/Header/Header */ "./resources/js/components/Client/elements/Header/Header.jsx");
 /* harmony import */ var _elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/Footer/Footer */ "./resources/js/components/Client/elements/Footer/Footer.jsx");
 /* harmony import */ var _api_getHomeSliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../api/getHomeSliders */ "./resources/js/api/getHomeSliders.js");
-/* harmony import */ var _elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../elements/HomeSlider/HomeSlider */ "./resources/js/components/Client/elements/HomeSlider/HomeSlider.jsx");
+/* harmony import */ var _api_getAfisha__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../api/getAfisha */ "./resources/js/api/getAfisha.js");
+/* harmony import */ var _elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../elements/HomeSlider/HomeSlider */ "./resources/js/components/Client/elements/HomeSlider/HomeSlider.jsx");
+/* harmony import */ var _elements_AfishaBlock_AfishaBlock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../elements/AfishaBlock/AfishaBlock */ "./resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -110080,16 +110414,23 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
 var Home = function Home() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
       homeSliders = _useState2[0],
       setHomeSliders = _useState2[1];
 
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      afishaSlides = _useState4[0],
+      setAfishaSlides = _useState4[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     var fetchData = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var data;
+        var dataHomeSlides, dataAfisahSlides;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -110098,10 +110439,17 @@ var Home = function Home() {
                 return Object(_api_getHomeSliders__WEBPACK_IMPORTED_MODULE_4__["fetchHomeSliders"])();
 
               case 2:
-                data = _context.sent;
-                setHomeSliders(data);
+                dataHomeSlides = _context.sent;
+                setHomeSliders(dataHomeSlides); // get from api related afisha slides
 
-              case 4:
+                _context.next = 6;
+                return Object(_api_getAfisha__WEBPACK_IMPORTED_MODULE_5__["fetchRelatedAfisha"])();
+
+              case 6:
+                dataAfisahSlides = _context.sent;
+                setAfishaSlides(dataAfisahSlides);
+
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -110117,10 +110465,13 @@ var Home = function Home() {
     fetchData();
     return function () {
       setHomeSliders([]);
+      setAfishaSlides([]);
     };
   }, [setHomeSliders]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_6__["default"], {
     sliders: homeSliders
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_AfishaBlock_AfishaBlock__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    sliders: afishaSlides
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
@@ -110445,6 +110796,28 @@ function sagaGetMenu() {
     }
   }, _marked4, null, [[0, 8]]);
 }
+
+/***/ }),
+
+/***/ "./resources/js/static/afisha-arr-mirror.png":
+/*!***************************************************!*\
+  !*** ./resources/js/static/afisha-arr-mirror.png ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/afisha-arr-mirror.png?16f0ebd60c666aef2e95ebb7c8ddcff0";
+
+/***/ }),
+
+/***/ "./resources/js/static/afisha-arr.png":
+/*!********************************************!*\
+  !*** ./resources/js/static/afisha-arr.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/afisha-arr.png?57799609e0ae027c561fbcd513d9d456";
 
 /***/ }),
 

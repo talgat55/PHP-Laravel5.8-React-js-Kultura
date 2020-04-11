@@ -61,6 +61,7 @@ const HomeSliderComponent = styled.div`
   width: 100%;
   height: 500px;
   position: relative;
+  overflow: hidden;
 
    .home-sliders__arrows{
       position: absolute;

@@ -25,6 +25,17 @@ class Afisha extends Model
         return $query->where('status', 1)->with('places') ->paginate('50');
     }
 
+    function scopeActiveWithPlacesRelated($query){
+        return $query
+            ->where('status', 1)
+            ->with('places')
+            ->orderBy('created_at', 'desc')
+            ->limit(8)
+            ->get();
+    }
+
+
+
 
     public function places()
     {
