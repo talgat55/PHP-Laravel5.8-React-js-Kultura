@@ -17,10 +17,12 @@ const settings = {
 };
 const HomeSlider = ({sliders}) => {
     let SliderInstance;
-    const next = () => {
+    const next = (e) => {
+        e.preventDefault();
         SliderInstance.slickNext();
     };
-    const prev = () => {
+    const prev = (e) => {
+        e.preventDefault();
         SliderInstance.slickPrev();
     };
 

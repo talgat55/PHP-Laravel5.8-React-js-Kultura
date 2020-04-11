@@ -109685,11 +109685,13 @@ var HomeSlider = function HomeSlider(_ref) {
   var sliders = _ref.sliders;
   var SliderInstance;
 
-  var next = function next() {
+  var next = function next(e) {
+    e.preventDefault();
     SliderInstance.slickNext();
   };
 
-  var prev = function prev() {
+  var prev = function prev(e) {
+    e.preventDefault();
     SliderInstance.slickPrev();
   };
 
