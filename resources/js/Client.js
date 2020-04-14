@@ -27,7 +27,6 @@ class Client extends Component {
 
 const mapDispatchToProps = {
     fetchInitialData
-
 };
 export default connect(null, mapDispatchToProps)(Client);
 

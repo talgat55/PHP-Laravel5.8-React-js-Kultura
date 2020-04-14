@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+    Link,
+} from "react-router-dom";
 import moment from 'moment';
 moment.locale('ru');
 
@@ -13,13 +16,13 @@ const Slide = ({name, image, ...props}) => {
                     {moment(props.date_time_launch).format('D MMMM')}
                 </div>
                 <div className="afisha-slide__image-block">
-                    <a href="#" className="afisha-slide__link">
+                    <Link to="#" className="afisha-slide__link">
                         <div className="afisha-slide__image" style={{backgroundImage: `url(${image})` }}></div>
                         <div className="afisha-slide__overlay"/>
                         <div className="afisha-slide__title">
                             {name}
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </SlideComponent>

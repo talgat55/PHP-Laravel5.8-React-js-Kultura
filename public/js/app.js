@@ -109418,8 +109418,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  .afisha-slide{\n    position: relative;\n    margin: 42px 10px 10px 10px;\n      &__link{\n        display: inline-block;\n        width: 100%;\n        height: 100%;\n        position: relative;\n        &:hover .afisha-slide__overlay,\n        &:hover .afisha-slide__title{\n          opacity: 1;\n        }\n      }\n      &__date{\n        background: #fff;\n        box-sizing: border-box;\n        z-index: 9;\n        white-space: nowrap;\n        padding: 3px 26px;\n        position: absolute;\n        top: -21px;\n        box-shadow: 0px -8px 18px 0px #e0e0e0;\n        left: 50%;\n        border-radius: 42px;\n        font-family: \"Neo Sans Pro\";\n        font-size: 23px;\n        color: #12a69d;\n        transform: translateX(-50%);\n      }\n      &__title{\n        position: absolute;\n        z-index: 3;\n        top: 50%;\n        left: 0;\n        width: 100%; \n        padding: 0 10px;\n        text-align: center;\n        font-family: \"Neo Sans Pro\";\n        font-size: 25px;\n        font-weight: 400;\n        color: #fff;\n         transition: all .3s;\n         transform: translateY(-50%);\n         opacity: 0;\n      }\n      &__overlay{\n        position: absolute;\n        z-index: 2;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background: rgba(0,0,0,.4); \n        transition: all .3s; \n        opacity: 0;\n      }\n      &__image-block{\n        width: 260px;\n        height: 250px; \n        margin: 0 auto;\n      }\n      &__image{\n        background-repeat: no-repeat!important;\n        background-position: center center!important;\n        background-size: cover!important;\n        height: 100%;\n      }\n  \n  }\n  \n"]);
 
@@ -109439,7 +109440,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-moment__WEBPACK_IMPORTED_MODULE_2___default.a.locale('ru');
+
+moment__WEBPACK_IMPORTED_MODULE_3___default.a.locale('ru');
 
 var Slide = function Slide(_ref) {
   var name = _ref.name,
@@ -109450,10 +109452,10 @@ var Slide = function Slide(_ref) {
     className: "afisha-slide"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__date"
-  }, moment__WEBPACK_IMPORTED_MODULE_2___default()(props.date_time_launch).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, moment__WEBPACK_IMPORTED_MODULE_3___default()(props.date_time_launch).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__image-block"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "#",
     className: "afisha-slide__link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__image",

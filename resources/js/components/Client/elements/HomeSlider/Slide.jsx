@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
+
 moment.locale('ru');
 
 const Slide = ({name, url, ...props}) => {
