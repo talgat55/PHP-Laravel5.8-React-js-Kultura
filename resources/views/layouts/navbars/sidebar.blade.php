@@ -119,6 +119,12 @@
                         <i class="ni ni-pin-3 text-info "></i> {{ __('Места') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('bannersIndex') }}">
+                        <i class="ni ni-album-2 text-default "></i> {{ __('Баннеры') }}
+                    </a>
+                </li>
+
 
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}

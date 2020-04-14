@@ -44,6 +44,12 @@ Route::prefix('admin')->group(function () {
     Route::match(['get', 'post'], '/place/{id}/edit', ['as' => 'placeEdit', 'uses' => 'PlaceController@edit']);
     Route::delete('/place/{id}/delete', 'PlaceController@delete')->name('placeDelete');
 
+    Route::get('/banners', 'BannerController@index')->name('bannersIndex');
+    Route::match(['get', 'post'], '/banners/create', ['as' => 'bannersCreate', 'uses' => 'BannerController@create']);
+    Route::match(['get', 'post'], '/banners/{id}/edit', ['as' => 'bannersEdit', 'uses' => 'BannerController@edit']);
+    Route::delete('/banners/{id}/delete', 'BannerController@delete')->name('bannersDelete');
+
+
 
 
 
