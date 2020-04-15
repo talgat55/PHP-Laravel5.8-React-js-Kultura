@@ -48,7 +48,7 @@
                             @foreach ($items as $item)
                                 <tr>
                                     <td>{{ $item->name }}</td>
-                                    <td> <img src="{{ $item->image }}"  alt="Image" /> </td>
+                                    <td> <img style="max-width: 250px;" src="{{ $item->image }}"  alt="Image" /> </td>
                                     <td> {{  $item->status  }} </td>
                                     <td> {{  $item->sort  }} </td>
                                     <td> {{  $item->page  }}  </td>
