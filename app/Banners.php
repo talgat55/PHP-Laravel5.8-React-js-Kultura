@@ -30,4 +30,11 @@ class Banners extends Model
         ];
     }
 
+    /*
+     * Return banner by page
+     */
+    function scopeGetByPage($query, $page){
+        return $query->where('status', 1)->where('page', $page)->get();
+    }
+
 }
