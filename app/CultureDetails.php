@@ -38,4 +38,16 @@ class CultureDetails extends Model
         return $query->where('status', 1)->paginate('50');
     }
 
+    /*
+     * Return last  3 items    sort by Date
+     */
+    function scopeActiveWithPlacesRelated($query){
+        return $query
+            ->select('name','anons', 'image')
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->limit(3)
+            ->get();
+    }
+
 }
