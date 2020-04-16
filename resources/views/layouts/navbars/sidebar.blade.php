@@ -124,6 +124,11 @@
                         <i class="ni ni-album-2 text-default "></i> {{ __('Баннеры') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('cultureDetailsIndex') }}">
+                        <i class="ni ni-atom text-pink "></i> {{ __('Культура в деталях') }}
+                    </a>
+                </li>
 
 
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}

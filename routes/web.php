@@ -50,6 +50,12 @@ Route::prefix('admin')->group(function () {
     Route::delete('/banners/{id}/delete', 'BannerController@delete')->name('bannersDelete');
 
 
+    Route::get('/culture-details', 'CultureDetailsController@index')->name('cultureDetailsIndex');
+    Route::match(['get', 'post'], '/culture-details/create', ['as' => 'cultureDetailsCreate', 'uses' => 'CultureDetailsController@create']);
+    Route::match(['get', 'post'], '/culture-details/{id}/edit', ['as' => 'cultureDetailsEdit', 'uses' => 'CultureDetailsController@edit']);
+    Route::delete('/culture-details/{id}/delete', 'CultureDetailsController@delete')->name('cultureDetailsDelete');
+
+
 
 
 
