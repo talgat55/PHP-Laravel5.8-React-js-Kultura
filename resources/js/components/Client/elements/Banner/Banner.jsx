@@ -2,7 +2,6 @@ import React from 'react';
 import styled  from 'styled-components'
 
 export default ({link,url}) => {
-    console.log(url);
     return (
         <div className="container">
             <div className="row">
@@ -25,5 +24,5 @@ const BannerComponent =styled.a`
   background-size: cover!important;
   background-position: center center!important;
   height: 230px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 `;
