@@ -56,6 +56,12 @@ Route::prefix('admin')->group(function () {
     Route::delete('/culture-details/{id}/delete', 'CultureDetailsController@delete')->name('cultureDetailsDelete');
 
 
+    Route::get('/news', 'NewsController@index')->name('newsIndex');
+    Route::match(['get', 'post'], '/news/create', ['as' => 'newsCreate', 'uses' => 'NewsController@create']);
+    Route::match(['get', 'post'], '/news/{id}/edit', ['as' => 'newsEdit', 'uses' => 'NewsController@edit']);
+    Route::delete('/news/{id}/delete', 'NewsController@delete')->name('newsDelete');
+
+
 
 
 

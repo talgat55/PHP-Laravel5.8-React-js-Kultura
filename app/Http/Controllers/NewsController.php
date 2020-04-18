@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\News;
 use Illuminate\Http\Request;
-use App\Banners;
-class BannerController extends Controller
+
+class NewsController extends Controller
 {
     /**
      * Show the list items
@@ -13,9 +13,9 @@ class BannerController extends Controller
      */
     public function index()
     {
-        $items = Banners::paginate('50');
+        $items = News::paginate('50');
 
-        return view('banners.index', compact('items'));
+        return view('news.index', compact('items'));
     }
 
     /**
@@ -26,12 +26,11 @@ class BannerController extends Controller
     public function create(Request $request)
     {
         if ($request->isMethod('post')) {
-            $model = Banners::create($request->all());
+            $model = News::create($request->all());
             $model->save();
-            return redirect()->route('bannersIndex')->withStatus(__('Запись создана.'));
+            return redirect()->route('newsIndex')->withStatus(__('Запись создана.'));
         }
-        $places = Banners::Pages();
-        return view('banners.create' , compact('places'));
+        return view('news.create' );
     }
 
     /**
@@ -42,14 +41,13 @@ class BannerController extends Controller
      */
     public function edit($id, Request $request)
     {
-        $item = Banners::find($id);
+        $item = News::find($id);
         if ($request->isMethod('post')) {
             $item->fill($request->all());
             $item->save();
-            return redirect()->route('bannersIndex')->withStatus(__('Запись успешно отредкатирована.'));
+            return redirect()->route('newsIndex')->withStatus(__('Запись успешно отредкатирована.'));
         }
-        $places = Banners::Pages();
-        return view('banners.edit', compact('item', 'places'));
+        return view('news.edit', compact('item'));
     }
     /*
     * Delete row
@@ -57,9 +55,8 @@ class BannerController extends Controller
     */
     public function delete($id)
     {
-        $item = Banners::find($id);
+        $item = News::find($id);
         $item->delete();
-        return redirect()->route('bannersIndex')->withStatus(__('Запись удалена'));
+        return redirect()->route('newsIndex')->withStatus(__('Запись удалена'));
     }
-
 }

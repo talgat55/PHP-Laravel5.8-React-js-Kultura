@@ -130,6 +130,12 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('newsIndex') }}">
+                        <i class="ni ni-single-copy-04 text-green "></i> {{ __('Новости') }}
+                    </a>
+                </li>
+
 
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}
