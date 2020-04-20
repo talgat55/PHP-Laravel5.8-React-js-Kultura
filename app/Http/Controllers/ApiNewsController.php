@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Afisha;
-class ApiAfishaController extends Controller
+use App\News;
+class ApiNewsController extends Controller
 {
     /**
      *  get  last items
@@ -13,7 +13,7 @@ class ApiAfishaController extends Controller
      */
     public function getRelated()
     {
-        $item = Afisha::activeWithPlacesRelated();
+        $item = News::activeWithPlacesRelated();
         return response()
             ->json($item);
     }

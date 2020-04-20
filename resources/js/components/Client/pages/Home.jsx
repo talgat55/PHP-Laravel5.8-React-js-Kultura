@@ -4,17 +4,20 @@ import Footer from "../elements/Footer/Footer";
 import {fetchHomeSliders} from "../../../api/getHomeSliders";
 import {fetchRelatedAfisha} from "../../../api/getAfisha";
 import {fetchRelatedCultureDetails} from "../../../api/getCultureDetails";
+import {fetchRelatedNews} from "../../../api/getNews";
 import {fetchBanner} from "../../../api/getBanner";
 import HomeSlider from "../elements/HomeSlider/HomeSlider";
 import AfishaBlock from "../elements/AfishaBlock/AfishaBlock";
 import Banner from "../elements/Banner/Banner";
 import CultureDetails from "../elements/CultureDetails/CultureDetails";
+import NewsBlock from "../elements/NewsBlock";
 
 const Home = () => {
     const [homeSliders, setHomeSliders] = useState([]);
     const [cultureDetails, setCultureDetails] = useState(null);
     const [afishaSlides, setAfishaSlides] = useState([]);
     const [banner, setBanner] = useState(null);
+    const [relatedNews, setRelatedNews] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
             // get from api   home slider slides
@@ -28,6 +31,12 @@ const Home = () => {
             setBanner(dataBanner[0]);
             const dataCultureDetails = await fetchRelatedCultureDetails();
             setCultureDetails(dataCultureDetails);
+
+            const dataRelatedNews = await fetchRelatedNews();
+            setRelatedNews(dataRelatedNews);
+
+
+
 
         };
         fetchData();
@@ -62,6 +71,14 @@ const Home = () => {
                 cultureDetails &&(
                     <CultureDetails
                         data={cultureDetails}
+                    />
+                )
+            }
+
+            {
+                relatedNews &&(
+                    <NewsBlock
+                        data={relatedNews}
                     />
                 )
             }

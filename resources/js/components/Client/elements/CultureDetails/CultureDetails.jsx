@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CultureDetailItem from "./CultureDetailItem";
 import Subtitle from "../Title/Subtitle";
+import Link from "../Link/Link";
 
 export default ({data}) =>{
     return  (
@@ -26,6 +27,12 @@ export default ({data}) =>{
                         }
                     </ul>
                 </div>
+                <div className="row  justify-content-center mt-4">
+                    <Link
+                        name="Все материалы"
+                        link="/culture-details"
+                    />
+                </div>
             </div>
         </CultureDetailComponent>
     )
@@ -33,6 +40,7 @@ export default ({data}) =>{
 
 const CultureDetailComponent = styled.section`
   display: flex; 
+  margin-bottom: 80px;
  .culture-details__list{
     margin: 0 -15px;
     padding: 0;
