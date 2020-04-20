@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
 import FadeIn from "react-fade-in";
-
+import PropTypes from 'prop-types';
 const TopNavigation = ({navigation}) => {
 
     return (
@@ -60,5 +60,7 @@ const mapStateToProps = state => {
         navigation: state.menu
     }
 };
-
+TopNavigation.propTypes = {
+    navigation: PropTypes.object
+};
 export default connect(mapStateToProps, null)(TopNavigation);

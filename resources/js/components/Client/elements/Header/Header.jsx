@@ -7,7 +7,7 @@ import VisualImpaired from "../VisualImpaired/VisualImpaired";
 import SocLinks from "../SocLinks/SocLinks";
 import TopNav from "../TopNav/TopNav";
 import TopNavigation from "../Navigation/Top";
-
+import PropTypes from "prop-types";
 const Header = (props) => {
 
     const {
@@ -79,7 +79,11 @@ const HeaderComponent = styled.header`
     
     
 `;
-
+Header.propTypes = {
+    props: PropTypes.shape({
+        logo_url: PropTypes.string,
+    }),
+};
 const mapStateToProps = state => {
     return {
         settingsData: state.settings.data

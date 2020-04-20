@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-const Link = ({name,link}) => (
+import PropTypes from 'prop-types';
+
+const Link = ({name, link}) => (
     <LinkComponent>
         <a href={link}>{name}</a>
     </LinkComponent>
@@ -25,4 +27,8 @@ const LinkComponent = styled.div`
         }
     }
 `;
+Link.propTypes = {
+    name: PropTypes.string,
+    link: PropTypes.string,
+};
 export default Link;

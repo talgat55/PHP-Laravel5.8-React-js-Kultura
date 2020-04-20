@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import styled from 'styled-components';
 import ReactHtmlParser from 'react-html-parser';
 import FadeIn from "react-fade-in";
+import PropTypes from "prop-types";
+import Slide from "../HomeSlider/Slide";
 
 const TopNav = (props) => {
 
@@ -191,5 +193,9 @@ const mapStateToProps = state => {
         data: state.settings.data
     }
 };
-
+TopNav.propTypes = {
+    props: PropTypes.shape({
+        data: PropTypes.string,
+    }),
+};
 export default connect(mapStateToProps, null)(TopNav);

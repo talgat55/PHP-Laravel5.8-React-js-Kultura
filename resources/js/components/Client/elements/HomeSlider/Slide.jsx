@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
-
+import PropTypes from 'prop-types';
 moment.locale('ru');
 
 const Slide = ({name, url, ...props}) => {
-
     return (
         <SlideComponent className="slide-home"  style={{backgroundImage: `url(${url})` }} >
             <div className="overlay-block-slider" />
@@ -156,4 +155,12 @@ const SlideComponent = styled.div`
     min-width: 200px;
   }
 `;
+Slide.propTypes = {
+    name: PropTypes.string,
+    url: PropTypes.string,
+    props: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+    ]),
+};
 export default Slide;

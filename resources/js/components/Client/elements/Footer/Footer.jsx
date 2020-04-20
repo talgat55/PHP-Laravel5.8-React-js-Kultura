@@ -5,7 +5,7 @@ import FadeIn from "react-fade-in";
 import SocLinks from "../SocLinks/SocLinks";
 import VisualImpaired from "../VisualImpaired/VisualImpaired";
 import BottomNavigation from "../Navigation/Bottom";
-
+import PropTypes from "prop-types";
 const Footer = (props) => {
     const {
         logo_url
@@ -62,7 +62,11 @@ const FooterComponent = styled.footer`
           }
     }
 `;
-
+Footer.propTypes = {
+    props: PropTypes.shape({
+        logo_url: PropTypes.string,
+    }),
+};
 const mapStateToProps = state => {
     return {
         settingsData: state.settings.data

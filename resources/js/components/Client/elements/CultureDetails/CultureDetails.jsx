@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import CultureDetailItem from "./CultureDetailItem";
 import Subtitle from "../Title/Subtitle";
 import Link from "../Link/Link";
-
-export default ({data}) =>{
+import PropTypes from "prop-types";
+const CultureDetails = ({data}) =>{
     return  (
         <CultureDetailComponent>
             <div className="container">
@@ -62,3 +62,8 @@ const CultureDetailComponent = styled.section`
  
 `;
 
+CultureDetails.propTypes = {
+    data:  PropTypes.array
+};
+
+export default CultureDetails;

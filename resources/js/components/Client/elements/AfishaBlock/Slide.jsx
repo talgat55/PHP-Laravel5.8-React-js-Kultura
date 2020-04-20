@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 import {
     Link,
 } from "react-router-dom";
@@ -27,6 +28,15 @@ const Slide = ({name, image, ...props}) => {
             </div>
         </SlideComponent>
     )
+};
+Slide.propTypes = {
+    name: PropTypes.string,
+    image: PropTypes.string,
+    props: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+    ]),
+
 };
 const SlideComponent = styled.div`
   .afisha-slide{

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
 import FadeIn from "react-fade-in";
+import PropTypes from "prop-types";
 
 const BottomNavigation = ({navigation}) => {
 
@@ -53,5 +54,7 @@ const mapStateToProps = state => {
         navigation: state.menu
     }
 };
-
+BottomNavigation.propTypes = {
+    navigation: PropTypes.object
+};
 export default connect(mapStateToProps, null)(BottomNavigation);

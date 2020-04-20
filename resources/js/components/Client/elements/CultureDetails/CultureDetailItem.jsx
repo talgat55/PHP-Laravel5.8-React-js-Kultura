@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
+const CultureDetailItem =  ({name,anons,image}) => {
 
-export default ({name,anons,image}) => {
-    let style = {
-        backgroundImage: `url(${image})`
-    };
     return (
         <CultureDetailsItemComponent className="culture-details__item" >
-            <a href="#" style={style}>
+            <a href="#" style={{ backgroundImage: `url(${image})`}}>
                 <div className="overlay-culture-detail"/>
                 <div className="culture-details__content-item">
                     <div className="culture-details__title-item">
@@ -20,7 +18,12 @@ export default ({name,anons,image}) => {
             </a>
         </CultureDetailsItemComponent>
     );
-}
+};
+CultureDetailItem.propTypes = {
+    name: PropTypes.string,
+    anons: PropTypes.string,
+    image: PropTypes.string
+};
 
 const CultureDetailsItemComponent = styled.li`
   list-style: none; 
@@ -65,3 +68,6 @@ const CultureDetailsItemComponent = styled.li`
     background: rgba(0, 0, 0, .32);
   }
 `;
+
+
+export default  CultureDetailItem;
