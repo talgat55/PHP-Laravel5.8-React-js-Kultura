@@ -24,4 +24,5 @@ Route::get('/get-afisha-related', 'ApiAfishaController@getRelated')->name('apiGe
 Route::get('/get-banner/{page}', 'ApiBannerController@get')->name('apiGetBannerByPage');
 Route::get('/get-culture-details-last', 'ApiCultureDetailsController@getRelated')->name('apiGetLastCultureDetails');
 
+Route::get('/get-news-last', 'ApiNewsController@getRelated')->name('apiGetLastNews');
 Route::get('/get-news/{page}', 'ApiNewsController@getWithPage')->name('apiGetNewsWithPage');
