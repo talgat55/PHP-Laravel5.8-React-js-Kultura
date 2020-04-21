@@ -17,4 +17,19 @@ class ApiNewsController extends Controller
         return response()
             ->json($item);
     }
+
+      /**
+     *  get   news items  with pagination
+     *
+     * @return \Illuminate\View\View
+     */
+    public function getWithPage()
+    {
+        $item = News::activeWithPagination();
+        return response()
+            ->json($item);
+    }
+
+
+
 }

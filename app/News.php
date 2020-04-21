@@ -32,4 +32,7 @@ class News extends Model
             ->limit(8)
             ->get();
     }
+    function scopeActiveWithPagination($query){
+        return $query->where('status', 1)->paginate('12');
+    }
 }

@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/news', function () {
+    return view('welcome');
+});
+
+
 
 Route::get('/admin', 'AdminController@index')->name('adminIndex');
 Route::prefix('admin')->group(function () {
