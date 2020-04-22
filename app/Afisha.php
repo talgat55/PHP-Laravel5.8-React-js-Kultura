@@ -3,9 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Laravel\Scout\Searchable;
 class Afisha extends Model
 {
+    use Searchable;
     protected $table = 'afisha';
 
     protected $fillable = [
