@@ -17,4 +17,19 @@ class ApiAfishaController extends Controller
         return response()
             ->json($item);
     }
+
+     /**
+     *  get  last items for page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function getRelatedPage()
+    {
+        $item = Afisha::activeWithPlacesRelatedPage();
+        return response()
+            ->json($item);
+    }
+
+
+
 }

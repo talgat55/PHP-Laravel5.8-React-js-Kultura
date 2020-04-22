@@ -4,6 +4,9 @@ import {fetchInitialData} from "./redux/actions";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./components/Client/pages/Home";
 import News from "./components/Client/pages/News";
+import Header from "./components/Client/elements/Header/Header";
+import Footer from "./components/Client/elements/Footer/Footer";
+import Afisha from "./components/Client/pages/Afisha";
 
 class Client extends Component {
 
@@ -17,13 +20,16 @@ class Client extends Component {
 
     render() {
         return (
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/news" component={News}/>
-                    <Route exact component={Error}/>
-                </Switch>
-            </Router>
+                <Router>
+                    <Header/>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/news" component={News}/>
+                        <Route exact path="/afisha" component={Afisha}/>
+                        <Route exact component={Error}/>
+                    </Switch>
+                    <Footer/>
+                </Router>
         );
     }
 }

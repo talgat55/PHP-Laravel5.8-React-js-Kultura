@@ -19,6 +19,10 @@ Route::get('/news', function () {
     return view('welcome');
 });
 
+Route::get('/afisha', function () {
+    return view('welcome');
+});
+
 
 
 Route::get('/admin', 'AdminController@index')->name('adminIndex');

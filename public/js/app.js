@@ -108893,6 +108893,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _components_Client_pages_Home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Client/pages/Home */ "./resources/js/components/Client/pages/Home.jsx");
 /* harmony import */ var _components_Client_pages_News__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Client/pages/News */ "./resources/js/components/Client/pages/News.jsx");
+/* harmony import */ var _components_Client_elements_Header_Header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Client/elements/Header/Header */ "./resources/js/components/Client/elements/Header/Header.jsx");
+/* harmony import */ var _components_Client_elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Client/elements/Footer/Footer */ "./resources/js/components/Client/elements/Footer/Footer.jsx");
+/* harmony import */ var _components_Client_pages_Afisha__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Client/pages/Afisha */ "./resources/js/components/Client/pages/Afisha.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -108922,6 +108925,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
+
 var Client = /*#__PURE__*/function (_Component) {
   _inherits(Client, _Component);
 
@@ -108941,7 +108947,7 @@ var Client = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Client_elements_Header_Header__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/",
         component: _components_Client_pages_Home__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -108951,8 +108957,12 @@ var Client = /*#__PURE__*/function (_Component) {
         component: _components_Client_pages_News__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
+        path: "/afisha",
+        component: _components_Client_pages_Afisha__WEBPACK_IMPORTED_MODULE_8__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
         component: Error
-      })));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Client_elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], null));
     }
   }]);
 
@@ -109006,12 +109016,13 @@ Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WE
 /*!***************************************!*\
   !*** ./resources/js/api/getAfisha.js ***!
   \***************************************/
-/*! exports provided: fetchRelatedAfisha */
+/*! exports provided: fetchRelatedAfisha, fetchRelatedAfishaPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchRelatedAfisha", function() { return fetchRelatedAfisha; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchRelatedAfishaPage", function() { return fetchRelatedAfishaPage; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -109051,6 +109062,43 @@ function _fetchRelatedAfisha() {
     }, _callee);
   }));
   return _fetchRelatedAfisha.apply(this, arguments);
+}
+
+function fetchRelatedAfishaPage() {
+  return _fetchRelatedAfishaPage.apply(this, arguments);
+}
+
+function _fetchRelatedAfishaPage() {
+  _fetchRelatedAfishaPage = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    var page,
+        response,
+        json,
+        _args2 = arguments;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            page = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : 1;
+            _context2.next = 3;
+            return fetch("/api/get-afisha-related-page/".concat(page));
+
+          case 3:
+            response = _context2.sent;
+            _context2.next = 6;
+            return response.json();
+
+          case 6:
+            json = _context2.sent;
+            return _context2.abrupt("return", json);
+
+          case 8:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _fetchRelatedAfishaPage.apply(this, arguments);
 }
 
 /***/ }),
@@ -109692,6 +109740,131 @@ Slide.propTypes = {
 };
 var SlideComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
 /* harmony default export */ __webpack_exports__["default"] = (Slide);
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/elements/AfishaPage/Item.jsx":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Client/elements/AfishaPage/Item.jsx ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  a{\n    display: inline-block;\n    width: 100%;\n    height: 300px;\n    text-decoration: none;\n    color: #fff;\n    background-size: cover!important;\n    padding: 13px;\n    margin-bottom: 30px;\n    position: relative;\n    .afisha-item__date{\n      font-size: 18px;\n      color: #fff;\n      font-family: 'Open Sans', sans-serif;\n      font-weight: bolder;\n      position: absolute;\n      top: 0;\n      left: 0;\n      padding: 10px;     \n    }\n    .afisha-item__title{ \n        font-family: \"Neo Sans Pro\";\n        font-size: 14px; \n        color: #fff; \n        position: absolute;\n        bottom: 0;\n        left: 0;\n        padding: 10px;   \n    }  \n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+var AfishaItem = function AfishaItem(_ref) {
+  var name = _ref.name,
+      image = _ref.image,
+      date = _ref.date;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AfishaItemComponent, {
+    className: "col-12 col-sm-3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    style: {
+      backgroundImage: "url(".concat(image, ")")
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "afisha-item__date"
+  }, moment__WEBPACK_IMPORTED_MODULE_3___default()(date).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "afisha-item__title"
+  }, name)));
+};
+
+var AfishaItemComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject());
+AfishaItem.propTypes = {
+  name: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  image: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  date: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (AfishaItem);
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/elements/AfishaPage/index.jsx":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Client/elements/AfishaPage/index.jsx ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Title_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Title/Title */ "./resources/js/components/Client/elements/Title/Title.jsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Item */ "./resources/js/components/Client/elements/AfishaPage/Item.jsx");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  margini: 40px 0;\n  .afisha-list{\n    width: 100%;\n    margin: 0;\n    padding: 0;\n    li{\n      list-style: none;\n    }\n    \n  }\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+var AfishaPage = function AfishaPage(_ref) {
+  var data = _ref.data;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AfishaPageComponent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "\u0410\u0444\u0438\u0448\u0430"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "afisha-list row"
+  }, data.map(function (item, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Item__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      key: index,
+      name: item.name,
+      image: item.image,
+      date: item.date_time_launch
+    });
+  })))));
+};
+
+AfishaPage.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+};
+var AfishaPageComponent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (AfishaPage);
 
 /***/ }),
 
@@ -111091,6 +111264,96 @@ var BVIComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_
 
 /***/ }),
 
+/***/ "./resources/js/components/Client/pages/Afisha.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Client/pages/Afisha.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _api_getAfisha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../api/getAfisha */ "./resources/js/api/getAfisha.js");
+/* harmony import */ var _elements_AfishaPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/AfishaPage */ "./resources/js/components/Client/elements/AfishaPage/index.jsx");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var Afisha = function Afisha() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      afisha = _useState2[0],
+      setAfisha = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(1),
+      _useState4 = _slicedToArray(_useState3, 2),
+      page = _useState4[0],
+      setPage = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    var fetchData = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var dataNews;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return Object(_api_getAfisha__WEBPACK_IMPORTED_MODULE_2__["fetchRelatedAfishaPage"])(page);
+
+              case 2:
+                dataNews = _context.sent;
+                setAfisha(dataNews);
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function fetchData() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    fetchData();
+    return function () {
+      setAfisha(null);
+    };
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, afisha && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_AfishaPage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    data: afisha
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Afisha);
+
+/***/ }),
+
 /***/ "./resources/js/components/Client/pages/Home.jsx":
 /*!*******************************************************!*\
   !*** ./resources/js/components/Client/pages/Home.jsx ***!
@@ -111104,18 +111367,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _elements_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../elements/Header/Header */ "./resources/js/components/Client/elements/Header/Header.jsx");
-/* harmony import */ var _elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/Footer/Footer */ "./resources/js/components/Client/elements/Footer/Footer.jsx");
-/* harmony import */ var _api_getHomeSliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../api/getHomeSliders */ "./resources/js/api/getHomeSliders.js");
-/* harmony import */ var _api_getAfisha__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../api/getAfisha */ "./resources/js/api/getAfisha.js");
-/* harmony import */ var _api_getCultureDetails__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../api/getCultureDetails */ "./resources/js/api/getCultureDetails.js");
-/* harmony import */ var _api_getNews__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../api/getNews */ "./resources/js/api/getNews.js");
-/* harmony import */ var _api_getBanner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../api/getBanner */ "./resources/js/api/getBanner.js");
-/* harmony import */ var _elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../elements/HomeSlider/HomeSlider */ "./resources/js/components/Client/elements/HomeSlider/HomeSlider.jsx");
-/* harmony import */ var _elements_AfishaBlock_AfishaBlock__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../elements/AfishaBlock/AfishaBlock */ "./resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx");
-/* harmony import */ var _elements_Banner_Banner__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../elements/Banner/Banner */ "./resources/js/components/Client/elements/Banner/Banner.jsx");
-/* harmony import */ var _elements_CultureDetails_CultureDetails__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../elements/CultureDetails/CultureDetails */ "./resources/js/components/Client/elements/CultureDetails/CultureDetails.jsx");
-/* harmony import */ var _elements_NewsBlock__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../elements/NewsBlock */ "./resources/js/components/Client/elements/NewsBlock/index.jsx");
+/* harmony import */ var _api_getHomeSliders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../api/getHomeSliders */ "./resources/js/api/getHomeSliders.js");
+/* harmony import */ var _api_getAfisha__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api/getAfisha */ "./resources/js/api/getAfisha.js");
+/* harmony import */ var _api_getCultureDetails__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../api/getCultureDetails */ "./resources/js/api/getCultureDetails.js");
+/* harmony import */ var _api_getNews__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../api/getNews */ "./resources/js/api/getNews.js");
+/* harmony import */ var _api_getBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../api/getBanner */ "./resources/js/api/getBanner.js");
+/* harmony import */ var _elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../elements/HomeSlider/HomeSlider */ "./resources/js/components/Client/elements/HomeSlider/HomeSlider.jsx");
+/* harmony import */ var _elements_AfishaBlock_AfishaBlock__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../elements/AfishaBlock/AfishaBlock */ "./resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx");
+/* harmony import */ var _elements_Banner_Banner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../elements/Banner/Banner */ "./resources/js/components/Client/elements/Banner/Banner.jsx");
+/* harmony import */ var _elements_CultureDetails_CultureDetails__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../elements/CultureDetails/CultureDetails */ "./resources/js/components/Client/elements/CultureDetails/CultureDetails.jsx");
+/* harmony import */ var _elements_NewsBlock__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../elements/NewsBlock */ "./resources/js/components/Client/elements/NewsBlock/index.jsx");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -111139,8 +111400,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-
+'NeoSansPro-Bold';
 
 
 
@@ -111183,32 +111443,32 @@ var Home = function Home() {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return Object(_api_getHomeSliders__WEBPACK_IMPORTED_MODULE_4__["fetchHomeSliders"])();
+                return Object(_api_getHomeSliders__WEBPACK_IMPORTED_MODULE_2__["fetchHomeSliders"])();
 
               case 2:
                 dataHomeSlides = _context.sent;
                 setHomeSliders(dataHomeSlides); // get from api related afisha slides
 
                 _context.next = 6;
-                return Object(_api_getAfisha__WEBPACK_IMPORTED_MODULE_5__["fetchRelatedAfisha"])();
+                return Object(_api_getAfisha__WEBPACK_IMPORTED_MODULE_3__["fetchRelatedAfisha"])();
 
               case 6:
                 dataAfisahSlides = _context.sent;
                 setAfishaSlides(dataAfisahSlides);
                 _context.next = 10;
-                return Object(_api_getBanner__WEBPACK_IMPORTED_MODULE_8__["fetchBanner"])('home_one');
+                return Object(_api_getBanner__WEBPACK_IMPORTED_MODULE_6__["fetchBanner"])('home_one');
 
               case 10:
                 dataBanner = _context.sent;
                 setBanner(dataBanner[0]);
                 _context.next = 14;
-                return Object(_api_getCultureDetails__WEBPACK_IMPORTED_MODULE_6__["fetchRelatedCultureDetails"])();
+                return Object(_api_getCultureDetails__WEBPACK_IMPORTED_MODULE_4__["fetchRelatedCultureDetails"])();
 
               case 14:
                 dataCultureDetails = _context.sent;
                 setCultureDetails(dataCultureDetails);
                 _context.next = 18;
-                return Object(_api_getNews__WEBPACK_IMPORTED_MODULE_7__["fetchRelatedNews"])();
+                return Object(_api_getNews__WEBPACK_IMPORTED_MODULE_5__["fetchRelatedNews"])();
 
               case 18:
                 dataRelatedNews = _context.sent;
@@ -111234,18 +111494,18 @@ var Home = function Home() {
       setBanner('');
     };
   }, [setHomeSliders]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_HomeSlider_HomeSlider__WEBPACK_IMPORTED_MODULE_7__["default"], {
     sliders: homeSliders
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_AfishaBlock_AfishaBlock__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_AfishaBlock_AfishaBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
     sliders: afishaSlides
-  }), banner && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Banner_Banner__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }), banner && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Banner_Banner__WEBPACK_IMPORTED_MODULE_9__["default"], {
     link: banner.link,
     url: banner.image
-  }), cultureDetails && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_CultureDetails_CultureDetails__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }), cultureDetails && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_CultureDetails_CultureDetails__WEBPACK_IMPORTED_MODULE_10__["default"], {
     data: cultureDetails
-  }), relatedNews && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_NewsBlock__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }), relatedNews && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_NewsBlock__WEBPACK_IMPORTED_MODULE_11__["default"], {
     data: relatedNews
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -111265,10 +111525,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../elements/Footer/Footer */ "./resources/js/components/Client/elements/Footer/Footer.jsx");
-/* harmony import */ var _elements_Header_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/Header/Header */ "./resources/js/components/Client/elements/Header/Header.jsx");
-/* harmony import */ var _elements_NewsPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../elements/NewsPage */ "./resources/js/components/Client/elements/NewsPage/index.jsx");
-/* harmony import */ var _api_getNews__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../api/getNews */ "./resources/js/api/getNews.js");
+/* harmony import */ var _elements_NewsPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../elements/NewsPage */ "./resources/js/components/Client/elements/NewsPage/index.jsx");
+/* harmony import */ var _api_getNews__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api/getNews */ "./resources/js/api/getNews.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -111286,8 +111544,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
 
 
 
@@ -111313,7 +111569,7 @@ var News = function News() {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return Object(_api_getNews__WEBPACK_IMPORTED_MODULE_5__["fetchNewsWithPage"])(page);
+                return Object(_api_getNews__WEBPACK_IMPORTED_MODULE_3__["fetchNewsWithPage"])(page);
 
               case 2:
                 dataNews = _context.sent;
@@ -111337,9 +111593,9 @@ var News = function News() {
       setNews(null);
     };
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Header_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), news && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_NewsPage__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, news && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_NewsPage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     data: news
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_elements_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (News);

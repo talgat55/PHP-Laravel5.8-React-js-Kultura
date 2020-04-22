@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import Header from "../elements/Header/Header";
-import Footer from "../elements/Footer/Footer";
 import {fetchHomeSliders} from "../../../api/getHomeSliders";
 import {fetchRelatedAfisha} from "../../../api/getAfisha";
 import {fetchRelatedCultureDetails} from "../../../api/getCultureDetails";
-import {fetchRelatedNews} from "../../../api/getNews";
+import {fetchRelatedNews} from "../../../api/getNews";'NeoSansPro-Bold'
 import {fetchBanner} from "../../../api/getBanner";
 import HomeSlider from "../elements/HomeSlider/HomeSlider";
 import AfishaBlock from "../elements/AfishaBlock/AfishaBlock";
@@ -51,7 +49,7 @@ const Home = () => {
 
     return (
         <>
-            <Header/>
+
             <HomeSlider
                 sliders={homeSliders}
             />
@@ -83,9 +81,6 @@ const Home = () => {
                 )
             }
 
-
-
-            <Footer/>
         </>
     )
 };

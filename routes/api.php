@@ -20,7 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/get-settings', 'ApiSettingsThemeController@get')->name('apiGetSettings');
 Route::get('/get-menus', 'ApiMenuController@get')->name('apiGetMenus');
 Route::get('/get-home-slider', 'ApiHomeSliderController@get')->name('apiGetHomeSlider');
+
 Route::get('/get-afisha-related', 'ApiAfishaController@getRelated')->name('apiGetAfishaRelated');
+Route::get('/get-afisha-related-page/{page}', 'ApiAfishaController@getRelatedPage')->name('apiGetAfishaRelatedPage');
+
+
 Route::get('/get-banner/{page}', 'ApiBannerController@get')->name('apiGetBannerByPage');
 Route::get('/get-culture-details-last', 'ApiCultureDetailsController@getRelated')->name('apiGetLastCultureDetails');
 

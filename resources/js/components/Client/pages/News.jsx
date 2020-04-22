@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Footer from "../elements/Footer/Footer";
-import Header from "../elements/Header/Header";
 import NewsPage from "../elements/NewsPage";
 import {fetchNewsWithPage} from "../../../api/getNews";
 const News = () => {
@@ -18,12 +16,10 @@ const News = () => {
     }, []);
     return (
         <>
-            <Header/>
             {news && (<NewsPage
                 data={news}
             />)
             }
-            <Footer/>
         </>
     )
 };
