@@ -7,6 +7,7 @@ import News from "./components/Client/pages/News";
 import Header from "./components/Client/elements/Header/Header";
 import Footer from "./components/Client/elements/Footer/Footer";
 import Afisha from "./components/Client/pages/Afisha";
+import Place from "./components/Client/pages/Place";
 
 class Client extends Component {
 
@@ -26,6 +27,7 @@ class Client extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/news" component={News}/>
                         <Route exact path="/afisha" component={Afisha}/>
+                        <Route exact path="/place" component={Place}/>
                         <Route exact component={Error}/>
                     </Switch>
                     <Footer/>

@@ -1,50 +1,42 @@
 import React from 'react';
-import Title from "../Title/Title";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import AfishaItem from './Item';
-const AfishaPage = ({data}) => {
+import Title from "../Title/Title";
+import Item from "./Item";
+
+const PlacePage = ({data}) => {
 
     return (
-        <AfishaPageComponent>
+        <PlacePageComponent>
             <div className="container">
                 <div className="row">
                     <Title
-                        title="Афиша"
+                        title="Места"
                     />
                 </div>
                 <div className="row">
-                    <ul className="afisha-list row">
+                    <ul className="news-list row">
                         {
                             data.map((item, index) => (
-                                <AfishaItem
+                                <Item
                                     key={index}
                                     name={item.name}
                                     image={item.image}
-                                    date={item.date_time_launch}
                                 />
                             ))
                         }
                     </ul>
                 </div>
             </div>
-        </AfishaPageComponent>
+        </PlacePageComponent>
     )
 };
-AfishaPage.propTypes = {
+PlacePage.propTypes = {
     data: PropTypes.object
 };
-const AfishaPageComponent = styled.section`
+
+const PlacePageComponent = styled.section`
   margin: 40px 0;
-  .afisha-list{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    li{
-      list-style: none;
-    }
-    
-  }
 
 `;
-export default AfishaPage;
+export default PlacePage;

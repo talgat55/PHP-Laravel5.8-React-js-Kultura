@@ -22,4 +22,18 @@ class Place extends Model
         'text',
         'category_place_id',
     ];
+
+
+    /*
+ * Get Related news
+ *
+ */
+    function scopeActiveRelated($query){
+        return $query
+            ->select('name', 'image' )
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->limit(8)
+            ->get();
+    }
 }

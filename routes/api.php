@@ -30,3 +30,5 @@ Route::get('/get-culture-details-last', 'ApiCultureDetailsController@getRelated'
 
 Route::get('/get-news-last', 'ApiNewsController@getRelated')->name('apiGetLastNews');
 Route::get('/get-news/{page}', 'ApiNewsController@getWithPage')->name('apiGetNewsWithPage');
+
+Route::get('/get-places', 'ApiPlaceController@getRelated')->name('apiGetRelatedPlaces');
