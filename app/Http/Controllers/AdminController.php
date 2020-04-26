@@ -19,7 +19,7 @@ class AdminController extends Controller
     }
 
     /*
-     * Upload images from forms
+     * Upload image from forms
      */
     public function upload(Request $request)
     {
@@ -39,6 +39,36 @@ class AdminController extends Controller
 
         $url = Storage::url($path);
         return response()->json(['data' => $url]);
+    }
+    /*
+     * Upload images from forms
+     */
+    public function uploads(Request $request)
+    {
+
+        $path = $request->input('path');
+        if(isset($path) && !empty($path)){
+            $folderSave= $path;
+
+        }else{
+            $folderSave= '/main';
+
+        }
+        $images = [];
+
+        if($request->get('totalImages') > 0) {
+            for ($x = 0; $x < $request->get('totalImages'); $x++) {
+                $path = $request->file('file'.$x)->store('public/'.$folderSave);
+                $optimizerChain = OptimizerChainFactory::create();
+                $optimizerChain->optimize(Storage::path($path));
+                $url = Storage::url($path);
+                $images[]=$url;
+            }
+        }
+
+
+
+        return response()->json(['data' => $images]);
     }
 
 }

@@ -135,7 +135,11 @@
                         <i class="ni ni-single-copy-04 text-green "></i> {{ __('Новости') }}
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('galleryIndex') }}">
+                        <i class="ni ni-app text-primary text-orange"></i> {{ __('Галерея') }}
+                    </a>
+                </li>
 
                 {{--@if (!Auth::user()->hasRole("viewer"))--}}
                 {{--<li class="nav-item">--}}

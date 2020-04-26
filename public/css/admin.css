@@ -1,6 +1,7 @@
 .image-preview{
     max-width: 300px;
 }
+.image-previews img ,
 .image-preview img {
     width: 100%;
 }
