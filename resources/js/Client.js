@@ -8,6 +8,7 @@ import Header from "./components/Client/elements/Header/Header";
 import Footer from "./components/Client/elements/Footer/Footer";
 import Afisha from "./components/Client/pages/Afisha";
 import Place from "./components/Client/pages/Place";
+import CultureDetails from "./components/Client/pages/CultureDetails";
 
 class Client extends Component {
 
@@ -28,6 +29,7 @@ class Client extends Component {
                         <Route exact path="/news" component={News}/>
                         <Route exact path="/afisha" component={Afisha}/>
                         <Route exact path="/place" component={Place}/>
+                        <Route exact path="/culture-details" component={CultureDetails}/>
                         <Route exact component={Error}/>
                     </Switch>
                     <Footer/>

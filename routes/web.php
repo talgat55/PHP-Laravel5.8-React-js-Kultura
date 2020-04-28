@@ -28,6 +28,16 @@ Route::get('/place', function () {
 });
 
 
+Route::get('/culture-details', function () {
+    return view('welcome');
+});
+
+Route::get('/gallery', function () {
+    return view('welcome');
+});
+
+
+
 
 Route::get('/admin', 'AdminController@index')->name('adminIndex');
 Route::prefix('admin')->group(function () {

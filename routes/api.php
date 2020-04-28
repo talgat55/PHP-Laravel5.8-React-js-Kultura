@@ -17,18 +17,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/get-settings', 'ApiSettingsThemeController@get')->name('apiGetSettings');
-Route::get('/get-menus', 'ApiMenuController@get')->name('apiGetMenus');
-Route::get('/get-home-slider', 'ApiHomeSliderController@get')->name('apiGetHomeSlider');
+Route::get('/get-settings', 'Api\ApiSettingsThemeController@get')->name('apiGetSettings');
+Route::get('/get-menus', 'Api\ApiMenuController@get')->name('apiGetMenus');
+Route::get('/get-home-slider', 'Api\ApiHomeSliderController@get')->name('apiGetHomeSlider');
 
-Route::get('/get-afisha-related', 'ApiAfishaController@getRelated')->name('apiGetAfishaRelated');
-Route::get('/get-afisha-related-page/{page}', 'ApiAfishaController@getRelatedPage')->name('apiGetAfishaRelatedPage');
+Route::get('/get-afisha-related', 'Api\ApiAfishaController@getRelated')->name('apiGetAfishaRelated');
+Route::get('/get-afisha-related-page/{page}', 'Api\ApiAfishaController@getRelatedPage')->name('apiGetAfishaRelatedPage');
 
 
-Route::get('/get-banner/{page}', 'ApiBannerController@get')->name('apiGetBannerByPage');
-Route::get('/get-culture-details-last', 'ApiCultureDetailsController@getRelated')->name('apiGetLastCultureDetails');
+Route::get('/get-banner/{page}', 'Api\ApiBannerController@get')->name('apiGetBannerByPage');
 
-Route::get('/get-news-last', 'ApiNewsController@getRelated')->name('apiGetLastNews');
-Route::get('/get-news/{page}', 'ApiNewsController@getWithPage')->name('apiGetNewsWithPage');
+Route::get('/get-culture-details-last', 'Api\ApiCultureDetailsController@getRelated')->name('apiGetLastCultureDetails');
+Route::get('/get-culture-details-page', 'Api\ApiCultureDetailsController@getPage')->name('apiGetCultureDetailsPage');
 
-Route::get('/get-places', 'ApiPlaceController@getRelated')->name('apiGetRelatedPlaces');
+Route::get('/get-news-last', 'Api\ApiNewsController@getRelated')->name('apiGetLastNews');
+Route::get('/get-news/{page}', 'Api\ApiNewsController@getWithPage')->name('apiGetNewsWithPage');
+
+Route::get('/get-places', 'Api\ApiPlaceController@getRelated')->name('apiGetRelatedPlaces');

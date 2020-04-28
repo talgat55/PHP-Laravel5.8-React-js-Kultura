@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+
 class CultureDetails extends Model
 {
     use Searchable;
@@ -23,7 +24,8 @@ class CultureDetails extends Model
     /*
      * Return lists category
      */
-    static function categories(){
+    static function categories()
+    {
         return [
             '1' => 'Интервью',
             '2' => 'Очерк',
@@ -35,20 +37,35 @@ class CultureDetails extends Model
     /*
      * Return list active items  with paginate
      */
-    function scopeActiveWithPaginate($query){
+    function scopeActiveWithPaginate($query)
+    {
         return $query->where('status', 1)->paginate('50');
     }
 
     /*
      * Return last  3 items    sort by Date
      */
-    function scopeActiveWithPlacesRelated($query){
+    function scopeActiveWithPlacesRelated($query)
+    {
         return $query
-            ->select('name','anons', 'image')
+            ->select('name', 'anons', 'image')
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
             ->limit(3)
             ->get();
     }
 
+
+     /*
+     * Get related items for page with pagination
+     */
+    function scopeActiveWithPagination($query)
+    {
+        return $query
+            ->where('status', 1)
+            ->with('places')
+            ->orderBy('created_at', 'desc')
+            ->limit(12)
+            ->get();
+    }
 }

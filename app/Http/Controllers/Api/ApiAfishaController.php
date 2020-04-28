@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\News;
-class ApiNewsController extends Controller
+use App\Afisha;
+use App\Http\Controllers\Controller;
+class ApiAfishaController extends Controller
 {
     /**
      *  get  last items
@@ -13,19 +14,19 @@ class ApiNewsController extends Controller
      */
     public function getRelated()
     {
-        $item = News::activeWithPlacesRelated();
+        $item = Afisha::activeWithPlacesRelated();
         return response()
             ->json($item);
     }
 
-      /**
-     *  get   news items  with pagination
+     /**
+     *  get  last items for page
      *
      * @return \Illuminate\View\View
      */
-    public function getWithPage()
+    public function getRelatedPage()
     {
-        $item = News::activeWithPagination();
+        $item = Afisha::activeWithPlacesRelatedPage();
         return response()
             ->json($item);
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\ThemeSettings;
-
+use App\Http\Controllers\Controller;
 class ApiSettingsThemeController extends Controller
 {
     /**

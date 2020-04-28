@@ -23,7 +23,6 @@ const Afisha = () => {
                     data={afisha}
                 />)
             }
-
         </>
     );
 };
