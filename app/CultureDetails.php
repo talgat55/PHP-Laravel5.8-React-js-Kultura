@@ -63,7 +63,6 @@ class CultureDetails extends Model
     {
         return $query
             ->where('status', 1)
-            ->with('places')
             ->orderBy('created_at', 'desc')
             ->limit(12)
             ->get();

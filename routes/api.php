@@ -34,3 +34,8 @@ Route::get('/get-news-last', 'Api\ApiNewsController@getRelated')->name('apiGetLa
 Route::get('/get-news/{page}', 'Api\ApiNewsController@getWithPage')->name('apiGetNewsWithPage');
 
 Route::get('/get-places', 'Api\ApiPlaceController@getRelated')->name('apiGetRelatedPlaces');
+
+
+Route::get('/get-gallery-page/{page}', 'Api\ApiGalleryController@getPage')->name('apiGetGalleryPage');
+
+

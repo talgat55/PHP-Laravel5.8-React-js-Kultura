@@ -24,4 +24,19 @@ class Gallery extends Model
     function scopeActiveWithPaginate($query){
         return $query->where('status', 1)->paginate('50');
     }
+
+    /*
+    * Get related items for page with pagination
+    */
+    function scopeActiveWithPage($query)
+    {
+        return $query
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->limit(12)
+            ->get();
+    }
+
+
+
 }
