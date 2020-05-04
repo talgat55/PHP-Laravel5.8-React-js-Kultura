@@ -9,6 +9,7 @@ import Subtitle from "../Title/Subtitle";
 import arrowRight from '../../../../static/afisha-arr.png';
 import arrowLeft from '../../../../static/afisha-arr-mirror.png';
 import Link from "../Link/Link";
+import AfishaBlockContentLoader from "../../../../contentLoaders/Afisha/AfishaBlockContentLoader";
 const settings = {
     dots: false,
     infinite: true,
@@ -35,19 +36,28 @@ const AfishaBlock = ({sliders}) => {
                         title="В ЦЕНТРЕ ВНИМАНИЯ"
                     />
                     <div className="slider-wrapper">
-                        <Slider  ref={e => SliderInstance = e}   {...settings}>
-                            {
-                                sliders.map(item => (
-                                    <Slide
-                                        key={item.id}
-                                        id={item.id}
-                                        name={item.name}
-                                        image={item.image}
-                                        date_time_launch={item.date_time_launch}
-                                    />
-                                ))
-                            }
-                        </Slider>
+                        <AfishaBlockContentLoader/>
+                        {/*{*/}
+                            {/*sliders  ?*/}
+                            {/*(*/}
+                                {/*<Slider  ref={e => SliderInstance = e}   {...settings}>*/}
+                                {/*{*/}
+                                    {/*sliders.map(item => (*/}
+                                        {/*<Slide*/}
+                                            {/*key={item.id}*/}
+                                            {/*id={item.id}*/}
+                                            {/*name={item.name}*/}
+                                            {/*image={item.image}*/}
+                                            {/*date_time_launch={item.date_time_launch}*/}
+                                        {/*/>*/}
+                                    {/*))*/}
+                                {/*}*/}
+                            {/*</Slider>*/}
+                            {/*)*/}
+                            {/*:*/}
+                            {/*(<AfishaBlockContentLoader/>)*/}
+                        {/*}*/}
+
                         <div className="afisha-sliders__arrows">
                             <div className="container">
                                 <div className="row">
