@@ -67381,6 +67381,157 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
+/***/ "./node_modules/react-content-loader/dist/react-content-loader.es.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-content-loader/dist/react-content-loader.es.js ***!
+  \***************************************************************************/
+/*! exports provided: default, BulletList, Code, Facebook, Instagram, List */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BulletList", function() { return ReactContentLoaderBulletList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Code", function() { return ReactContentLoaderCode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Facebook", function() { return ReactContentLoaderFacebook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Instagram", function() { return ReactContentLoaderInstagram; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return ReactContentLoaderListStyle; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+var uid = (function () {
+    return Math.random()
+        .toString(36)
+        .substring(6);
+});
+
+var SVG = function (_a) {
+    var animate = _a.animate, backgroundColor = _a.backgroundColor, backgroundOpacity = _a.backgroundOpacity, baseUrl = _a.baseUrl, children = _a.children, foregroundColor = _a.foregroundColor, foregroundOpacity = _a.foregroundOpacity, gradientRatio = _a.gradientRatio, uniqueKey = _a.uniqueKey, interval = _a.interval, rtl = _a.rtl, speed = _a.speed, style = _a.style, title = _a.title, props = __rest(_a, ["animate", "backgroundColor", "backgroundOpacity", "baseUrl", "children", "foregroundColor", "foregroundOpacity", "gradientRatio", "uniqueKey", "interval", "rtl", "speed", "style", "title"]);
+    var fixedId = uniqueKey || uid();
+    var idClip = fixedId + "-diff";
+    var idGradient = fixedId + "-animated-diff";
+    var idAria = fixedId + "-aria";
+    var rtlStyle = rtl ? { transform: 'scaleX(-1)' } : null;
+    var keyTimes = "0; " + interval + "; 1";
+    var dur = speed + "s";
+    return (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", __assign({ "aria-labelledby": idAria, role: "img", style: __assign(__assign({}, style), rtlStyle) }, props),
+        title ? Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("title", { id: idAria }, title) : null,
+        Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { role: "presentation", x: "0", y: "0", width: "100%", height: "100%", clipPath: "url(" + baseUrl + "#" + idClip + ")", style: { fill: "url(" + baseUrl + "#" + idGradient + ")" } }),
+        Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("defs", { role: "presentation" },
+            Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("clipPath", { id: idClip }, children),
+            Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("linearGradient", { id: idGradient },
+                Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("stop", { offset: "0%", stopColor: backgroundColor, stopOpacity: backgroundOpacity }, animate && (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("animate", { attributeName: "offset", values: -gradientRatio + "; " + -gradientRatio + "; 1", keyTimes: keyTimes, dur: dur, repeatCount: "indefinite" }))),
+                Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("stop", { offset: "50%", stopColor: foregroundColor, stopOpacity: foregroundOpacity }, animate && (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("animate", { attributeName: "offset", values: -gradientRatio / 2 + "; " + -gradientRatio / 2 + "; " + (1 +
+                        gradientRatio / 2), keyTimes: keyTimes, dur: dur, repeatCount: "indefinite" }))),
+                Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("stop", { offset: "100%", stopColor: backgroundColor, stopOpacity: backgroundOpacity }, animate && (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("animate", { attributeName: "offset", values: "0; 0; " + (1 + gradientRatio), keyTimes: keyTimes, dur: dur, repeatCount: "indefinite" })))))));
+};
+SVG.defaultProps = {
+    animate: true,
+    backgroundColor: '#f5f6f7',
+    backgroundOpacity: 1,
+    baseUrl: '',
+    foregroundColor: '#eee',
+    foregroundOpacity: 1,
+    gradientRatio: 2,
+    id: null,
+    interval: 0.25,
+    rtl: false,
+    speed: 1.2,
+    style: {},
+    title: 'Loading...',
+};
+
+var ContentLoader = function (props) {
+    return props.children ? Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(SVG, __assign({}, props)) : Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ReactContentLoaderFacebook, __assign({}, props));
+};
+
+var ReactContentLoaderFacebook = function (props) { return (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ContentLoader, __assign({ viewBox: "0 0 476 124" }, props),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "48", y: "8", width: "88", height: "6", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "48", y: "26", width: "52", height: "6", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "56", width: "410", height: "6", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "72", width: "380", height: "6", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "88", width: "178", height: "6", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("circle", { cx: "20", cy: "20", r: "20" }))); };
+
+var ReactContentLoaderInstagram = function (props) { return (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ContentLoader, __assign({ viewBox: "0 0 400 460" }, props),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("circle", { cx: "31", cy: "31", r: "15" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "58", y: "18", rx: "2", ry: "2", width: "140", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "58", y: "34", rx: "2", ry: "2", width: "140", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "60", rx: "2", ry: "2", width: "400", height: "400" }))); };
+
+var ReactContentLoaderCode = function (props) { return (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ContentLoader, __assign({ viewBox: "0 0 340 84" }, props),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "0", width: "67", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "76", y: "0", width: "140", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "127", y: "48", width: "53", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "187", y: "48", width: "72", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "18", y: "48", width: "100", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "71", width: "37", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "18", y: "23", width: "140", height: "11", rx: "3" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "166", y: "23", width: "173", height: "11", rx: "3" }))); };
+
+var ReactContentLoaderListStyle = function (props) { return (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ContentLoader, __assign({ viewBox: "0 0 400 110" }, props),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "0", rx: "3", ry: "3", width: "250", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "20", y: "20", rx: "3", ry: "3", width: "220", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "20", y: "40", rx: "3", ry: "3", width: "170", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "0", y: "60", rx: "3", ry: "3", width: "250", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "20", y: "80", rx: "3", ry: "3", width: "200", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "20", y: "100", rx: "3", ry: "3", width: "80", height: "10" }))); };
+
+var ReactContentLoaderBulletList = function (props) { return (Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ContentLoader, __assign({ viewBox: "0 0 245 125" }, props),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("circle", { cx: "10", cy: "20", r: "8" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "25", y: "15", rx: "5", ry: "5", width: "220", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("circle", { cx: "10", cy: "50", r: "8" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "25", y: "45", rx: "5", ry: "5", width: "220", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("circle", { cx: "10", cy: "80", r: "8" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "25", y: "75", rx: "5", ry: "5", width: "220", height: "10" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("circle", { cx: "10", cy: "110", r: "8" }),
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("rect", { x: "25", y: "105", rx: "5", ry: "5", width: "220", height: "10" }))); };
+
+/* harmony default export */ __webpack_exports__["default"] = (ContentLoader);
+
+//# sourceMappingURL=react-content-loader.es.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -109723,15 +109874,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _Slide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Slide */ "./resources/js/components/Client/elements/AfishaBlock/Slide.jsx");
-/* harmony import */ var _Title_Subtitle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Title/Subtitle */ "./resources/js/components/Client/elements/Title/Subtitle.jsx");
-/* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../static/afisha-arr.png */ "./resources/js/static/afisha-arr.png");
-/* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../static/afisha-arr-mirror.png */ "./resources/js/static/afisha-arr-mirror.png");
-/* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Link/Link */ "./resources/js/components/Client/elements/Link/Link.jsx");
+/* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-fade-in */ "./node_modules/react-fade-in/lib/index.js");
+/* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_fade_in__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Slide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Slide */ "./resources/js/components/Client/elements/AfishaBlock/Slide.jsx");
+/* harmony import */ var _Title_Subtitle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Title/Subtitle */ "./resources/js/components/Client/elements/Title/Subtitle.jsx");
+/* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../static/afisha-arr.png */ "./resources/js/static/afisha-arr.png");
+/* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../static/afisha-arr-mirror.png */ "./resources/js/static/afisha-arr-mirror.png");
+/* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Link/Link */ "./resources/js/components/Client/elements/Link/Link.jsx");
+/* harmony import */ var _contentLoaders_Afisha_AfishaWrapper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../contentLoaders/Afisha/AfishaWrapper */ "./resources/js/contentLoaders/Afisha/AfishaWrapper.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 55px 0;\n    .slider-wrapper{\n      width: 100%;\n      position: relative;\n    }\n    .afisha-sliders__arrows{\n        .button{\n          position: absolute;\n          top: 150px;\n          transition: all .3s;\n          &:hover{\n            opacity: .5;\n          }\n        }\n        \n        .right-arrow{\n            right: -40px;\n        }\n        .left-arrow{\n            left: -40px;\n        }\n    }\n    .afisha__link-bottom-wrapper{\n        display: table;\n        margin: 40px auto;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 55px 0;\n    .slider-wrapper{\n      width: 100%;\n      position: relative;\n    }\n    .afisha-sliders__arrows{\n        .button{\n          position: absolute;\n          top: 150px;\n          transition: all .3s;\n          &:hover{\n            opacity: .5;\n          }\n        }\n\n        .right-arrow{\n            right: -40px;\n        }\n        .left-arrow{\n            left: -40px;\n        }\n    }\n    .afisha__link-bottom-wrapper{\n        display: table;\n        margin: 40px auto;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -109743,6 +109897,8 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
 
 
 
@@ -109781,23 +109937,23 @@ var AfishaBlock = function AfishaBlock(_ref) {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title_Subtitle__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Title_Subtitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
     title: "\u0412 \u0426\u0415\u041D\u0422\u0420\u0415 \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u042F"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "slider-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
+  }, sliders ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_fade_in__WEBPACK_IMPORTED_MODULE_6___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
     ref: function ref(e) {
       return SliderInstance = e;
     }
   }, settings), sliders.map(function (item) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slide__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slide__WEBPACK_IMPORTED_MODULE_7__["default"], {
       key: item.id,
       id: item.id,
       name: item.name,
       image: item.image,
       date_time_launch: item.date_time_launch
     });
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contentLoaders_Afisha_AfishaWrapper__WEBPACK_IMPORTED_MODULE_12__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-sliders__arrows"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
@@ -109808,18 +109964,18 @@ var AfishaBlock = function AfishaBlock(_ref) {
     className: "button  left-arrow",
     onClick: prev
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_9___default.a,
+    src: _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10___default.a,
     alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     className: "button  right-arrow",
     onClick: next
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+    src: _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_9___default.a,
     alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha__link-bottom-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_11__["default"], {
     name: "\u0412\u0441\u044F \u0430\u0444\u0438\u0448\u0430",
     link: "/afisha"
   }))))));
@@ -110492,8 +110648,7 @@ var Item = function Item(_ref) {
 Item.propTypes = {
   name: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   image: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  slug: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  anons: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
+  slug: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
 };
 var GalleryItemComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject());
 /* harmony default export */ __webpack_exports__["default"] = (Item);
@@ -112126,7 +112281,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-'NeoSansPro-Bold';
 
 
 
@@ -112145,7 +112299,7 @@ var Home = function Home() {
       cultureDetails = _useState4[0],
       setCultureDetails = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
       _useState6 = _slicedToArray(_useState5, 2),
       afishaSlides = _useState6[0],
       setAfishaSlides = _useState6[1];
@@ -112410,6 +112564,81 @@ var Place = function Place() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Place);
+
+/***/ }),
+
+/***/ "./resources/js/contentLoaders/Afisha/AfishaBlock.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/contentLoaders/Afisha/AfishaBlock.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_content_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-content-loader */ "./node_modules/react-content-loader/dist/react-content-loader.es.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var AfishaBlockContentLoader = function AfishaBlockContentLoader() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_content_loader__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    speed: 1,
+    primaryColor: '#f3f3f3',
+    secondaryColor: '#ecebeb'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("rect", {
+    x: "0",
+    y: "0",
+    rx: "0",
+    ry: "0",
+    width: "265",
+    height: "250"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AfishaBlockContentLoader);
+
+/***/ }),
+
+/***/ "./resources/js/contentLoaders/Afisha/AfishaWrapper.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/contentLoaders/Afisha/AfishaWrapper.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _AfishaBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AfishaBlock */ "./resources/js/contentLoaders/Afisha/AfishaBlock.js");
+
+
+
+var AfishaContentLoaderWrap = function AfishaContentLoaderWrap() {
+  var LIST = [{
+    key: 0
+  }, {
+    key: 1
+  }, {
+    key: 2
+  }, {
+    key: 3
+  }];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, LIST.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "item col-12 col-md-6 col-lg-3",
+      key: item.key
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AfishaBlock__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AfishaContentLoaderWrap);
 
 /***/ }),
 
@@ -112861,8 +113090,8 @@ module.exports = "/images/vk.png?36846d23d3f7e119367fdae02c8914e0";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/lenovo/sites/KulturaReact/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/lenovo/sites/KulturaReact/resources/sass/app.sass */"./resources/sass/app.sass");
+__webpack_require__(/*! /home/lenovo/sites/PHP-Laravel5.8-React-js-Kultura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/lenovo/sites/PHP-Laravel5.8-React-js-Kultura/resources/sass/app.sass */"./resources/sass/app.sass");
 
 
 /***/ }),
