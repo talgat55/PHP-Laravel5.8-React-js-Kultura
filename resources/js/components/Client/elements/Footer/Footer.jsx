@@ -1,6 +1,7 @@
 import {connect} from "react-redux";
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 import FadeIn from "react-fade-in";
 import SocLinks from "../SocLinks/SocLinks";
 import VisualImpaired from "../VisualImpaired/VisualImpaired";
@@ -20,9 +21,9 @@ const Footer = (props) => {
                             logo_url &&
                             (
                                 <FadeIn>
-                                    <a href="/">
+                                    <Link to="/">
                                         <img src={logo_url} alt="Логотип"/>
-                                    </a>
+                                    </Link>
                                 </FadeIn>
                             )
                         }

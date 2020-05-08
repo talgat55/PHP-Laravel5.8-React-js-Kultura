@@ -2,19 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import moment from "moment";
-
+import {Link} from 'react-router-dom';
 const AfishaItem = ({name, image, date}) => {
 
     return (
         <AfishaItemComponent className="col-12 col-sm-3">
-            <a href="#" style={{backgroundImage: `url(${image})`}}>
+            <Link to="#" style={{backgroundImage: `url(${image})`}}>
                 <div className="afisha-item__date">
                     {moment(date).format('D MMMM')}
                 </div>
                 <h3 className="afisha-item__title">
                     {name}
-                </h3> 
-            </a>
+                </h3>
+            </Link>
         </AfishaItemComponent>
     )
 };
@@ -37,17 +37,17 @@ const AfishaItemComponent = styled.li`
       position: absolute;
       top: 0;
       left: 0;
-      padding: 10px;     
+      padding: 10px;
     }
-    .afisha-item__title{ 
+    .afisha-item__title{
         font-family: "Neo Sans Pro";
-        font-size: 14px; 
-        color: #fff; 
+        font-size: 14px;
+        color: #fff;
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 10px;   
-    }  
+        padding: 10px;
+    }
   }
 `;
 AfishaItem.propTypes = {

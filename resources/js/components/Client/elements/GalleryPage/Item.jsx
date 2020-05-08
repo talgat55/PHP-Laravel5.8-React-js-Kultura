@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types";
-
+import {Link} from 'react-router-dom';
 const Item = ({name, image, slug}) =>{
     const readyImage = JSON.parse(image);
     return  (
 
         <GalleryItemComponent className="news-item col-12 col-sm-3">
 
-            <a href={`/news/${slug}`}>
+            <Link to={`/news/${slug}`}>
 
                 <div className="news-item__image">
                     <img src={readyImage[0]} alt="Image"/>
@@ -16,7 +16,7 @@ const Item = ({name, image, slug}) =>{
                 <h3 className="news-item__title">
                     {name}
                 </h3>
-            </a>
+            </Link>
         </GalleryItemComponent>
     )
 };
@@ -53,14 +53,14 @@ const GalleryItemComponent = styled.li`
     .news-item__image img {
       max-width: 100%;
     }
-    .news-item__image{ 
+    .news-item__image{
       margin-bottom: 25px
     }
     .news-item__title{
         font-size: 18px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
-        color: #000; 
+        color: #000;
         min-height: 52px;
         margin: 0 0 20px;
     }
@@ -68,8 +68,8 @@ const GalleryItemComponent = styled.li`
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
     }
-    
-  } 
+
+  }
 `;
 
 

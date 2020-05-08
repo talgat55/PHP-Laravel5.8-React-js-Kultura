@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
 const CultureDetailItem =  ({name,anons,image}) => {
 
     return (
         <CultureDetailsItemComponent className="culture-details__item" >
-            <a href="#" style={{ backgroundImage: `url(${image})`}}>
+            <Link to="#" style={{ backgroundImage: `url(${image})`}}>
                 <div className="overlay-culture-detail"/>
                 <div className="culture-details__content-item">
                     <div className="culture-details__title-item">
@@ -15,7 +16,7 @@ const CultureDetailItem =  ({name,anons,image}) => {
                         {anons}
                     </div>
                 </div>
-            </a>
+            </Link>
         </CultureDetailsItemComponent>
     );
 };
@@ -26,7 +27,7 @@ CultureDetailItem.propTypes = {
 };
 
 const CultureDetailsItemComponent = styled.li`
-  list-style: none; 
+  list-style: none;
   padding: 15px;
   a{
     height: 100%;
@@ -37,12 +38,12 @@ const CultureDetailsItemComponent = styled.li`
     text-decoration: none;
     color: #fff;
     position: relative;
-    
+
     .culture-details__content-item{
       position: absolute;
       z-index: 3;
       bottom: 30px;
-      left: 30px; 
+      left: 30px;
         .culture-details__title-item{
             font-family: "Neo Sans Pro";
             font-size: 25px;
@@ -55,8 +56,8 @@ const CultureDetailsItemComponent = styled.li`
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
             color: #fff;
-        } 
-    } 
+        }
+    }
   }
   .overlay-culture-detail{
     width: 100%;

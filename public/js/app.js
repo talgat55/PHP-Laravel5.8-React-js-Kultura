@@ -110081,8 +110081,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  a{\n    display: inline-block;\n    width: 100%;\n    height: 300px;\n    text-decoration: none;\n    color: #fff;\n    background-size: cover!important;\n    padding: 13px;\n    margin-bottom: 30px;\n    position: relative;\n    .afisha-item__date{\n      font-size: 18px;\n      color: #fff;\n      font-family: 'Open Sans', sans-serif;\n      font-weight: bolder;\n      position: absolute;\n      top: 0;\n      left: 0;\n      padding: 10px;     \n    }\n    .afisha-item__title{ \n        font-family: \"Neo Sans Pro\";\n        font-size: 14px; \n        color: #fff; \n        position: absolute;\n        bottom: 0;\n        left: 0;\n        padding: 10px;   \n    }  \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  a{\n    display: inline-block;\n    width: 100%;\n    height: 300px;\n    text-decoration: none;\n    color: #fff;\n    background-size: cover!important;\n    padding: 13px;\n    margin-bottom: 30px;\n    position: relative;\n    .afisha-item__date{\n      font-size: 18px;\n      color: #fff;\n      font-family: 'Open Sans', sans-serif;\n      font-weight: bolder;\n      position: absolute;\n      top: 0;\n      left: 0;\n      padding: 10px;\n    }\n    .afisha-item__title{\n        font-family: \"Neo Sans Pro\";\n        font-size: 14px;\n        color: #fff;\n        position: absolute;\n        bottom: 0;\n        left: 0;\n        padding: 10px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110098,14 +110099,15 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var AfishaItem = function AfishaItem(_ref) {
   var name = _ref.name,
       image = _ref.image,
       date = _ref.date;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AfishaItemComponent, {
     className: "col-12 col-sm-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    to: "#",
     style: {
       backgroundImage: "url(".concat(image, ")")
     }
@@ -110260,8 +110262,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  list-style: none; \n  padding: 15px;\n  a{\n    height: 100%;\n    width: 100%;\n    background-size: cover!important;\n    background-repeat: no-repeat!important;\n    display: inline-block;\n    text-decoration: none;\n    color: #fff;\n    position: relative;\n    \n    .culture-details__content-item{\n      position: absolute;\n      z-index: 3;\n      bottom: 30px;\n      left: 30px; \n        .culture-details__title-item{\n            font-family: \"Neo Sans Pro\";\n            font-size: 25px;\n            color: #fff;\n            text-decoration: none;\n            font-weight: bold;\n            margin-bottom: 30px;\n        }\n        .culture-details__anons-item{\n            font-family: 'Open Sans', sans-serif;\n            font-size: 16px;\n            color: #fff;\n        } \n    } \n  }\n  .overlay-culture-detail{\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 2;\n    background: rgba(0, 0, 0, .32);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  list-style: none;\n  padding: 15px;\n  a{\n    height: 100%;\n    width: 100%;\n    background-size: cover!important;\n    background-repeat: no-repeat!important;\n    display: inline-block;\n    text-decoration: none;\n    color: #fff;\n    position: relative;\n\n    .culture-details__content-item{\n      position: absolute;\n      z-index: 3;\n      bottom: 30px;\n      left: 30px;\n        .culture-details__title-item{\n            font-family: \"Neo Sans Pro\";\n            font-size: 25px;\n            color: #fff;\n            text-decoration: none;\n            font-weight: bold;\n            margin-bottom: 30px;\n        }\n        .culture-details__anons-item{\n            font-family: 'Open Sans', sans-serif;\n            font-size: 16px;\n            color: #fff;\n        }\n    }\n  }\n  .overlay-culture-detail{\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 2;\n    background: rgba(0, 0, 0, .32);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110276,14 +110279,15 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var CultureDetailItem = function CultureDetailItem(_ref) {
   var name = _ref.name,
       anons = _ref.anons,
       image = _ref.image;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CultureDetailsItemComponent, {
     className: "culture-details__item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "#",
     style: {
       backgroundImage: "url(".concat(image, ")")
     }
@@ -110395,8 +110399,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  a{\n    width: 100%;\n    display: inline-block;\n    text-decoration: none;\n    color: #000;\n    padding: 10px;\n    transition: all .3s;\n    &:hover{\n        -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -webkit-transform: scale(1.1);\n        -moz-transform: scale(1.1);\n        -ms-transform: scale(1.1);\n        -o-transform: scale(1.1);\n        transform: scale(1.1);\n    }\n    .news-item__date{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 800;\n        margin-bottom: 20px;\n        color: #12a69d;\n    }\n    .news-item__image img {\n      max-width: 100%;\n    }\n    .news-item__image{ \n      margin-bottom: 25px\n    }\n    .news-item__title{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 700;\n        color: #000; \n        min-height: 52px;\n        margin: 0 0 20px;\n    }\n    .news-item__anons{\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n    }\n    \n  }\n  \n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  a{\n    width: 100%;\n    display: inline-block;\n    text-decoration: none;\n    color: #000;\n    padding: 10px;\n    transition: all .3s;\n    &:hover{\n        -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -webkit-transform: scale(1.1);\n        -moz-transform: scale(1.1);\n        -ms-transform: scale(1.1);\n        -o-transform: scale(1.1);\n        transform: scale(1.1);\n    }\n    .news-item__date{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 800;\n        margin-bottom: 20px;\n        color: #12a69d;\n    }\n    .news-item__image img {\n      max-width: 100%;\n    }\n    .news-item__image{\n      margin-bottom: 25px\n    }\n    .news-item__title{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 700;\n        color: #000;\n        min-height: 52px;\n        margin: 0 0 20px;\n    }\n    .news-item__anons{\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n    }\n\n  }\n\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110406,6 +110411,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -110421,8 +110427,8 @@ var Item = function Item(_ref) {
       date = _ref.date;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NewsItemComponent, {
     className: "news-item col-12 col-sm-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/news/".concat(slug)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    to: "/news/".concat(slug)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news-item__date"
   }, moment__WEBPACK_IMPORTED_MODULE_3___default()(date).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -110528,13 +110534,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-fade-in */ "./node_modules/react-fade-in/lib/index.js");
-/* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_fade_in__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SocLinks/SocLinks */ "./resources/js/components/Client/elements/SocLinks/SocLinks.jsx");
-/* harmony import */ var _VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../VisualImpaired/VisualImpaired */ "./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx");
-/* harmony import */ var _Navigation_Bottom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Navigation/Bottom */ "./resources/js/components/Client/elements/Navigation/Bottom.jsx");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-fade-in */ "./node_modules/react-fade-in/lib/index.js");
+/* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_fade_in__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SocLinks/SocLinks */ "./resources/js/components/Client/elements/SocLinks/SocLinks.jsx");
+/* harmony import */ var _VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../VisualImpaired/VisualImpaired */ "./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx");
+/* harmony import */ var _Navigation_Bottom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Navigation/Bottom */ "./resources/js/components/Client/elements/Navigation/Bottom.jsx");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    background: #303030;\n    color: rgba(255, 255, 255, 0.65);\n    font-size: 14px;\n    padding: 35px 5px 30px;\n    position: relative;\n    .link-to-social{\n        justify-content: flex-start;\n        margin: 10px 0 10px;\n    }\n    .bottom-copyright{\n          color: rgba(255, 255, 255, 0.8);\n          width: 100%;\n          text-align: right;\n          display: block;\n          margin-top: 20px;\n          span{\n            color: #9aca42;\n          }\n          &:hover{\n            text-decoraiton: underline;\n          }\n    }\n"]);
 
@@ -110556,6 +110563,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var Footer = function Footer(props) {
   var logo_url = props.settingsData.logo_url;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterComponent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -110564,14 +110572,14 @@ var Footer = function Footer(props) {
     className: "row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "footer__first col-12 col-sm-5"
-  }, logo_url && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fade_in__WEBPACK_IMPORTED_MODULE_3___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "/"
+  }, logo_url && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fade_in__WEBPACK_IMPORTED_MODULE_4___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: logo_url,
     alt: "\u041B\u043E\u0433\u043E\u0442\u0438\u043F"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "footer__second col-12 col-sm-7"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Navigation_Bottom__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Navigation_Bottom__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "bottom-copyright",
     target: "_blank",
     title: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0441\u0430\u0439\u0442 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0447\u0438\u043A\u0430",
@@ -110581,8 +110589,8 @@ var Footer = function Footer(props) {
 
 var FooterComponent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].footer(_templateObject());
 Footer.propTypes = {
-  props: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.shape({
-    logo_url: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string
+  props: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.shape({
+    logo_url: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.string
   })
 };
 
@@ -110610,8 +110618,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  a{\n    width: 100%;\n    display: inline-block;\n    text-decoration: none;\n    color: #000;\n    padding: 10px;\n    transition: all .3s;\n    &:hover{\n        -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -webkit-transform: scale(1.1);\n        -moz-transform: scale(1.1);\n        -ms-transform: scale(1.1);\n        -o-transform: scale(1.1);\n        transform: scale(1.1);\n    }\n    .news-item__date{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 800;\n        margin-bottom: 20px;\n        color: #12a69d;\n    }\n    .news-item__image img {\n      max-width: 100%;\n    }\n    .news-item__image{ \n      margin-bottom: 25px\n    }\n    .news-item__title{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 700;\n        color: #000; \n        min-height: 52px;\n        margin: 0 0 20px;\n    }\n    .news-item__anons{\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n    }\n    \n  } \n"]);
+  var data = _taggedTemplateLiteral(["\n  a{\n    width: 100%;\n    display: inline-block;\n    text-decoration: none;\n    color: #000;\n    padding: 10px;\n    transition: all .3s;\n    &:hover{\n        -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -webkit-transform: scale(1.1);\n        -moz-transform: scale(1.1);\n        -ms-transform: scale(1.1);\n        -o-transform: scale(1.1);\n        transform: scale(1.1);\n    }\n    .news-item__date{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 800;\n        margin-bottom: 20px;\n        color: #12a69d;\n    }\n    .news-item__image img {\n      max-width: 100%;\n    }\n    .news-item__image{\n      margin-bottom: 25px\n    }\n    .news-item__title{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 700;\n        color: #000;\n        min-height: 52px;\n        margin: 0 0 20px;\n    }\n    .news-item__anons{\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n    }\n\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110626,6 +110635,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var Item = function Item(_ref) {
   var name = _ref.name,
       image = _ref.image,
@@ -110633,8 +110643,8 @@ var Item = function Item(_ref) {
   var readyImage = JSON.parse(image);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GalleryItemComponent, {
     className: "news-item col-12 col-sm-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/news/".concat(slug)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/news/".concat(slug)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news-item__image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -110733,15 +110743,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-fade-in */ "./node_modules/react-fade-in/lib/index.js");
 /* harmony import */ var react_fade_in__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_fade_in__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SearchBox/SearchBox */ "./resources/js/components/Client/elements/SearchBox/SearchBox.jsx");
-/* harmony import */ var _VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../VisualImpaired/VisualImpaired */ "./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx");
-/* harmony import */ var _SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../SocLinks/SocLinks */ "./resources/js/components/Client/elements/SocLinks/SocLinks.jsx");
-/* harmony import */ var _TopNav_TopNav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../TopNav/TopNav */ "./resources/js/components/Client/elements/TopNav/TopNav.jsx");
-/* harmony import */ var _Navigation_Top__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Navigation/Top */ "./resources/js/components/Client/elements/Navigation/Top.jsx");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SearchBox/SearchBox */ "./resources/js/components/Client/elements/SearchBox/SearchBox.jsx");
+/* harmony import */ var _VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../VisualImpaired/VisualImpaired */ "./resources/js/components/Client/elements/VisualImpaired/VisualImpaired.jsx");
+/* harmony import */ var _SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../SocLinks/SocLinks */ "./resources/js/components/Client/elements/SocLinks/SocLinks.jsx");
+/* harmony import */ var _TopNav_TopNav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../TopNav/TopNav */ "./resources/js/components/Client/elements/TopNav/TopNav.jsx");
+/* harmony import */ var _Navigation_Top__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Navigation/Top */ "./resources/js/components/Client/elements/Navigation/Top.jsx");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    background-image: -webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#1f1b2f),color-stop(.395,#252d45),color-stop(.667,#285a6c),color-stop(.998,#24838a));\n    background-image: -webkit-linear-gradient(0deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    background-image: linear-gradient(90deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    \n    .header{\n      &__top {\n        padding: 19px 0;\n          .row{\n            align-items: center;\n          } \n      }\n      &__bottom{\n        background: #fff;\n      }\n      &__add-block-top{\n        display: flex;\n        justify-content: flex-end;\n        flex-direction: column;\n        text-align: right;\n      }\n    }\n     \n    \n    \n"]);
+  var data = _taggedTemplateLiteral(["\n    background-image: -webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#1f1b2f),color-stop(.395,#252d45),color-stop(.667,#285a6c),color-stop(.998,#24838a));\n    background-image: -webkit-linear-gradient(0deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n    background-image: linear-gradient(90deg,#1f1b2f 0,#252d45 39.5%,#285a6c 66.7%,#24838a 99.8%);\n\n    .header{\n      &__top {\n        padding: 19px 0;\n          .row{\n            align-items: center;\n          }\n      }\n      &__bottom{\n        background: #fff;\n      }\n      &__add-block-top{\n        display: flex;\n        justify-content: flex-end;\n        flex-direction: column;\n        text-align: right;\n      }\n    }\n\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110751,6 +110762,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -110773,26 +110785,26 @@ var Header = function Header(props) {
     className: "row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__logo-top col-12 col-md-6 col-lg-4"
-  }, logo_url && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_fade_in__WEBPACK_IMPORTED_MODULE_3___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
+  }, logo_url && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_fade_in__WEBPACK_IMPORTED_MODULE_3___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: logo_url,
     alt: "\u041B\u043E\u0433\u043E\u0442\u0438\u043F"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__search-top col-12 col-md-6 col-lg-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBox_SearchBox__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__add-block-top col-12 col-md-6 col-lg-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TopNav_TopNav__WEBPACK_IMPORTED_MODULE_7__["default"], null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VisualImpaired_VisualImpaired__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SocLinks_SocLinks__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TopNav_TopNav__WEBPACK_IMPORTED_MODULE_8__["default"], null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__bottom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_Top__WEBPACK_IMPORTED_MODULE_8__["default"], null))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_Top__WEBPACK_IMPORTED_MODULE_9__["default"], null))));
 };
 
 var HeaderComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header(_templateObject());
 Header.propTypes = {
-  props: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.shape({
-    logo_url: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.string
+  props: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.shape({
+    logo_url: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.string
   })
 };
 
@@ -110935,10 +110947,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 590px; \n  background-size: cover;\n  background-position: center center!important;\n  display: flex;\n  align-items: center;\n  position: relative;\n  .overlay-block-slider{\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 6;\n    background: rgba(0, 0, 0, .3);\n  }\n  .link__slide-home{\n    color: #fff;\n    border: 1.4px solid #12a69d;\n    display: table;\n    background: #12a69d;\n    margin: 40px 0 0;\n    text-decoration: none;\n    padding: 10px 32px;\n    font-family: \"Neo Sans Pro\";\n    font-size: 20px;\n    -webkit-transition: all 0.3s ease;\n    -moz-transition: all 0.3s ease;\n    transition: all 0.3s ease;\n    &:hover{\n          color: #12a69d;\n          background: transparent;\n    }\n  }\n  .slide-home__title{\n    font-size: 40px;\n    line-height: 49px;\n    color: #fff;\n    font-family: \"Neo Sans Pro\";\n    font-weight: 500;    \n  }\n  .slide-home__text{\n    font-size: 20px;\n    color: #fff;\n    width: 82%;\n    text-align: left;\n    font-family: 'Open Sans', sans-serif;\n    padding: 43px 0;\n  }\n  .container{\n    position: relative;\n    z-index: 10;\n  }\n  .slide-home__second .text-block{\n      border-bottom: 6px solid #12a69d;\n      border-top: 6px solid #12a69d;\n      border-right: 6px solid #12a69d;\n      width: 55%;\n      display: flex;\n      align-items: center;\n      margin: 0 0 0 auto;\n      min-height: 200px;\n      position: relative;\n  }\n  .slide-home__second .text-block:after{\n    content: \"\";\n    height: 12px;\n    position: absolute;\n    bottom: -1px;\n    display: block;\n    border-left: 6px solid #12a69d;\n  }\n  .slide-home__second .text-block:before{\n    content: \"\";\n    height: 12px;\n    position: absolute;\n    top: -1px;\n    display: block;\n    border-left: 6px solid #12a69d;\n  }\n  .slide-home__place-second{\n    font-family: \"Neo Sans Pro\";\n    color: #fff;\n    font-size: 17px;\n    font-weight: 600;\n    text-align: center;\n    padding-left: 106px;\n    text-transform: uppercase;\n    padding-right: 10px;\n  }\n  .slide-home__date{\n    font-family: \"Neo Sans Pro\";\n    font-weight: bold;\n    font-size: 70px;\n    line-height: 70px;\n    color: #fff;\n    text-align: center;\n    position: absolute;\n    right: 199px;\n    max-width: 200px;\n    min-width: 200px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 590px;\n  background-size: cover;\n  background-position: center center!important;\n  display: flex;\n  align-items: center;\n  position: relative;\n  .overlay-block-slider{\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 6;\n    background: rgba(0, 0, 0, .3);\n  }\n  .link__slide-home{\n    color: #fff;\n    border: 1.4px solid #12a69d;\n    display: table;\n    background: #12a69d;\n    margin: 40px 0 0;\n    text-decoration: none;\n    padding: 10px 32px;\n    font-family: \"Neo Sans Pro\";\n    font-size: 20px;\n    -webkit-transition: all 0.3s ease;\n    -moz-transition: all 0.3s ease;\n    transition: all 0.3s ease;\n    &:hover{\n          color: #12a69d;\n          background: transparent;\n    }\n  }\n  .slide-home__title{\n    font-size: 40px;\n    line-height: 49px;\n    color: #fff;\n    font-family: \"Neo Sans Pro\";\n    font-weight: 500;\n  }\n  .slide-home__text{\n    font-size: 20px;\n    color: #fff;\n    width: 82%;\n    text-align: left;\n    font-family: 'Open Sans', sans-serif;\n    padding: 43px 0;\n  }\n  .container{\n    position: relative;\n    z-index: 10;\n  }\n  .slide-home__second .text-block{\n      border-bottom: 6px solid #12a69d;\n      border-top: 6px solid #12a69d;\n      border-right: 6px solid #12a69d;\n      width: 55%;\n      display: flex;\n      align-items: center;\n      margin: 0 0 0 auto;\n      min-height: 200px;\n      position: relative;\n  }\n  .slide-home__second .text-block:after{\n    content: \"\";\n    height: 12px;\n    position: absolute;\n    bottom: -1px;\n    display: block;\n    border-left: 6px solid #12a69d;\n  }\n  .slide-home__second .text-block:before{\n    content: \"\";\n    height: 12px;\n    position: absolute;\n    top: -1px;\n    display: block;\n    border-left: 6px solid #12a69d;\n  }\n  .slide-home__place-second{\n    font-family: \"Neo Sans Pro\";\n    color: #fff;\n    font-size: 17px;\n    font-weight: 600;\n    text-align: center;\n    padding-left: 106px;\n    text-transform: uppercase;\n    padding-right: 10px;\n  }\n  .slide-home__date{\n    font-family: \"Neo Sans Pro\";\n    font-weight: bold;\n    font-size: 70px;\n    line-height: 70px;\n    color: #fff;\n    text-align: center;\n    position: absolute;\n    right: 199px;\n    max-width: 200px;\n    min-width: 200px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110952,6 +110965,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -110983,9 +110997,9 @@ var Slide = function Slide(_ref) {
     className: "slide-home__title"
   }, name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "slide-home__text"
-  }, props === null || props === void 0 ? void 0 : props.text), (props === null || props === void 0 ? void 0 : props.link) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, props === null || props === void 0 ? void 0 : props.text), (props === null || props === void 0 ? void 0 : props.link) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     className: "link__slide-home",
-    href: props === null || props === void 0 ? void 0 : props.link,
+    to: props === null || props === void 0 ? void 0 : props.link,
     target: "_blank"
   }, "\u0423\u0437\u0430\u043D\u0442\u044C \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "slide-home__second  col-12 col-sm-6"
@@ -111002,9 +111016,9 @@ var Slide = function Slide(_ref) {
 
 var SlideComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
 Slide.propTypes = {
-  name: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  url: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  props: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number])
+  name: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  url: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  props: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number])
 };
 /* harmony default export */ __webpack_exports__["default"] = (Slide);
 
@@ -111203,8 +111217,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  a{\n    width: 100%;\n    display: inline-block;\n    text-decoration: none;\n    color: #000;\n    padding: 10px;\n    transition: all .3s;\n    &:hover{\n        -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -webkit-transform: scale(1.1);\n        -moz-transform: scale(1.1);\n        -ms-transform: scale(1.1);\n        -o-transform: scale(1.1);\n        transform: scale(1.1);\n    }\n    .news-item__date{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 800;\n        margin-bottom: 20px;\n        color: #12a69d;\n    }\n    .news-item__image img {\n      max-width: 100%;\n    }\n    .news-item__image{ \n      margin-bottom: 25px\n    }\n    .news-item__title{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 700;\n        color: #000; \n        min-height: 52px;\n        margin: 0 0 20px;\n    }\n    .news-item__anons{\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n    }\n    \n  }\n  \n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  a{\n    width: 100%;\n    display: inline-block;\n    text-decoration: none;\n    color: #000;\n    padding: 10px;\n    transition: all .3s;\n    &:hover{\n        -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);\n        -webkit-transform: scale(1.1);\n        -moz-transform: scale(1.1);\n        -ms-transform: scale(1.1);\n        -o-transform: scale(1.1);\n        transform: scale(1.1);\n    }\n    .news-item__date{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 800;\n        margin-bottom: 20px;\n        color: #12a69d;\n    }\n    .news-item__image img {\n      max-width: 100%;\n    }\n    .news-item__image{\n      margin-bottom: 25px\n    }\n    .news-item__title{\n        font-size: 18px;\n        font-family: 'Open Sans', sans-serif;\n        font-weight: 700;\n        color: #000;\n        min-height: 52px;\n        margin: 0 0 20px;\n    }\n    .news-item__anons{\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n    }\n\n  }\n\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -111214,6 +111229,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -111229,8 +111245,8 @@ var Item = function Item(_ref) {
       date = _ref.date;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NewsItemComponent, {
     className: "news-item col-12 col-sm-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/news/".concat(slug)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    to: "/news/".concat(slug)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news-item__date"
   }, moment__WEBPACK_IMPORTED_MODULE_3___default()(date).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

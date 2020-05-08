@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 moment.locale('ru');
 
@@ -20,9 +21,9 @@ const Slide = ({name, url, ...props}) => {
                             </div>
                             {
                                 props?.link &&(
-                                    <a className="link__slide-home" href={ props?.link} target="_blank">
+                                    <Link className="link__slide-home" to={ props?.link} target="_blank">
                                         Узанть подробнее
-                                    </a>
+                                    </Link>
                                 )
                             }
                         </div>
@@ -53,7 +54,7 @@ const Slide = ({name, url, ...props}) => {
 };
 const SlideComponent = styled.div`
   width: 100%;
-  height: 590px; 
+  height: 590px;
   background-size: cover;
   background-position: center center!important;
   display: flex;
@@ -91,7 +92,7 @@ const SlideComponent = styled.div`
     line-height: 49px;
     color: #fff;
     font-family: "Neo Sans Pro";
-    font-weight: 500;    
+    font-weight: 500;
   }
   .slide-home__text{
     font-size: 20px;

@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="567f64c4-aab4-407e-af53-e64572852b38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/contentLoaders/Afisha/AfishaBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/contentLoaders/Afisha/AfishaWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/KulturaReact.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KulturaReact.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetailItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetailItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetailsPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetailsPage/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/HomeSlider/Slide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/HomeSlider/Slide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/NewsBlock/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/NewsBlock/Item.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +243,7 @@
       <workItem from="1588525434079" duration="1761000" />
       <workItem from="1588610219681" duration="4008000" />
       <workItem from="1588711300084" duration="2612000" />
-      <workItem from="1588789242785" duration="5885000" />
+      <workItem from="1588789242785" duration="7589000" />
     </task>
     <servers />
   </component>
@@ -263,13 +264,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="520" y="377" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588614640483">
+    <state x="459" y="170" width="578" height="584" key="MultipleFileMergeDialog" timestamp="1588956133350">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state x="520" y="377" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1373.873@67.27.1373.873" timestamp="1588614640483" />
-    <state x="390" y="47" width="727" height="831" key="find.popup" timestamp="1588715361430">
+    <state x="459" y="170" width="578" height="584" key="MultipleFileMergeDialog/67.27.1373.873@67.27.1373.873" timestamp="1588956133350" />
+    <state x="487" y="97" width="522" height="730" key="VCS.ChangeListViewerDialog" timestamp="1588956103055">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state x="390" y="47" width="727" height="831" key="find.popup/67.27.1373.873@67.27.1373.873" timestamp="1588715361430" />
+    <state x="487" y="97" width="522" height="730" key="VCS.ChangeListViewerDialog/67.27.1373.873@67.27.1373.873" timestamp="1588956103055" />
+    <state x="520" y="377" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588956117687">
+      <screen x="67" y="27" width="1373" height="873" />
+    </state>
+    <state x="520" y="377" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1373.873@67.27.1373.873" timestamp="1588956117687" />
+    <state x="390" y="47" width="727" height="831" key="find.popup" timestamp="1588957701173">
+      <screen x="67" y="27" width="1373" height="873" />
+    </state>
+    <state x="390" y="47" width="727" height="831" key="find.popup/67.27.1373.873@67.27.1373.873" timestamp="1588957701173" />
   </component>
 </project>

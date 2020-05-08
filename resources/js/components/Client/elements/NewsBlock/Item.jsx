@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types";
 import moment from 'moment';
-
+import {Link} from 'react-router-dom';
 moment.locale('ru');
 const Item = ({name, image, slug, anons, date}) => (
     <NewsItemComponent className="news-item col-12 col-sm-3">
-        <a href={`/news/${slug}`}>
+        <Link to={`/news/${slug}`}>
             <div className="news-item__date">
                 {moment(date).format('D MMMM')}
             </div>
@@ -19,7 +19,7 @@ const Item = ({name, image, slug, anons, date}) => (
             <div className="news-item__anons">
                 {anons}
             </div>
-        </a>
+        </Link>
     </NewsItemComponent>
 );
 Item.propTypes = {
@@ -57,14 +57,14 @@ const NewsItemComponent = styled.li`
     .news-item__image img {
       max-width: 100%;
     }
-    .news-item__image{ 
+    .news-item__image{
       margin-bottom: 25px
     }
     .news-item__title{
         font-size: 18px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
-        color: #000; 
+        color: #000;
         min-height: 52px;
         margin: 0 0 20px;
     }
@@ -72,9 +72,9 @@ const NewsItemComponent = styled.li`
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
     }
-    
+
   }
-  
+
 
 
 `;
