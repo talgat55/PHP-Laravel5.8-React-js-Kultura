@@ -15,6 +15,7 @@ class Place extends Model
         'name',
         'image',
         'address',
+        'slug',
         'phone',
         'status',
         'sort',

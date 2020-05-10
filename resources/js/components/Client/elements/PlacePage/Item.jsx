@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
-const ItemPlace = ({name, image}) => {
+const ItemPlace = ({name, image,slug}) => {
 
     return (
         <PlaceItemComponent className=" col-12 col-md-3">
-            <Link to="#">
+            <Link to={slug}>
                 <div className="place-item__image">
                     <img src={image} alt="Image"/>
                 </div>
@@ -41,7 +41,7 @@ const PlaceItemComponent = styled.li`
     line-height: 22px;
     margin: 20px 0 0;
   }
-  
-  
+
+
 `;
 export default ItemPlace;

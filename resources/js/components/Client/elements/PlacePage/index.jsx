@@ -22,6 +22,7 @@ const PlacePage = ({data}) => {
                                     key={index}
                                     name={item.name}
                                     image={item.image}
+                                    slug={item.slug}
                                 />
                             ))
                         }

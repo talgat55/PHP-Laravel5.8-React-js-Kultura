@@ -20,6 +20,7 @@ class CreateTablePlaces extends Migration
             $table->string('address');
             $table->string('phone');
             $table->boolean('status');
+            $table->string('slug')->nullable();
             $table->integer('sort');
             $table->string('web_site_link');
             $table->longText('text');
