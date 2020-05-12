@@ -20,6 +20,7 @@ class CreateTableAfisha extends Migration
             $table->longText('text');
             $table->string('image');
             $table->string('age_limit');
+            $table->string('slug');
             $table->boolean('status');
             $table->integer('sort');
             $table->string('duration');

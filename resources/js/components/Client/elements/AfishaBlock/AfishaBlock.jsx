@@ -50,6 +50,7 @@ const AfishaBlock = ({sliders}) => {
                                                 name={item.name}
                                                 image={item.image}
                                                 date_time_launch={item.date_time_launch}
+                                                slug={item.slug}
                                             />
                                         ))
                                     }

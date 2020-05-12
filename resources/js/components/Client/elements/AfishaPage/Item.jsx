@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import moment from "moment";
 import {Link} from 'react-router-dom';
-const AfishaItem = ({name, image, date}) => {
+const AfishaItem = ({name, image, date,slug}) => {
 
     return (
         <AfishaItemComponent className="col-12 col-sm-3">
-            <Link to="#" style={{backgroundImage: `url(${image})`}}>
+            <Link to={slug} style={{backgroundImage: `url(${image})`}}>
                 <div className="afisha-item__date">
                     {moment(date).format('D MMMM')}
                 </div>

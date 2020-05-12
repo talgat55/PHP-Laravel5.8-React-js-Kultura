@@ -19,6 +19,7 @@ class Afisha extends Model
         'date_time_launch',
         'place_id',
         'sort',
+        'slug',
         'status',
     ];
 

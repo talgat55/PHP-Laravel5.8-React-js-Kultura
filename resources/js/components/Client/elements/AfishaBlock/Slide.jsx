@@ -17,7 +17,7 @@ const Slide = ({name, image, ...props}) => {
                     {moment(props.date_time_launch).format('D MMMM')}
                 </div>
                 <div className="afisha-slide__image-block">
-                    <Link to="#" className="afisha-slide__link">
+                    <Link to={props.slug} className="afisha-slide__link">
                         <div className="afisha-slide__image" style={{backgroundImage: `url(${image})` }}></div>
                         <div className="afisha-slide__overlay"/>
                         <div className="afisha-slide__title">
@@ -73,7 +73,7 @@ const SlideComponent = styled.div`
         z-index: 3;
         top: 50%;
         left: 0;
-        width: 100%; 
+        width: 100%;
         padding: 0 10px;
         text-align: center;
         font-family: "Neo Sans Pro";
@@ -91,13 +91,13 @@ const SlideComponent = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,.4); 
-        transition: all .3s; 
+        background: rgba(0,0,0,.4);
+        transition: all .3s;
         opacity: 0;
       }
       &__image-block{
         width: 260px;
-        height: 250px; 
+        height: 250px;
         margin: 0 auto;
       }
       &__image{
@@ -106,9 +106,9 @@ const SlideComponent = styled.div`
         background-size: cover!important;
         height: 100%;
       }
-  
+
   }
-  
+
 `;
 
 

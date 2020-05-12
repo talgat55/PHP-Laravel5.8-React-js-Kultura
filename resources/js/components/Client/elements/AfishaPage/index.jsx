@@ -22,6 +22,7 @@ const AfishaPage = ({data}) => {
                                     name={item.name}
                                     image={item.image}
                                     date={item.date_time_launch}
+                                    slug={item.slug}
                                 />
                             ))
                         }
@@ -43,7 +44,7 @@ const AfishaPageComponent = styled.section`
     li{
       list-style: none;
     }
-    
+
   }
 
 `;

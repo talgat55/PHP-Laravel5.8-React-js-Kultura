@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="567f64c4-aab4-407e-af53-e64572852b38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Place.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Place.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_08_172718_create_table_places.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/PlacePage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/PlacePage/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/PlacePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/PlacePage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Afisha.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Afisha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/Slide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/Slide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +243,8 @@
       <workItem from="1588610219681" duration="4008000" />
       <workItem from="1588711300084" duration="2612000" />
       <workItem from="1588789242785" duration="8374000" />
-      <workItem from="1589125567466" duration="1152000" />
+      <workItem from="1589125567466" duration="1781000" />
+      <workItem from="1589299189488" duration="1162000" />
     </task>
     <servers />
   </component>
@@ -261,14 +265,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589127078886">
+    <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589300319391">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1589127078886" />
-    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588960717654">
+    <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1589300319391" />
+    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589137342266">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873@67.27.1373.873" timestamp="1588960717654" />
+    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873@67.27.1373.873" timestamp="1589137342266" />
     <state x="459" y="170" width="578" height="584" key="MultipleFileMergeDialog" timestamp="1588956133350">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
