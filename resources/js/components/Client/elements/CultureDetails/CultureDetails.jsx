@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CultureDetailItem from "./CultureDetailItem";
 import Subtitle from "../Title/Subtitle";
-import Link from "../Link/Link";
+import Link from "../Link/LinkComponent";
 import PropTypes from "prop-types";
 const CultureDetails = ({data}) =>{
     return  (
@@ -39,12 +39,12 @@ const CultureDetails = ({data}) =>{
 };
 
 const CultureDetailComponent = styled.section`
-  display: flex; 
+  display: flex;
   margin-bottom: 80px;
  .culture-details__list{
     margin: 0 -15px;
     padding: 0;
-    min-width: 1170px; 
+    min-width: 1170px;
   }
   .culture-details__list li {
     width: 60%;
@@ -54,12 +54,12 @@ const CultureDetailComponent = styled.section`
     &:hover{
       opacity: .5;
     }
-  } 
+  }
   .culture-details__list li:first-child{
     height: 600px;
     width: 40% !important;
   }
- 
+
 `;
 
 CultureDetails.propTypes = {

@@ -9,7 +9,7 @@ class Afisha extends Model
 {
     use Searchable;
     protected $table = 'afisha';
-
+    protected $primaryKey = 'id';
     protected $fillable = [
         'name',
         'text',

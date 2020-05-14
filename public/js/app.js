@@ -109882,7 +109882,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_png__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../static/afisha-arr-mirror.png */ "./resources/js/static/afisha-arr-mirror.png");
 /* harmony import */ var _static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_static_afisha_arr_mirror_png__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Link/Link */ "./resources/js/components/Client/elements/Link/Link.jsx");
+/* harmony import */ var _Link_LinkComponent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Link/LinkComponent */ "./resources/js/components/Client/elements/Link/LinkComponent.jsx");
 /* harmony import */ var _contentLoaders_Afisha_AfishaWrapper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../contentLoaders/Afisha/AfishaWrapper */ "./resources/js/contentLoaders/Afisha/AfishaWrapper.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    padding: 55px 0;\n    .slider-wrapper{\n      width: 100%;\n      position: relative;\n    }\n    .afisha-sliders__arrows{\n        .button{\n          position: absolute;\n          top: 150px;\n          transition: all .3s;\n          &:hover{\n            opacity: .5;\n          }\n        }\n\n        .right-arrow{\n            right: -40px;\n        }\n        .left-arrow{\n            left: -40px;\n        }\n    }\n    .afisha__link-bottom-wrapper{\n        display: table;\n        margin: 40px auto;\n    }\n"]);
@@ -109951,7 +109951,8 @@ var AfishaBlock = function AfishaBlock(_ref) {
       id: item.id,
       name: item.name,
       image: item.image,
-      date_time_launch: item.date_time_launch
+      date_time_launch: item.date_time_launch,
+      slug: item.slug
     });
   }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contentLoaders_Afisha_AfishaWrapper__WEBPACK_IMPORTED_MODULE_12__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-sliders__arrows"
@@ -109975,7 +109976,7 @@ var AfishaBlock = function AfishaBlock(_ref) {
     alt: "\u0418\u043A\u043E\u043D\u043A\u0430"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha__link-bottom-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_LinkComponent__WEBPACK_IMPORTED_MODULE_11__["default"], {
     name: "\u0412\u0441\u044F \u0430\u0444\u0438\u0448\u0430",
     link: "/afisha"
   }))))));
@@ -110007,7 +110008,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  .afisha-slide{\n    position: relative;\n    margin: 42px 10px 10px 10px;\n      &__link{\n        display: inline-block;\n        width: 100%;\n        height: 100%;\n        position: relative;\n        &:hover .afisha-slide__overlay,\n        &:hover .afisha-slide__title{\n          opacity: 1;\n        }\n      }\n      &__date{\n        background: #fff;\n        box-sizing: border-box;\n        z-index: 9;\n        white-space: nowrap;\n        padding: 3px 26px;\n        position: absolute;\n        top: -21px;\n        box-shadow: 0px -8px 18px 0px #e0e0e0;\n        left: 50%;\n        border-radius: 42px;\n        font-family: \"Neo Sans Pro\";\n        font-size: 23px;\n        color: #12a69d;\n        transform: translateX(-50%);\n      }\n      &__title{\n        position: absolute;\n        z-index: 3;\n        top: 50%;\n        left: 0;\n        width: 100%; \n        padding: 0 10px;\n        text-align: center;\n        font-family: \"Neo Sans Pro\";\n        font-size: 25px;\n        font-weight: 400;\n        color: #fff;\n         transition: all .3s;\n         transform: translateY(-50%);\n         opacity: 0;\n      }\n      &__overlay{\n        position: absolute;\n        z-index: 2;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background: rgba(0,0,0,.4); \n        transition: all .3s; \n        opacity: 0;\n      }\n      &__image-block{\n        width: 260px;\n        height: 250px; \n        margin: 0 auto;\n      }\n      &__image{\n        background-repeat: no-repeat!important;\n        background-position: center center!important;\n        background-size: cover!important;\n        height: 100%;\n      }\n  \n  }\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  .afisha-slide{\n    position: relative;\n    margin: 42px 10px 10px 10px;\n      &__link{\n        display: inline-block;\n        width: 100%;\n        height: 100%;\n        position: relative;\n        &:hover .afisha-slide__overlay,\n        &:hover .afisha-slide__title{\n          opacity: 1;\n        }\n      }\n      &__date{\n        background: #fff;\n        box-sizing: border-box;\n        z-index: 9;\n        white-space: nowrap;\n        padding: 3px 26px;\n        position: absolute;\n        top: -21px;\n        box-shadow: 0px -8px 18px 0px #e0e0e0;\n        left: 50%;\n        border-radius: 42px;\n        font-family: \"Neo Sans Pro\";\n        font-size: 23px;\n        color: #12a69d;\n        transform: translateX(-50%);\n      }\n      &__title{\n        position: absolute;\n        z-index: 3;\n        top: 50%;\n        left: 0;\n        width: 100%;\n        padding: 0 10px;\n        text-align: center;\n        font-family: \"Neo Sans Pro\";\n        font-size: 25px;\n        font-weight: 400;\n        color: #fff;\n         transition: all .3s;\n         transform: translateY(-50%);\n         opacity: 0;\n      }\n      &__overlay{\n        position: absolute;\n        z-index: 2;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background: rgba(0,0,0,.4);\n        transition: all .3s;\n        opacity: 0;\n      }\n      &__image-block{\n        width: 260px;\n        height: 250px;\n        margin: 0 auto;\n      }\n      &__image{\n        background-repeat: no-repeat!important;\n        background-position: center center!important;\n        background-size: cover!important;\n        height: 100%;\n      }\n\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110041,7 +110042,7 @@ var Slide = function Slide(_ref) {
   }, moment__WEBPACK_IMPORTED_MODULE_4___default()(props.date_time_launch).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__image-block"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    to: "#",
+    to: props.slug,
     className: "afisha-slide__link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__image",
@@ -110103,11 +110104,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var AfishaItem = function AfishaItem(_ref) {
   var name = _ref.name,
       image = _ref.image,
-      date = _ref.date;
+      date = _ref.date,
+      slug = _ref.slug;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AfishaItemComponent, {
     className: "col-12 col-sm-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-    to: "#",
+    to: slug,
     style: {
       backgroundImage: "url(".concat(image, ")")
     }
@@ -110145,7 +110147,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Item */ "./resources/js/components/Client/elements/AfishaPage/Item.jsx");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 40px 0;\n  .afisha-list{\n    width: 100%;\n    margin: 0;\n    padding: 0;\n    li{\n      list-style: none;\n    }\n    \n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 40px 0;\n  .afisha-list{\n    width: 100%;\n    margin: 0;\n    padding: 0;\n    li{\n      list-style: none;\n    }\n\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110179,7 +110181,8 @@ var AfishaPage = function AfishaPage(_ref) {
       key: index,
       name: item.name,
       image: item.image,
-      date: item.date_time_launch
+      date: item.date_time_launch,
+      slug: item.slug
     });
   })))));
 };
@@ -110326,11 +110329,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _CultureDetailItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CultureDetailItem */ "./resources/js/components/Client/elements/CultureDetails/CultureDetailItem.jsx");
 /* harmony import */ var _Title_Subtitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Title/Subtitle */ "./resources/js/components/Client/elements/Title/Subtitle.jsx");
-/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Link/Link */ "./resources/js/components/Client/elements/Link/Link.jsx");
+/* harmony import */ var _Link_LinkComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Link/LinkComponent */ "./resources/js/components/Client/elements/Link/LinkComponent.jsx");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex; \n  margin-bottom: 80px;\n .culture-details__list{\n    margin: 0 -15px;\n    padding: 0;\n    min-width: 1170px; \n  }\n  .culture-details__list li {\n    width: 60%;\n    height: 300px;\n    float: left;\n    transition: all .3s;\n    &:hover{\n      opacity: .5;\n    }\n  } \n  .culture-details__list li:first-child{\n    height: 600px;\n    width: 40% !important;\n  }\n \n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  margin-bottom: 80px;\n .culture-details__list{\n    margin: 0 -15px;\n    padding: 0;\n    min-width: 1170px;\n  }\n  .culture-details__list li {\n    width: 60%;\n    height: 300px;\n    float: left;\n    transition: all .3s;\n    &:hover{\n      opacity: .5;\n    }\n  }\n  .culture-details__list li:first-child{\n    height: 600px;\n    width: 40% !important;\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110369,7 +110372,7 @@ var CultureDetails = function CultureDetails(_ref) {
     });
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row  justify-content-center mt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_LinkComponent__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "\u0412\u0441\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B",
     link: "/culture-details"
   }))));
@@ -111024,10 +111027,10 @@ Slide.propTypes = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Client/elements/Link/Link.jsx":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/Client/elements/Link/Link.jsx ***!
-  \***************************************************************/
+/***/ "./resources/js/components/Client/elements/Link/LinkComponent.jsx":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Client/elements/Link/LinkComponent.jsx ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -111038,6 +111041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    a{\n        display: inline-block;\n        color: #12a69d;\n        border: 1.4px solid #12a69d;\n\n        text-decoration: none;\n        padding: 10px 32px;\n        font-family: \"Neo Sans Pro\";\n        font-size: 20px;\n        -webkit-transition: all 0.3s ease;\n        -moz-transition: all 0.3s ease;\n        transition: all 0.3s ease;\n        &:hover{\n            color: #fff;\n            background-color: #12a69d;\n            text-decoration: none;\n        }\n    }\n"]);
 
@@ -111054,20 +111058,21 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Link = function Link(_ref) {
+
+var LinkComponent = function LinkComponent(_ref) {
   var name = _ref.name,
       link = _ref.link;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinkComponent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: link
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinkWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: link
   }, name));
 };
 
-var LinkComponent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
-Link.propTypes = {
+var LinkWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+LinkComponent.propTypes = {
   name: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   link: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
 };
-/* harmony default export */ __webpack_exports__["default"] = (Link);
+/* harmony default export */ __webpack_exports__["default"] = (LinkComponent);
 
 /***/ }),
 
@@ -111287,7 +111292,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Title_Subtitle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Title/Subtitle */ "./resources/js/components/Client/elements/Title/Subtitle.jsx");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Item */ "./resources/js/components/Client/elements/NewsBlock/Item.jsx");
-/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Link/Link */ "./resources/js/components/Client/elements/Link/Link.jsx");
+/* harmony import */ var _Link_LinkComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Link/LinkComponent */ "./resources/js/components/Client/elements/Link/LinkComponent.jsx");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
 function _templateObject() {
@@ -111332,7 +111337,7 @@ var NewsBlock = function NewsBlock(_ref) {
     });
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row  justify-content-center mt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Link_LinkComponent__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "\u0412\u0441\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B",
     link: "/news"
   }))));
@@ -111429,7 +111434,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  list-style: none;\n  .place-item__image img{\n    max-width: 100%;\n  }\n  a{\n    display: inline-block;\n    margin-bottom: 30px;\n  }\n  .place-item__title{\n    font-family: \"Neo Sans Pro\";\n    font-weight: 400;\n    color: #20acaf;\n    font-size: 18px;\n    text-align: center;\n    line-height: 22px;\n    margin: 20px 0 0;\n  }\n  \n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  list-style: none;\n  .place-item__image img{\n    max-width: 100%;\n  }\n  a{\n    display: inline-block;\n    margin-bottom: 30px;\n  }\n  .place-item__title{\n    font-family: \"Neo Sans Pro\";\n    font-weight: 400;\n    color: #20acaf;\n    font-size: 18px;\n    text-align: center;\n    line-height: 22px;\n    margin: 20px 0 0;\n  }\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -111447,11 +111452,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var ItemPlace = function ItemPlace(_ref) {
   var name = _ref.name,
-      image = _ref.image;
+      image = _ref.image,
+      slug = _ref.slug;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PlaceItemComponent, {
     className: " col-12 col-md-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    to: "#"
+    to: slug
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "place-item__image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -111521,7 +111527,8 @@ var PlacePage = function PlacePage(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Item__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: index,
       name: item.name,
-      image: item.image
+      image: item.image,
+      slug: item.slug
     });
   })))));
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import Subtitle from "../Title/Subtitle";
 import styled from 'styled-components';
 import Item from './Item';
-import Link from "../Link/Link";
+import Link from "../Link/LinkComponent";
 import PropTypes from "prop-types";
 
 

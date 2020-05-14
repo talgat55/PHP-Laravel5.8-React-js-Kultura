@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="567f64c4-aab4-407e-af53-e64572852b38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/KulturaReact.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KulturaReact.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Afisha.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Afisha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_08_173511_create_table_afisha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/scout.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/scout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/AfishaBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/Slide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/Slide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/Link/Link.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/Link/LinkComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/NewsBlock/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/NewsBlock/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +28,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -137,6 +158,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/vendor/laravel/scout" />
       <path value="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php" />
+      <path value="$PROJECT_DIR$/vendor/teamtnt/tntsearch" />
+      <path value="$PROJECT_DIR$/vendor/teamtnt/laravel-scout-tntsearch-driver" />
     </include_path>
   </component>
   <component name="ProjectId" id="1bPEezniaOBC5N1rqq0Gn50gGEQ" />
@@ -150,6 +173,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -244,7 +268,8 @@
       <workItem from="1588711300084" duration="2612000" />
       <workItem from="1588789242785" duration="8374000" />
       <workItem from="1589125567466" duration="1781000" />
-      <workItem from="1589299189488" duration="1162000" />
+      <workItem from="1589299189488" duration="1811000" />
+      <workItem from="1589480290608" duration="3475000" />
     </task>
     <servers />
   </component>
@@ -269,10 +294,14 @@
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1589300319391" />
-    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589137342266">
+    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589303907883">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873@67.27.1373.873" timestamp="1589137342266" />
+    <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873@67.27.1373.873" timestamp="1589303907883" />
+    <state width="263" height="541" key="HiddenNamespacesPopup" timestamp="1589483162735">
+      <screen x="67" y="27" width="1389" height="879" />
+    </state>
+    <state width="263" height="541" key="HiddenNamespacesPopup/67.27.1389.879@67.27.1389.879" timestamp="1589483162735" />
     <state x="459" y="170" width="578" height="584" key="MultipleFileMergeDialog" timestamp="1588956133350">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
@@ -285,9 +314,10 @@
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="520" y="377" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1373.873@67.27.1373.873" timestamp="1588956117687" />
-    <state x="390" y="47" width="727" height="831" key="find.popup" timestamp="1588957701173">
-      <screen x="67" y="27" width="1373" height="873" />
+    <state x="394" y="47" width="736" height="837" key="find.popup" timestamp="1589486334768">
+      <screen x="67" y="27" width="1389" height="879" />
     </state>
     <state x="390" y="47" width="727" height="831" key="find.popup/67.27.1373.873@67.27.1373.873" timestamp="1588957701173" />
+    <state x="394" y="47" width="736" height="837" key="find.popup/67.27.1389.879@67.27.1389.879" timestamp="1589486334768" />
   </component>
 </project>

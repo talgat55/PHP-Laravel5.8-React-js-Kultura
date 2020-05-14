@@ -9,7 +9,7 @@ import Slide from "./Slide";
 import Subtitle from "../Title/Subtitle";
 import arrowRight from '../../../../static/afisha-arr.png';
 import arrowLeft from '../../../../static/afisha-arr-mirror.png';
-import Link from "../Link/Link";
+import LinkComponent from "../Link/LinkComponent";
 import AfishaContentLoaderWrap from "../../../../contentLoaders/Afisha/AfishaWrapper";
 
 const settings = {
@@ -75,7 +75,7 @@ const AfishaBlock = ({sliders}) => {
                             </div>
                         </div>
                         <div className="afisha__link-bottom-wrapper">
-                            <Link
+                            <LinkComponent
                                 name="Вся афиша"
                                 link="/afisha"
                             />

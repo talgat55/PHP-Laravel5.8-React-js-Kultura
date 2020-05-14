@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import {
+    Link
+} from "react-router-dom";
 
-const Link = ({name, link}) => (
-    <LinkComponent>
-        <a href={link}>{name}</a>
-    </LinkComponent>
+const LinkComponent = ({name, link}) => (
+    <LinkWrapper>
+        <Link to={link}>{name}</Link>
+    </LinkWrapper>
 );
-const LinkComponent = styled.div`
+const LinkWrapper = styled.div`
     a{
         display: inline-block;
         color: #12a69d;
@@ -27,8 +30,8 @@ const LinkComponent = styled.div`
         }
     }
 `;
-Link.propTypes = {
+LinkComponent.propTypes = {
     name: PropTypes.string,
     link: PropTypes.string,
 };
-export default Link;
+export default LinkComponent;
