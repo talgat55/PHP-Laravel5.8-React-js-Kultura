@@ -109050,6 +109050,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Client_pages_Place__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Client/pages/Place */ "./resources/js/components/Client/pages/Place.jsx");
 /* harmony import */ var _components_Client_pages_CultureDetails__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Client/pages/CultureDetails */ "./resources/js/components/Client/pages/CultureDetails.jsx");
 /* harmony import */ var _components_Client_pages_Gallery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Client/pages/Gallery */ "./resources/js/components/Client/pages/Gallery.jsx");
+/* harmony import */ var _components_Client_pages_AfishaDetail__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Client/pages/AfishaDetail */ "./resources/js/components/Client/pages/AfishaDetail.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -109071,6 +109072,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -109116,6 +109118,10 @@ var Client = /*#__PURE__*/function (_Component) {
         exact: true,
         path: "/afisha",
         component: _components_Client_pages_Afisha__WEBPACK_IMPORTED_MODULE_8__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
+        path: "/afisha/:idAfisha",
+        component: _components_Client_pages_AfishaDetail__WEBPACK_IMPORTED_MODULE_12__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/place",
@@ -109185,13 +109191,14 @@ Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WE
 /*!***************************************!*\
   !*** ./resources/js/api/getAfisha.js ***!
   \***************************************/
-/*! exports provided: fetchRelatedAfisha, fetchRelatedAfishaPage */
+/*! exports provided: fetchRelatedAfisha, fetchRelatedAfishaPage, fetchDetailAfisha */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchRelatedAfisha", function() { return fetchRelatedAfisha; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchRelatedAfishaPage", function() { return fetchRelatedAfishaPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDetailAfisha", function() { return fetchDetailAfisha; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -109200,9 +109207,14 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//--------------------
+// Get related items
+//--------------------
 function fetchRelatedAfisha() {
   return _fetchRelatedAfisha.apply(this, arguments);
-}
+} //----------------------------
+//  Get items for page
+//---------------------------
 
 function _fetchRelatedAfisha() {
   _fetchRelatedAfisha = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
@@ -109235,7 +109247,9 @@ function _fetchRelatedAfisha() {
 
 function fetchRelatedAfishaPage() {
   return _fetchRelatedAfishaPage.apply(this, arguments);
-}
+} //--------------------
+// Get item for detail
+//---------------------
 
 function _fetchRelatedAfishaPage() {
   _fetchRelatedAfishaPage = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
@@ -109268,6 +109282,39 @@ function _fetchRelatedAfishaPage() {
     }, _callee2);
   }));
   return _fetchRelatedAfishaPage.apply(this, arguments);
+}
+
+function fetchDetailAfisha(_x) {
+  return _fetchDetailAfisha.apply(this, arguments);
+}
+
+function _fetchDetailAfisha() {
+  _fetchDetailAfisha = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(id) {
+    var response, json;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return fetch("/api/get-afisha-detail/".concat(id));
+
+          case 2:
+            response = _context3.sent;
+            _context3.next = 5;
+            return response.json();
+
+          case 5:
+            json = _context3.sent;
+            return _context3.abrupt("return", json);
+
+          case 7:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _fetchDetailAfisha.apply(this, arguments);
 }
 
 /***/ }),
@@ -110042,7 +110089,7 @@ var Slide = function Slide(_ref) {
   }, moment__WEBPACK_IMPORTED_MODULE_4___default()(props.date_time_launch).format('D MMMM')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__image-block"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    to: props.slug,
+    to: "/afisha/".concat(props.slug),
     className: "afisha-slide__link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "afisha-slide__image",
@@ -110109,7 +110156,7 @@ var AfishaItem = function AfishaItem(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AfishaItemComponent, {
     className: "col-12 col-sm-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-    to: slug,
+    to: "/afisha/".concat(slug),
     style: {
       backgroundImage: "url(".concat(image, ")")
     }
@@ -112075,6 +112122,78 @@ var Afisha = function Afisha() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Afisha);
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/pages/AfishaDetail.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/Client/pages/AfishaDetail.jsx ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_html_parser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-html-parser */ "./node_modules/react-html-parser/lib/index.js");
+/* harmony import */ var react_html_parser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_html_parser__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _api_getAfisha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../api/getAfisha */ "./resources/js/api/getAfisha.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var AfishaDetail = function AfishaDetail(_ref) {
+  var match = _ref.match,
+      location = _ref.location;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      data = _useState2[0],
+      setData = _useState2[1];
+
+  var idAfisha = match.params.idAfisha;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var detail = Object(_api_getAfisha__WEBPACK_IMPORTED_MODULE_2__["fetchDetailAfisha"])(idAfisha);
+    detail.then(function (data) {
+      setData(data);
+    });
+  }, []);
+  if (!data) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430");
+  console.log(data);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container  mb-5 mt-5"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, data[0].name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "img-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: data[0].image,
+    alt: "\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "description"
+  }, react_html_parser__WEBPACK_IMPORTED_MODULE_1___default()(data[0].text))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AfishaDetail);
 
 /***/ }),
 

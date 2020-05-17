@@ -10,6 +10,7 @@ import Afisha from "./components/Client/pages/Afisha";
 import Place from "./components/Client/pages/Place";
 import CultureDetails from "./components/Client/pages/CultureDetails";
 import Gallery from "./components/Client/pages/Gallery";
+import AfishaDetail from "./components/Client/pages/AfishaDetail";
 
 class Client extends Component {
 
@@ -29,6 +30,7 @@ class Client extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/news" component={News}/>
                         <Route exact path="/afisha" component={Afisha}/>
+                        <Route exact path="/afisha/:idAfisha" component={AfishaDetail}/>
                         <Route exact path="/place" component={Place}/>
                         <Route exact path="/gallery" component={Gallery}/>
                         <Route exact path="/culture-details" component={CultureDetails}/>

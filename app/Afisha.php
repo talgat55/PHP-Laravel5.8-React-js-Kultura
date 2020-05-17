@@ -31,6 +31,18 @@ class Afisha extends Model
         return $query->where('status', 1)->with('places')->paginate('50');
     }
 
+
+    /*
+     * Get active items  by ID
+     */
+    function scopeActiveWithPlacesDetailPage($query,$id)
+    {
+        return $query->where('status', 1)->where('id', $id)->with('places')->get();
+    }
+
+
+
+
     /*
      * Get related items for block
      */

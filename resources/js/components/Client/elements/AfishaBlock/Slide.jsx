@@ -17,7 +17,7 @@ const Slide = ({name, image, ...props}) => {
                     {moment(props.date_time_launch).format('D MMMM')}
                 </div>
                 <div className="afisha-slide__image-block">
-                    <Link to={props.slug} className="afisha-slide__link">
+                    <Link to={`/afisha/${props.slug}`} className="afisha-slide__link">
                         <div className="afisha-slide__image" style={{backgroundImage: `url(${image})` }}></div>
                         <div className="afisha-slide__overlay"/>
                         <div className="afisha-slide__title">

@@ -31,6 +31,18 @@ class ApiAfishaController extends Controller
             ->json($item);
     }
 
+    /**
+     * Return object detail
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getDetail($id)
+    {
+        $item = Afisha::activeWithPlacesDetailPage($id);
+        return response()
+            ->json($item);
+    }
+
 
 
 }

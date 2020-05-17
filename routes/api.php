@@ -22,6 +22,7 @@ Route::get('/get-menus', 'Api\ApiMenuController@get')->name('apiGetMenus');
 Route::get('/get-home-slider', 'Api\ApiHomeSliderController@get')->name('apiGetHomeSlider');
 
 Route::get('/get-afisha-related', 'Api\ApiAfishaController@getRelated')->name('apiGetAfishaRelated');
+Route::get('/get-afisha-detail/{id}', 'Api\ApiAfishaController@getDetail')->name('apiGetAfishaDetail');
 Route::get('/get-afisha-related-page/{page}', 'Api\ApiAfishaController@getRelatedPage')->name('apiGetAfishaRelatedPage');
 
 

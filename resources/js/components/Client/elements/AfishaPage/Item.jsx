@@ -7,7 +7,7 @@ const AfishaItem = ({name, image, date,slug}) => {
 
     return (
         <AfishaItemComponent className="col-12 col-sm-3">
-            <Link to={slug} style={{backgroundImage: `url(${image})`}}>
+            <Link to={`/afisha/${slug}`} style={{backgroundImage: `url(${image})`}}>
                 <div className="afisha-item__date">
                     {moment(date).format('D MMMM')}
                 </div>
