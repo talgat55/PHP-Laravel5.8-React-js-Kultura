@@ -6,12 +6,9 @@ import {
 } from "react-router-dom";
 import moment from 'moment';
 moment.locale('ru');
-
 const Slide = ({name, image, ...props}) => {
-
     return (
         <SlideComponent >
-
             <div className="afisha-slide">
                 <div className="afisha-slide__date">
                     {moment(props.date_time_launch).format('D MMMM')}

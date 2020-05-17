@@ -15,3 +15,12 @@ export async function fetchNewsWithPage(page = 1){
     return json;
 }
 
+/*
+* Get detail news
+*/
+export async function fetchDetailNews(slug){
+    const response = await fetch(`/api/get-news-detail/${slug}`);
+    const json = await response.json();
+    return json;
+}
+

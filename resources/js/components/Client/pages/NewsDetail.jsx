@@ -1,19 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import {fetchDetailAfisha} from "../../../api/getAfisha";
+import {fetchDetailNews} from "../../../api/getNews";
 
-const AfishaDetail = ({match, location}) => {
+const NewsDetail = ({match, location}) => {
     const [data, setData] = useState(null);
-    const {params: {idAfisha}} = match;
-
+    const {params: {idNews}} = match;
     useEffect(() => {
-        const detail = fetchDetailAfisha(idAfisha);
+        const detail = fetchDetailNews(idNews);
         detail.then(data => {
             setData(data);
         });
     }, []);
-
-    if (!data) return (<>Загрузка</>);
+    console.log(data);
+    if(!data)  return  (<>Загрузка</>);
 
     return (
         <div className="container  mb-5 mt-5">
@@ -23,15 +22,11 @@ const AfishaDetail = ({match, location}) => {
                 </h1>
             </div>
             <div className="row">
-                <div className="col-12 col-lg-7">
+                <div className="col-12 col-lg-12">
                     <div className="img-block">
                         <img src={data[0].image}  alt="Изображение" />
                     </div>
                 </div>
-                <div className="col-12 col-lg-5">
-
-                </div>
-
                 <div className="description">
                     {ReactHtmlParser(data[0].text)}
                 </div>
@@ -40,4 +35,5 @@ const AfishaDetail = ({match, location}) => {
     )
 };
 
-export default AfishaDetail;
+
+export default NewsDetail;

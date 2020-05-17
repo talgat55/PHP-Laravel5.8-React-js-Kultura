@@ -31,6 +31,17 @@ class ApiNewsController extends Controller
             ->json($item);
     }
 
+    /**
+     * Return object detail
+     * @param $slug
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getDetail($slug)
+    {
+        $item = News::ActiveDetailBySlug($slug);
+        return response()
+            ->json($item);
+    }
 
 
 }

@@ -33,6 +33,8 @@ Route::get('/get-culture-details-page', 'Api\ApiCultureDetailsController@getPage
 
 Route::get('/get-news-last', 'Api\ApiNewsController@getRelated')->name('apiGetLastNews');
 Route::get('/get-news/{page}', 'Api\ApiNewsController@getWithPage')->name('apiGetNewsWithPage');
+Route::get('/get-news-detail/{slug}', 'Api\ApiNewsController@getDetail')->name('apiGetNewsDetail');
+
 
 Route::get('/get-places', 'Api\ApiPlaceController@getRelated')->name('apiGetRelatedPlaces');
 

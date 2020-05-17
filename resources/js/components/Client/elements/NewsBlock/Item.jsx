@@ -72,12 +72,6 @@ const NewsItemComponent = styled.li`
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
     }
-
   }
-
-
-
 `;
-
-
 export default Item;

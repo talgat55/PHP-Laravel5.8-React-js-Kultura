@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+
 class News extends Model
 {
     use Searchable;
@@ -23,17 +24,29 @@ class News extends Model
 
     /*
      * Get Related news
-     *
      */
-    function scopeActiveWithPlacesRelated($query){
+    function scopeActiveWithPlacesRelated($query)
+    {
         return $query
-            ->select('name', 'image', 'slug' ,'anons' , 'publish_date')
+            ->select('name', 'image', 'slug', 'anons', 'publish_date')
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
             ->limit(8)
             ->get();
     }
-    function scopeActiveWithPagination($query){
+    /*
+    *  With pagination
+    */
+    function scopeActiveWithPagination($query)
+    {
         return $query->where('status', 1)->paginate('12');
     }
+    /*
+    * Get active items  by slug
+    */
+    function scopeActiveDetailBySlug($query, $slug)
+    {
+        return $query->where('status', 1)->where('slug', $slug)->get();
+    }
+
 }
