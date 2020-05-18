@@ -18,5 +18,16 @@ class ApiGalleryController extends Controller
         return response()
             ->json($item);
     }
+    /**
+     * Return object detail
+     * @param $slug
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getDetail($slug)
+    {
+        $item = Gallery::ActiveDetailBySlug($slug);
+        return response()
+            ->json($item);
+    }
 
 }

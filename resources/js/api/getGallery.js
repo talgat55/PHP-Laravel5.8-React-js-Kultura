@@ -3,3 +3,12 @@ export async function fetchGalleryPage(page =1){
     const json = await response.json();
     return json;
 }
+
+//----------------
+// get Detail
+//-----------------
+export async function fetchGalleryDetailPage(slug){
+    const response = await fetch(`/api/get-gallery-detail/${slug}`);
+    const json = await response.json();
+    return json;
+}

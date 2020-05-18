@@ -109052,6 +109052,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Client_pages_Gallery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Client/pages/Gallery */ "./resources/js/components/Client/pages/Gallery.jsx");
 /* harmony import */ var _components_Client_pages_AfishaDetail__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Client/pages/AfishaDetail */ "./resources/js/components/Client/pages/AfishaDetail.jsx");
 /* harmony import */ var _components_Client_pages_NewsDetail__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/Client/pages/NewsDetail */ "./resources/js/components/Client/pages/NewsDetail.jsx");
+/* harmony import */ var _components_Client_pages_GalleryDetail__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/Client/pages/GalleryDetail */ "./resources/js/components/Client/pages/GalleryDetail.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -109073,6 +109074,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -109136,6 +109138,10 @@ var Client = /*#__PURE__*/function (_Component) {
         exact: true,
         path: "/gallery",
         component: _components_Client_pages_Gallery__WEBPACK_IMPORTED_MODULE_11__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
+        path: "/gallery/:idGallery",
+        component: _components_Client_pages_GalleryDetail__WEBPACK_IMPORTED_MODULE_14__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/culture-details",
@@ -109477,12 +109483,13 @@ function _fetchCultureDetailsPage() {
 /*!****************************************!*\
   !*** ./resources/js/api/getGallery.js ***!
   \****************************************/
-/*! exports provided: fetchGalleryPage */
+/*! exports provided: fetchGalleryPage, fetchGalleryDetailPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGalleryPage", function() { return fetchGalleryPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGalleryDetailPage", function() { return fetchGalleryDetailPage; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -109493,7 +109500,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 function fetchGalleryPage() {
   return _fetchGalleryPage.apply(this, arguments);
-}
+} //----------------
+// get Detail
+//-----------------
 
 function _fetchGalleryPage() {
   _fetchGalleryPage = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
@@ -109526,6 +109535,39 @@ function _fetchGalleryPage() {
     }, _callee);
   }));
   return _fetchGalleryPage.apply(this, arguments);
+}
+
+function fetchGalleryDetailPage(_x) {
+  return _fetchGalleryDetailPage.apply(this, arguments);
+}
+
+function _fetchGalleryDetailPage() {
+  _fetchGalleryDetailPage = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(slug) {
+    var response, json;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return fetch("/api/get-gallery-detail/".concat(slug));
+
+          case 2:
+            response = _context2.sent;
+            _context2.next = 5;
+            return response.json();
+
+          case 5:
+            json = _context2.sent;
+            return _context2.abrupt("return", json);
+
+          case 7:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _fetchGalleryDetailPage.apply(this, arguments);
 }
 
 /***/ }),
@@ -110737,7 +110779,7 @@ var Item = function Item(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GalleryItemComponent, {
     className: "news-item col-12 col-sm-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    to: "/news/".concat(slug)
+    to: "/gallery/".concat(slug)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news-item__image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -110808,7 +110850,8 @@ var GalleryPage = function GalleryPage(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Item__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: index,
       name: item.name,
-      image: item.images
+      image: item.images,
+      slug: item.slug
     });
   })))));
 };
@@ -112416,6 +112459,95 @@ var Gallery = function Gallery() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Gallery);
+
+/***/ }),
+
+/***/ "./resources/js/components/Client/pages/GalleryDetail.jsx":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Client/pages/GalleryDetail.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_html_parser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-html-parser */ "./node_modules/react-html-parser/lib/index.js");
+/* harmony import */ var react_html_parser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_html_parser__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _api_getGallery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api/getGallery */ "./resources/js/api/getGallery.js");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    .image{\n        max-width: 100%;\n    }\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var GalleryDetail = function GalleryDetail(_ref) {
+  var match = _ref.match,
+      location = _ref.location;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      data = _useState2[0],
+      setData = _useState2[1];
+
+  var idGallery = match.params.idGallery;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var detail = Object(_api_getGallery__WEBPACK_IMPORTED_MODULE_3__["fetchGalleryDetailPage"])(idGallery);
+    detail.then(function (data) {
+      setData(data);
+    });
+  }, []);
+  if (!data) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430");
+  var arrImages = JSON.parse(data[0].images);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GalleryDetailComponent, {
+    className: "container  mb-5 mt-5"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, data[0].name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "description"
+  }, react_html_parser__WEBPACK_IMPORTED_MODULE_1___default()(data[0].description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, arrImages.map(function (item, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: index,
+      className: "col-12 col-lg-3"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "image",
+      src: item,
+      alt: "\u0438\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435"
+    }));
+  })));
+};
+
+var GalleryDetailComponent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (GalleryDetail);
 
 /***/ }),
 

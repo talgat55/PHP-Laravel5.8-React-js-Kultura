@@ -21,6 +21,7 @@ const GalleryPage = ({data}) => {
                                     key={index}
                                     name={item.name}
                                     image={item.images}
+                                    slug={item.slug}
                                 />
                             ))
                         }

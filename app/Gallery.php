@@ -37,6 +37,12 @@ class Gallery extends Model
             ->get();
     }
 
-
+    /*
+    * Get active items  by slug
+    */
+    function scopeActiveDetailBySlug($query, $slug)
+    {
+        return $query->where('status', 1)->where('slug', $slug)->get();
+    }
 
 }

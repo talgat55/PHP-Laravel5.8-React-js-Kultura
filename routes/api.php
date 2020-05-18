@@ -40,5 +40,5 @@ Route::get('/get-places', 'Api\ApiPlaceController@getRelated')->name('apiGetRela
 
 
 Route::get('/get-gallery-page/{page}', 'Api\ApiGalleryController@getPage')->name('apiGetGalleryPage');
-
+Route::get('/get-gallery-detail/{slug}', 'Api\ApiGalleryController@getDetail')->name('apiGetGalleryPageDetail');
 

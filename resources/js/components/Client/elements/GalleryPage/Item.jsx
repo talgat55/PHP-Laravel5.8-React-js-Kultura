@@ -8,7 +8,7 @@ const Item = ({name, image, slug}) =>{
 
         <GalleryItemComponent className="news-item col-12 col-sm-3">
 
-            <Link to={`/news/${slug}`}>
+            <Link to={`/gallery/${slug}`}>
 
                 <div className="news-item__image">
                     <img src={readyImage[0]} alt="Image"/>

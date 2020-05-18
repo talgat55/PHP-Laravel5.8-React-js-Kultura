@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="567f64c4-aab4-407e-af53-e64572852b38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Client/pages/NewsDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Client/pages/GalleryDetail.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiNewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiNewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiGalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiGalleryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Client.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/api/getNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/api/getNews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/Slide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/AfishaBlock/Slide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/NewsBlock/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/NewsBlock/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/pages/AfishaDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/pages/AfishaDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/api/getGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/api/getGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +170,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components/Client/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -179,17 +178,17 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage" />
-      <recent name="$PROJECT_DIR$/resources/js/components/Client/pages" />
-      <recent name="$PROJECT_DIR$/resources/js/api" />
-      <recent name="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetailsPage" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/components/Client/pages" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/resources/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/components/Client/pages" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage" />
+      <recent name="$PROJECT_DIR$/resources/js/api" />
+      <recent name="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetailsPage" />
     </key>
   </component>
   <component name="RunManager">
@@ -270,6 +269,7 @@
       <workItem from="1589562590865" duration="222000" />
       <workItem from="1589661999282" duration="6666000" />
       <workItem from="1589726503894" duration="8502000" />
+      <workItem from="1589821491028" duration="2165000" />
     </task>
     <servers />
   </component>
@@ -290,11 +290,11 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589737315303">
+    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589825893550">
       <screen x="67" y="27" width="1853" height="947" />
     </state>
     <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1589300319391" />
-    <state x="632" y="236" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.947@67.27.1853.947" timestamp="1589737315303" />
+    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.947@67.27.1853.947" timestamp="1589825893550" />
     <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589562811843">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
