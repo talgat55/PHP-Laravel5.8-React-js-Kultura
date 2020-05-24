@@ -13,6 +13,7 @@ import Gallery from "./components/Client/pages/Gallery";
 import AfishaDetail from "./components/Client/pages/AfishaDetail";
 import NewsDetail from "./components/Client/pages/NewsDetail";
 import GalleryDetail from "./components/Client/pages/GalleryDetail";
+import CulturePageDetail from "./components/Client/pages/CulturePageDetail";
 
 class Client extends Component {
 
@@ -38,6 +39,7 @@ class Client extends Component {
                         <Route exact path="/gallery" component={Gallery}/>
                         <Route exact path="/gallery/:idGallery" component={GalleryDetail}/>
                         <Route exact path="/culture-details" component={CultureDetails}/>
+                        <Route exact path="/culture-details/:idCulture" component={CulturePageDetail}/>
                         <Route exact component={Error}/>
                     </Switch>
                     <Footer/>

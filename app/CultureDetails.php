@@ -17,6 +17,7 @@ class CultureDetails extends Model
         'category',
         'anons',
         'sort',
+        'slug',
         'status',
     ];
 
@@ -67,4 +68,15 @@ class CultureDetails extends Model
             ->limit(12)
             ->get();
     }
+
+    /*
+    * Get active items  by slug
+    */
+    function scopeActiveDetailBySlug($query, $slug)
+    {
+        return $query->where('status', 1)->where('slug', $slug)->get();
+    }
+
+
+
 }

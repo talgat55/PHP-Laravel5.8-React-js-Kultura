@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 moment.locale('ru');
 const Item = ({name, image, slug, anons, date}) => (
     <NewsItemComponent className="news-item col-12 col-sm-3">
-        <Link to={`/news/${slug}`}>
+        <Link to={`/culture-details/${slug}`}>
             <div className="news-item__date">
                 {moment(date).format('D MMMM')}
             </div>

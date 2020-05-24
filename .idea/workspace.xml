@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="567f64c4-aab4-407e-af53-e64572852b38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Client/pages/GalleryDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Client/pages/CulturePageDetail.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiGalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiGalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CultureDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CultureDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiCultureDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiCultureDetailsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_16_154954_create_table_culture_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_16_154954_create_table_culture_details.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Client.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/api/getGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/api/getGallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/GalleryPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/api/getCultureDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/api/getCultureDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetailItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetailItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetails/CultureDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetailsPage/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Client/elements/CultureDetailsPage/Item.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -270,6 +272,7 @@
       <workItem from="1589661999282" duration="6666000" />
       <workItem from="1589726503894" duration="8502000" />
       <workItem from="1589821491028" duration="2165000" />
+      <workItem from="1590244761471" duration="4123000" />
     </task>
     <servers />
   </component>
@@ -290,11 +293,11 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589825893550">
+    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590343188241">
       <screen x="67" y="27" width="1853" height="947" />
     </state>
     <state x="486" y="220" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1589300319391" />
-    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.947@67.27.1853.947" timestamp="1589825893550" />
+    <state x="632" y="236" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.947@67.27.1853.947" timestamp="1590343188241" />
     <state x="536" y="220" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589562811843">
       <screen x="67" y="27" width="1373" height="873" />
     </state>

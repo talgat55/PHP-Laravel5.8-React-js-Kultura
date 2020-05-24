@@ -32,4 +32,16 @@ class ApiCultureDetailsController extends Controller
 
 
 
+    /**
+     * Return object detail
+     * @param $slug
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getDetail($slug)
+    {
+        $item = CultureDetails::activeDetailBySlug($slug);
+        return response()
+            ->json($item);
+    }
+
 }

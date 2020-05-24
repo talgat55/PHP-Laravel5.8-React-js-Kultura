@@ -22,6 +22,7 @@ const CultureDetails = ({data}) =>{
                                     name={item.name}
                                     anons={item.anons}
                                     image={item.image}
+                                    slug={item.slug}
                                 />
                             ))
                         }

@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
-const CultureDetailItem =  ({name,anons,image}) => {
+const CultureDetailItem =  ({name,anons,image,slug}) => {
 
     return (
         <CultureDetailsItemComponent className="culture-details__item" >
-            <Link to="#" style={{ backgroundImage: `url(${image})`}}>
+            <Link to={`/culture-details/${slug}`} style={{ backgroundImage: `url(${image})`}}>
                 <div className="overlay-culture-detail"/>
                 <div className="culture-details__content-item">
                     <div className="culture-details__title-item">

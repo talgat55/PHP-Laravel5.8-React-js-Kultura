@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\CultureDetails;
+use App\Observers\CultureDetailsObserver;
 use App\Observers\GalleryObserver;
 use Illuminate\Support\ServiceProvider;
 use App\News;
@@ -34,5 +36,6 @@ class AppServiceProvider extends ServiceProvider
         Gallery::observe(GalleryObserver::class);
         Place::observe(PlaceObserver::class);
         Afisha::observe(AfishaObserver::class);
+        CultureDetails::observe(CultureDetailsObserver::class);
     }
 }

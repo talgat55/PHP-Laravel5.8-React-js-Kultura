@@ -4,9 +4,19 @@ export async function fetchRelatedCultureDetails(){
     return json;
 }
 
-
+//---------------
+//  Get data for page
+//--------------
 export async function fetchCultureDetailsPage(page = 1){
-    const response = await fetch(`/api/get-afisha-related-page/${page}`);
+    const response = await fetch(`/api/culture-details-page/${page}`);
+    const json = await response.json();
+    return json;
+}
+//-------------------
+// Get data for detail page
+//---------------------------
+export async function fetchCultureDetailsPageBySlug(slug){
+    const response = await fetch(`/api/culture-details-detail/${slug}`);
     const json = await response.json();
     return json;
 }

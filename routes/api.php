@@ -29,7 +29,8 @@ Route::get('/get-afisha-related-page/{page}', 'Api\ApiAfishaController@getRelate
 Route::get('/get-banner/{page}', 'Api\ApiBannerController@get')->name('apiGetBannerByPage');
 
 Route::get('/get-culture-details-last', 'Api\ApiCultureDetailsController@getRelated')->name('apiGetLastCultureDetails');
-Route::get('/get-culture-details-page', 'Api\ApiCultureDetailsController@getPage')->name('apiGetCultureDetailsPage');
+Route::get('/culture-details-page/{page}', 'Api\ApiCultureDetailsController@getPage')->name('apiGetCultureDetailsPage');
+Route::get('/culture-details-detail/{slug}', 'Api\ApiCultureDetailsController@getDetail')->name('apiGetCultureDetailsPage');
 
 Route::get('/get-news-last', 'Api\ApiNewsController@getRelated')->name('apiGetLastNews');
 Route::get('/get-news/{page}', 'Api\ApiNewsController@getWithPage')->name('apiGetNewsWithPage');

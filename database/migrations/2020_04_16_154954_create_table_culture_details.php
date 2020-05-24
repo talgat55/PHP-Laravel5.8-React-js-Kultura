@@ -19,6 +19,7 @@ class CreateTableCultureDetails extends Migration
             $table->integer('sort');
             $table->integer('category');
             $table->string('image');
+            $table->string('slug');
             $table->string('name');
             $table->text('anons');
             $table->longText('text');
