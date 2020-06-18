@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,38 +13,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/news', function () {
-    return view('welcome');
-});
-
-Route::get('/afisha', function () {
-    return view('welcome');
-});
-
-Route::get('/place', function () {
-    return view('welcome');
-});
-
-
-Route::get('/culture-details', function () {
-    return view('welcome');
-});
-
-Route::get('/gallery', function () {
-    return view('welcome');
-});
-
-
-
+if (!strpos(Request::url(), "admin")) {
+    Route::any('{slug}', function($slug = null)
+    {
+        return view('welcome');
+    })->where('slug', '.*');
+}
 
 Route::get('/admin', 'AdminController@index')->name('adminIndex');
 Route::prefix('admin')->group(function () {
-    Route::post('/upload-images/upload','AdminController@upload');
-    Route::post('/upload-images/uploads','AdminController@uploads');
+    Route::post('/upload-images/upload', 'AdminController@upload');
+    Route::post('/upload-images/uploads', 'AdminController@uploads');
     Route::get('/home-slider', 'HomeSliderController@index')->name('homeSliderIndex');
     Route::match(['get', 'post'], '/home-slider/create', ['as' => 'homeSliderCreate', 'uses' => 'HomeSliderController@create']);
     Route::delete('/home-slider/{id}/delete', 'HomeSliderController@delete')->name('homeSliderDelete');
@@ -88,3 +70,5 @@ Route::prefix('admin')->group(function () {
 
 
 });
+
+
